@@ -1,28 +1,11 @@
-// Adan Rivas
-// ENGS 65
-// 16W
-// 1/29/16
-
-// Project 3: Symmetric Matrices
-
 /*
-Objective: Build an ADT for symmetric matrix that catlogs travel distances between cities. 
+Authors: Adan Rivas and Jonah Sternthal
+ENGS 65 Engineering Design
+16W
 
-In a symmetric matrix the cells in the upper right are the same as the cells in the lower
-left, i.e entry (i,j) = (j,i). So this ends up reducing to to an upper triangular matrix 
-of size N-1xN-1 because the main diagonal is full of zeros. So we only need to store either 
-the upper and lower diagonal entries.
+Final Project: Markov Chain Simulation of Basketball teams
 
-My data structure will reduce the table of miles to a 1D array and thus store only half of 
-the matrix. But the user will still believe that they are interacting with a matrix/table.
-
-final 1D is going to look like:
-
-[1108, 708, 994,  756,   1753,  279,  2191,  3017,  2048,  2288,  854,  222,  809,  649,  2794]
-
-Assume matrix has already exists...
-
-Since mileage maps are indexed by city names, we may consider using enumerated types.
+General probability matrix where the row index denotes the home team:
 
 	Atl   Bos   Chi   Det   LA    NY
 Atl  0    1108  708   756  2191   854
@@ -32,16 +15,15 @@ Det 756   1753  279     0  2288   649
 LA 2191   3017 2048  2288     0  2794
 NY  854    222  809   649  2794     0
 
-Assume data types are floats for some precision of distance in miles.
 
-I can expect that a NxN symmetric matrix with its main diagonal filled with zeros will
-have a total of (N-1)*N/2 elements to store (similar algorithm to a triangular matrix of size (N-1)x(N-1). 
+To find the probability that the visiting teams wins, we simply find the
+complement of the entery (home, away)
 
-An auxilliary function would include adding another city to the table and how I would need 
-to redefine my 1D array. I can also consider creating a dynamic structure out the milage table
 */
 
 #include <iostream>
+#include <string>
+#include <stdlib.h> // srand rand 
 #include "sym_mat.h"
 
 using namespace std;
@@ -50,26 +32,130 @@ int main()
 {
 	cout << "program starting...\n\n";
 
+	// create struct for teams
+
+	struct team{
+		int num; // factor
+		int count; // keeps track of wins
+		string name;
+	};
+
+	team Atl, Bos, Chi, Det, LA, NY;
+	
+	// set team names
+	Atl.name = "Atlanta";
+	Bos.name = "Boston";
+	Chi.name = "Chicago";
+	Det.name = "Detroit";
+	LA.name = "Los Angeles";
+	NY.name = "New York";
+
 	// enumerate city names by index in table
-	int Atl = 0;
-	int Bos = 1;
-	int Chi = 2;
-	int Det = 3;
-	int LA = 4;
-	int NY = 5;
+	Atl.num = 0;
+	Bos.num = 1;
+	Chi.num = 2;
+	Det.num = 3;
+	LA.num = 4;
+	NY.num = 5;
+
+	// initialize counts to zero
+
+	Atl.count = 0;
+	Bos.count = 0;
+	Chi.count = 0;
+	Det.count = 0;
+	LA.count = 0;
+	NY.count = 0;
+
+	team teams[6] = { Atl, Bos, Chi, Det, LA, NY };
 
 	int num_of_cities = 6; // size of table
 
-	// create miles table
-	float distances[6][6] = {
-		{ 0.0, 1108.0, 708.0, 756.0, 2191.0, 854.0 },
-		{ 1108.0, 0.0, 994.0, 1753.0, 3017.0, 222.0 },
-		{ 708.0, 994.0, 0.0, 279.0, 2048.0, 809.0 },
-		{ 756.0, 1753.0, 279.0, 0.0, 2288.0, 649.0 },
-		{ 2191.0, 3017.0, 2048.0, 2288.0, 0.0, 2794.0 },
-		{ 854.0, 222.0, 809.0, 649.0, 2794.0, 0.0 }
+	// probability matrix
+	float prob_matrix[6][6] = {
+		{ 0.2, 0.25, 0.56, 0.45, 0.33, 0.34 },
+		{ 0.45, 0.60, 0.85, 0.56, 0.23, 0.65 },
+		{ 0.43, 0.56, 0.56, 0.56, 0.34, 0.56 },
+		{ 0.70, 0.45, 0.6, 0.15, 0.50, 0.65 },
+		{ 0.43,0.56, .87, 0.54, 0.40, .50 },
+		{ 0.34, 0.45, 0.45, 0.56, 0.67, 0.47 }
 	};
 
+	int team1 = rand() % 6;  // rand_num in the range 0 to 5
+	float n = 100; // number of simulations
+
+	// random number generator
+	for (int i = 0; i < n; i++){
+		
+		//int home = rand() % 6;  // rand_num in the range 0 to 5
+		int team2 = rand() % 6;
+		while (team2 == team1){
+			team2 = rand() % 6;
+		}
+
+		// who is playing home? 
+
+		float p = ((float)rand() / (RAND_MAX)); // random number between 0 and 1
+
+		if (p < 0.5){ // if less than 0.5 than team 1 is at home
+
+			cout << "home team: ";
+			cout << teams[team1].name << endl;
+
+			cout << "away team: ";
+			cout << teams[team2].name << endl;
+
+			cout << "probability of home team winning: " << prob_matrix[team1][team2] << endl;
+
+			float r = ((float)rand() / (RAND_MAX)); // random number between 0 and 1
+
+			if (r > prob_matrix[team1][team2]){
+				cout << "Away team won!";
+				teams[team2].count += 1;
+				team1 = team2; // set winner as new top team
+			}
+			else {
+				cout << "Home team won!";
+				teams[team1].count += 1;
+			}
+
+		}
+		else { // otherwise team2 is at home
+			cout << "home team: ";
+			cout << teams[team2].name << endl;
+
+			cout << "away team: ";
+			cout << teams[team1].name << endl;
+
+			cout << "probability of home team winning: " << prob_matrix[team2][team1] << endl;
+
+			float r = ((float)rand() / (RAND_MAX)); // random number between 0 and 1
+
+			if (r > prob_matrix[team2][team1]){
+				cout << "\nAway team won!";
+				teams[team1].count += 1;
+			}
+			else {
+				cout << "\nHome team won!";
+				teams[team2].count += 1;
+				team1 = team2;
+			}
+		}
+
+		
+		cout << endl;
+		cout << endl;
+
+	}
+
+	for (int i = 0; i < 6; i++){
+
+		cout << "frequency of " << teams[i].name << " being best team: " << (teams[i].count / n) << endl;
+
+	}
+
+
+	/*
 	// create mileage table through a dynamically allocated 2D array
 	cout << "creating dynamic 2D array\n" << endl; 
  	float ** miles_tbl = new float*[num_of_cities]; //allocate array of float pointers
@@ -84,18 +170,9 @@ int main()
 		}
 	}
 
-	// delete matrix
-	//delete[] distances;
-
-	Sym_Mat sym_matrix(num_of_cities, miles_tbl); // create class 
-	cout << "Distance from Boston to Atlanta: ";
-	cout << sym_matrix.get_distance(Bos, Atl) << endl; 
-	cout << endl; // add white space
-
-	cout << "Distance from Chicago to Detroit: ";
-	cout << sym_matrix.get_distance(Chi, Det) << endl;
-	cout << endl; // add white space
-
+	// initialize class
+	Sym_Mat sym_matrix(num_of_cities, miles_tbl); // creat class
+	
 	cout << "Distance from Detroit to Chicago: ";
 	cout << sym_matrix.get_distance(Det, Chi) << endl;
 	cout << endl; // add white space
@@ -113,6 +190,9 @@ int main()
 	cout << "(LA, NY) = " << fromMatrixToVector(LA, NY) << endl;
 	cout << "(5, 2) = " << fromMatrixToVector(5, 2) << endl;
 	
+	*/
+
+
 	cout << "\nExiting program. Press enter to exit." << endl;
 
 	cin.get();
