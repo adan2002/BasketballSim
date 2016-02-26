@@ -65,7 +65,7 @@ int fromMatrixToVector(int row, int col) // input and row index and column index
 		return (row - 1)*row / 2 + col;
 	else if (row  == col)
 	{
-		cout << "Start and End citie are the same" << endl;
+		cout << "Start and End cities are the same" << endl;
 		return -1;
 	}
 	else
