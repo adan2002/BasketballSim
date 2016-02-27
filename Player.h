@@ -36,10 +36,12 @@ public:
     void setMinPl(int mins);
     //get minutes
     int getMinPl();
-    //change injury //did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss season
+    //did player get injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss season
     void isInjured();
+    //returns if player is injured
+    bool ifInjured();
     //set games with Injury left
-    void setGamesOut(int numofgames);
+    int getGamesOut();
     //decrease games with injury left
     void decGamesOut();
 
