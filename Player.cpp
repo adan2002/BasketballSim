@@ -4,26 +4,36 @@
 
 #include "Player.h"
 #include <iostream>
+#include <cmath>
+#include<stdio.h>
 #include <stdlib.h>
 #include <string>
 using namespace std;
 
 //set age
-void Player::setAge(int age){}
+void Player::setAge(int agein){
+    age=agein;
+}
 
 //getage
 int Player::getAge(){
-
+    return(age);
 }
 
 //set position
-void Player::setPosition(int posNum){}
+void Player::setPosition(int posNum){
+    posNum=position;
+}
 
 //get position
-int Player::getPosition(){}
+int Player::getPosition(){
+    return(position)
+}
 
 //set probability of injury (based on age/minutes played)
-void Player::setProbInj(){}//maybe this just goes into age?
+void Player::setProbInj(){
+    pOFi=float log(float 2*age)
+}
 
 //get prob of inj
 float Player::getProbofInj(){}
