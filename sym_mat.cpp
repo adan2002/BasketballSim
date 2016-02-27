@@ -1,7 +1,7 @@
 #include "sym_mat.h"
 
 #include <iostream>
-#include <string> # allows the use of strings
+#include <string> // allows the use of strings
 #include <array>
 
 using namespace std;

@@ -24,7 +24,12 @@ complement of the entery (home, away)
 #include <iostream>
 #include <string>
 #include <stdlib.h> // srand rand 
+
 #include "sym_mat.h"
+#include "Team.h"
+#include "Player.h"
+#include "ProbMatrix.h"
+
 
 using namespace std;
 
@@ -82,7 +87,7 @@ int main()
 	};
 
 	int team1 = rand() % 6;  // rand_num in the range 0 to 5
-	float n = 100; // number of simulations
+	float n = 50; // number of simulations
 
 	// random number generator
 	for (int i = 0; i < n; i++){
@@ -148,6 +153,7 @@ int main()
 
 	}
 
+	// sick about using merge sort technique to order teams
 	for (int i = 0; i < 6; i++){
 
 		cout << "frequency of " << teams[i].name << " being best team: " << (teams[i].count / n) << endl;
