@@ -40,7 +40,7 @@ public:
     //get minutes
     int getMinPl();
     //did player get injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss season
-    void isInjured();
+    void InjuredInGame();
     //returns if player is injured
     bool ifInjured();
     //set games with Injury left

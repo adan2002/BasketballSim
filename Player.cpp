@@ -86,7 +86,7 @@ int Player::getMinPl(){
 }
 
 //change injury //did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss 20 games
-void Player::isInjured(){
+void Player::InjuredInGame(){
     float rando;
     rando=(float)rand()/RAND_MAX;
     rando=(float)rand()/RAND_MAX;
@@ -119,5 +119,6 @@ int Player::getGamesOut(){
 
 //decrease games with injury left
 void Player::decGamesOut() {
-    gamesWithInjleft--;
+    if(gamesWithInjleft>0){
+    gamesWithInjleft--;}
 }
