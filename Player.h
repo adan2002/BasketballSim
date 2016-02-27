@@ -16,6 +16,9 @@ private:
     bool injury;
     int gamesWithInjleft; //games played with injury
 public:
+    Player();
+    Player(int yo, int pos, int PofI, int rtng, bool inj, int GWIL);
+    ~Player();
     //set age
     void setAge(int age);
     //getage

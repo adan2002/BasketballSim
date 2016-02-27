@@ -4,7 +4,7 @@ project(BasketballSim)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES
-    main.cpp
+
         maintest.cpp
         Player.h
         Player.cpp
