@@ -17,19 +17,32 @@ private:
     int gamesWithInjleft; //games played with injury
 public:
     //set age
+    void setAge(int age);
     //getage
+    int getAge();
     //set position
+    void setPosition(int posNum);
     //get position
+    int getPosition();
     //set probability of injury (based on age/minutes played)
+    void setProbInj();//maybe this just goes into age?
     //get prob of inj
+    float getProbofInj();
     //set rating
+    void setRating(int rating);
     //get rating
-    //set minutes
-    //add minutes
+    int getRating();
+    //set minutes played
+    void setMinPl(int mins);
     //get minutes
-    //change injury
+    int getMinPl();
+    //change injury //did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss season
+    void isInjured();
     //set games with Injury left
+    void setGamesOut(int numofgames);
     //decrease games with injury left
+    void decGamesOut();
+
 };
 
 
