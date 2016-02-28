@@ -1,9 +1,11 @@
 ## Webscraper for tables in html
 ## Use to read in NBA rosters from ESPN
 
-## Example
+
+setwd("C:/Users/Adan/Desktop/BasketballSim")
 
 require(rvest)
+require(dplyr)
 
 
 # loop thru every nba team
@@ -32,3 +34,6 @@ for (name in NBA_teams){
 
 # reset dataframe row index
 rownames(NBA_players) <- seq(length=nrow(NBA_players))
+
+# player rating
+ratings <- tbl_df(read.csv(file = 'NBA 2K16 Ratings.csv', header = T))
