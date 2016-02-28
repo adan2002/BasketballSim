@@ -21,7 +21,8 @@ Player::Player() {
 }
 
 //input constructor
-Player::Player(int yo, int pos, int PofI, int rtng, bool inj, int GWIL){
+Player::Player(string namein, int yo, int pos, int PofI, int rtng, bool inj, int GWIL){
+    name=namein;
     age=yo;
     position=pos;
     pOFi=PofI;
@@ -90,6 +91,10 @@ void Player::setMinPl(int mins){
     minutes=mins;
 }
 
+void Player::addMinPl(int minsadded) {
+    minutes+=minsadded;
+}
+
 //get minutes
 int Player::getMinPl(){
     return minutes;
@@ -132,4 +137,12 @@ int Player::getGamesOut(){
 void Player::decGamesOut() {
     if(gamesWithInjleft>0){
     gamesWithInjleft--;}
+}
+
+void Player::setName(string inName) {
+    name=inName;
+}
+
+string Player::getName() {
+    return(name);
 }

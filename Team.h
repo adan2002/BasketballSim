@@ -40,7 +40,7 @@ public:
 	void setstarters(Player[5]);
 	//set pig
 	void setpig();
-
+	//setName of team
 	void setName(string namein);
 
 	void enumerate(int num);
@@ -49,6 +49,10 @@ public:
 	void changeWstreak();
 	//loss stream on/off
 	void changeLstreak();
+
+	//things that should happen to team after the game...
+	//idk if this is the best way to implement
+	void aftergame(char WoL);
 
 
 };
