@@ -10,6 +10,7 @@ class Player {
 private:
     int age;
     int position; //1-PG,2-SG,3-SF,4-PF,5-C
+	int rank; // 1 = starter, 2 = backup
     float pOFi; //probabilty of injury
     int rating;
     int minutes; //minutes played

@@ -55,9 +55,19 @@ int Player::getPosition(){
 }
 
 //set probability of injury (based on age/minutes played)
+// Based on age of player and minutes played throughout the season
+// If minutes played exceeds 2400 (30 min on average over 80 games),
+// then add extra term
 void Player::setProbInj(){
-    pOFi= (log(float (2*age)))+(minutes/150);
-    pOFi=pOFi/100;
+	if (minutes > 2400) {
+		pOFi = (log(float(2 * age))) + (minutes - 2400) / 120;
+		pOFi = pOFi / 100;
+	}
+
+	else{
+		pOFi = (log(float(2 * age))) / 100;
+	}
+
 }
 
 //get prob of inj
@@ -86,6 +96,7 @@ int Player::getMinPl(){
 }
 
 //change injury //did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss 20 games
+// think about printing out when a player gets injured/sidelined
 void Player::InjuredInGame(){
     float rando;
     rando=(float)rand()/RAND_MAX;

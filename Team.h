@@ -17,10 +17,10 @@ private:
 	int wins; //function find win percent and loss percent
 	int losses;
 	float addedProb; //needs function that will updatate( this is the added probability that a team will win)
-	Player roster[10];
-	Player starters[5];
-	Player pig[5]; //players in game
-	bool wstreak;
+	Player* roster;
+	Player* starters;
+	Player* pig; //players in game
+	bool wstreak; 
 	bool lstreak;
 	int index; // id in matrix
 public:
@@ -49,8 +49,6 @@ public:
 	void changeWstreak();
 	//loss stream on/off
 	void changeLstreak();
-
-
 
 
 };

@@ -1,0 +1,413 @@
+Team,Rating,Player,,,Rating,FirstName,LastName,TEAM,PER
+ATL,85, Paul Millsap,,,93,Stephen,Curry,GSW,28
+ATL,83, Al Horford,,,90,Chris,Paul,LAC,26
+ATL,78, Jeff Teague,,,89,Russell,Westbrook,OKC,29.1
+ATL,78, Kyle Korver,,,87,Kyrie,Irving,CLE,21.5
+ATL,75, DeMarre Carroll,,,87,John,Wall,WAS,19.9
+ATL,74, Thabo Sefolosha,,,86,Damian,Lillard,POR,20.7
+ATL,74, Kent Bazemore,,,85,Mike,Conley,MEM,18.6
+ATL,72, Mike Scott,,,84,Derrick,Rose,CHI,15.9
+ATL,71, Adreian Payne,,,83,Jeff,Teague,ATL,20.6
+ATL,71, Shelvin Mack,,,83,Kyle,Lowry,TOR,19.3
+ATL,70, Dennis Schroder,,,83,Tony,Parker,SAS,15.9
+ATL,69, Pero Antic,,,82,Eric,Bledsoe,PHX,18.4
+ATL,68, John Jenkins,,,81,Isaiah,Thomas,BOS,20.6
+BOS,87, Rajon Rondo,,,81,Brandon,Knight,PHX,17.1
+BOS,78, Avery Bradley,,,81,Ty,Lawson,HOU,18.5
+BOS,78, Jeff Green,,,81,Kemba,Walker,CHA,17.6
+BOS,78, Jared Sullinger ,,,81,Goran,Dragic,MIA,17.4
+BOS,76, Marcus Smart ,,,80,Brandon,Jennings,DET,19.7
+BOS,76, Marcus Thornton ,,,79,Jrue,Holiday,NOP,18.8
+BOS,75, Brandon Bass,,,79,Darren,Collison,SAC,17.5
+BOS,74, Gerald Wallace ,,,78,George,Hill,IND,21.5
+BOS,74, Kelly Olynyk ,,,78,Reggie,Jackson,DET,17.2
+BOS,72, Vitor Faverani ,,,78,Deron,Williams,BKN,15.7
+BOS,70, Tyler Zeller ,,,77,Ricky,Rubio,MIN,15.2
+BOS,70, Phil Pressey ,,,77,Michael,Carter-Williams,MIL,14.1
+BOS,68, James Young ,,,77,Rajon,Rondo,SAC,13.5
+BOS,66, Joel Anthony,,,77,D'Angelo,Russell,LAL,
+BKN,84, Deron Williams,,,76,Dennis,Schroder,ATL,15.7
+BKN,83, Brook Lopez,,,76,Mo,Williams,CLE,15.4
+BKN,82, Joe Johnson,,,76,Elfrid,Payton,ORL,13.8
+BKN,77, Mason Plumlee ,,,76,Patrick,Beverley,HOU,11.3
+BKN,77, Kevin Garnett,,,75,Jordan,Clarkson,LAL,16.9
+BKN,74, Andrei Kirilenko,,,75,Jeremy,Lin,CHA,15.6
+BKN,74, Bojan Bogdanovic ,,,75,Beno,Udrih,MEM,15.4
+BKN,74, Jarrett Jack,,,75,Tony,Wroten,PHI,14.9
+BKN,71, Mirza Teletovic ,,,75,Aaron,Brooks,CHI,14.4
+BKN,71, Alan Anderson ,,,75,Emmanual,Mudiay,DEN,
+BKN,69, Marquis Teague ,,,74,Cory,Joseph,TOR,15.5
+BKN,68, Markel Brown ,,,74,C.J.,Watson,ORL,15.4
+BKN,66, Sergey Karasev,,,74,J.J.,Barea,DAL,15.1
+CHA,87, Al Jefferson,,,74,Devin,Harris,DAL,14.8
+CHA,84, Lance Stephenson,,,74,Jarrett,Jack,BKN,14.6
+CHA,82, Kemba Walker,,,74,Patty,Mills,SAS,13
+CHA,78, Gerald Henderson ,,,74,Marcus,Smart,BOS,11
+CHA,77, Michael Kidd-Gilchrist ,,,73,D.J.,Augustin,OKC,13.9
+CHA,75, Gary Neal ,,,73,Trey,Burke,UTA,12.6
+CHA,74, Brian Roberts ,,,73,Greivis,Vasquez,MIL,12.6
+CHA,73, Cody Zeller,,,73,Isaiah,Canaan,PHI,12.4
+CHA,73, Marvin Williams ,,,73,Zach,LaVine,MIN,11.3
+CHA,73, Bismack Biyombo,,,73,Dante,Exum,UTA,5.7
+CHA,72, Noah Vonleh,,,72,Shelvin,Mack,ATL,13.2
+CHA,72, Jeff Taylor ,,,72,Langston,Galloway,NYK,12.3
+CHA,71, P.J. Hairston ,,,72,Mario,Chalmers,MIA,11.7
+CHA,67, Jannero Pargo,,,72,Ramon,Sessions,WAS,11.1
+CHI,88, Derrick Rose,,,72,Norris,Cole,NOP,10.9
+CHI,87, Joakim Noah ,,,72,Cameron,Payne,OKC,
+CHI,82, Pau Gasol,,,71,Kirk,Hinrich,CHI,6.8
+CHI,80, Taj Gibson,,,70,Shane,Larkin,BKN,10.9
+CHI,80, Jimmy Butler,,,70,Spencer,Dinwiddie,DET,10.2
+CHI,76, Kirk Hinrich ,,,70,Matthew,Dellavedova,CLE,8.5
+CHI,75, Doug McDermott ,,,70,Delon,Wright,TOR,
+CHI,75, Nikola Mirotic ,,,69,Jerian,Grant,NYK,
+CHI,74, Mike Dunleavy ,,,69,Terry,Rozier,BOS,
+CHI,73, Aaron Brooks ,,,69,Tyus,Jones,MIN,
+CHI,72, Tony Snell ,,,69,Pierre,Jackson,PHI,
+CHI,66, Cameron Bairstow,,,67,Jimmer,Fredette,SAS,9.8
+CLE,98, LeBron James ,,,92,James,Harden,HOU,26.7
+CLE,89, Kevin Love ,,,87,Klay,Thompson,GSW,20.8
+CLE,86, Kyrie Irving ,,,86,Dwyane,Wade,MIA,21.4
+CLE,78, Dion Waiters ,,,86,Jimmy,Butler,CHI,21.3
+CLE,77, Shawn Marion ,,,85,Kobe,Bryant,LAL,17.6
+CLE,76, Tristan Thompson ,,,83,DeMar,DeRozan,TOR,17.4
+CLE,75, Anderson Varejao ,,,81,Monta,Ellis,IND,16.5
+CLE,74, Mike Miller ,,,80,Lou,Williams,LAL,19.9
+CLE,72, Matthew Dellavedova ,,,80,Victor,Oladipo,ORL,15.9
+CLE,69, James Jones ,,,80,Bradley,Beal,WAS,14
+CLE,69, John Lucas ,,,79,Kevin,Martin,MIN,16.7
+CLE,66, Malcolm Thomas ,,,79,Jamal,Crawford,LAC,16.6
+CLE,65, Brendan Haywood,,,79,J.J.,Redick,LAC,16.2
+DAL,88, Dirk Nowitzki ,,,79,Wesley,Matthews,DAL,16.1
+DAL,82, Monta Ellis,,,79,Kyle,Korver,ATL,14.8
+DAL,79, Chandler Parsons,,,78,Manu,Ginobili,SAS,16.2
+DAL,79, Tyson Chandler ,,,78,Khris,Middleton,MIL,15.6
+DAL,76, Jameer Nelson ,,,78,Tony,Allen,MEM,14.6
+DAL,75, Devin Harris ,,,78,Eric,Gordon,NOP,12.7
+DAL,75, Brandan Wright ,,,77,Avery,Bradley,BOS,11.5
+DAL,74, Raymond Felton ,,,76,Danny,Green,SAS,16.5
+DAL,74, Al-Farouq Aminu ,,,76,Rodney,Stuckey,IND,15.4
+DAL,72, Jae Crowder ,,,76,Gerald,Green,MIA,15.4
+DAL,72, Richard Jefferson,,,76,J.R.,Smith,CLE,13.6
+DAL,67, Gal Mekel ,,,76,Alec,Burks,UTA,13
+DAL,67, Ricky Ledo ,,,75,Shabazz,Muhammad,MIN,19.9
+DAL,67, Greg Smith,,,75,O.J.,Mayo,MIL,13.5
+DEN,84, Ty Lawson,,,75,Courtney,Lee,MEM,11.5
+DEN,81, Kenneth Faried,,,75,Iman,Shumpert,CLE,11.4
+DEN,78, Arron Afflalo ,,,75,Arron,Afflalo,NYK,10.6
+DEN,78, Wilson Chandler,,,74,Leandro,Barbosa,GSW,15.3
+DEN,77, Danilo Gallinari ,,,74,Jodie,Meeks,DET,14.1
+DEN,77, J.J. Hickson ,,,74,Gerald,Henderson,CHA,13.2
+DEN,76, Nate Robinson ,,,74,Lance,Stephenson,LAC,8.8
+DEN,74, JaVale McGee ,,,74,Ray,Allen,FA,12.8
+DEN,74, Randy Foye ,,,74,Jeremy,Lamb,CHA,14.9
+DEN,74, Timofey Mozgov ,,,73,C.J.,Miles,IND,14.1
+DEN,71, Gary Harris ,,,73,Will,Barton,DEN,13.6
+DEN,69, Jusuf Nurkic ,,,73,Marco,Belinelli,SAS,12.4
+DEN,69, Darrell Arthur ,,,73,Tim,Hardaway,ATL,12.1
+DEN,68, Quincy Miller,,,73,Kentavious,Caldwell-Pope,DET,11.2
+DET,83, Andre Drummond,,,73,Gary,Neal,WAS,11.1
+DET,80, Brandon Jennings,,,73,Austin,Rivers,LAC,10.3
+DET,80, Josh Smith,,,73,Mario,Hezonjga,ORL,
+DET,80, Greg Monroe,,,73,Jason,Richardson,FA,11.7
+DET,76, Caron Butler ,,,72,C.J.,McCollum,POR,13.1
+DET,76, D.J. Augustin ,,,72,Evan,Fournier,ORL,12.4
+DET,75, Jodie Meeks ,,,72,Randy,Foye,DEN,11
+DET,74, Kyle Singler ,,,72,Ben,McLemore,SAC,10.4
+DET,72, Kentavious Caldwell,Pope ,,72,Vince,Carter,MEM,9.6
+DET,71, Jonas Jerebko ,,,72,Devin,Booker,PHX,
+DET,70, Will Bynum ,,,71,Bojan,Bogdanovic,BKN,11.6
+DET,70, Cartier Martin ,,,71,Hollis,Thompson,PHI,10.9
+DET,68, Tony Mitchell ,,,71,Justin,Anderson,DAL,
+DET,67, Luigi Datome ,,,70,Jordan,Adams,MEM,12.8
+DET,67, Aaron Gray,,,70,Archie,Goodwin,PHX,11.2
+GSW,89, Stephen Curry ,,,70,E'Twaun,Moore,CHI,10.3
+GSW,82, Klay Thompson,,,69,Rashad,Vaughn,MIL,
+GSW,82, Andre Iguodala,,,68,James,Young,BOS,8.5
+GSW,82, David Lee,,,94,LeBron,James,CLE,25.9
+GSW,80, Andrew Bogut,,,91,Kevin,Durant,OKC,27.6
+GSW,77, Draymond Green ,,,88,Carmelo,Anthony,NYK,21.5
+GSW,76, Harrison Barnes ,,,87,Kawhi,Leonard,SAS,22
+GSW,74, Shaun Livingston ,,,86,Paul,George,IND,13
+GSW,72, Marreese Speights ,,,83,Rudy,Gay,SAC,19.7
+GSW,69, Brandon Rush ,,,83,Gordon,Hayward,UTA,20.2
+GSW,67, Ognjen Kuzmic,,,80,Tyreke,Evans,NOP,17.7
+GSW,67, Nemanja Nedovic,,,80,Andrew,Wiggins,MIN,13.9
+GSW,67, Festus Ezeli,,,79,Tobias,Harris,ORL,16.7
+HOU,88, James Harden ,,,79,Chandler,Parsons,DAL,16.3
+HOU,88, Dwight Howard ,,,79,DeMarre,Carroll,TOR,15.9
+HOU,78, Patrick Beverley,,,79,Giannis,Antetokounmpo,MIL,14.8
+HOU,78, Trevor Ariza ,,,79,Joe,Johnson,BKN,14.1
+HOU,77, Terrence Jones ,,,78,Luol,Deng,MIA,15.5
+HOU,72, Isaiah Canaan ,,,78,Paul,Pierce,LAC,15.2
+HOU,71, Troy Daniels ,,,78,Michael,Kidd-Gilchrist,CHA,15.1
+HOU,71, Jeff Adrien ,,,77,Jabari,Parker,MIL,14.5
+HOU,71, Nick Johnson ,,,77,Jeff,Green,MEM,14.4
+HOU,69, Alonzo Gee ,,,77,Harrison,Barnes,GSW,13.4
+HOU,69, Donatas Motiejunas ,,,77,Wilson,Chandler,DEN,13.2
+HOU,69, Robert Covington ,,,77,Nicholas,Batum,CHA,13.1
+HOU,68, Ish Smith ,,,77,Trevor,Ariza,HOU,12.7
+HOU,67, Josh Powell,,,77,Andre,Iguodala,GSW,12.3
+IND,89, Paul George,,,76,Danilo,Gallinari,DEN,16.8
+IND,80, David West,,,76,Corey,Brewer,HOU,13.9
+IND,80, Roy Hibbert,,,75,James,Johnson,TOR,17.9
+IND,78, George Hill ,,,75,P.J.,Tucker,PHX,12.5
+IND,77, Luis Scola ,,,75,Jared,Dudley,WAS,12.3
+IND,75, Rodney Stuckey ,,,74,Anthony,Morrow,OKC,14.8
+IND,75, Ian Mahinmi ,,,74,Evan,Turner,BOS,12.8
+IND,75, C.J. Watson ,,,74,Thabo,Sefolosha,ATL,13.8
+IND,73, C.J. Miles ,,,74,Justise,Winslow,MIA,
+IND,71, Chris Copeland ,,,73,Robert,Covington,PHI,14.7
+IND,68, Lavoy Allen ,,,73,Al-Farouq,Aminu,POR,14.4
+IND,66, Solomon Hill ,,,73,Omri,Casspi,SAC,14.4
+IND,65, Donald Sloan,,,73,Nick,Young,LAL,14.2
+LAC,91, Chris Paul ,,,73,Marcus,Morris,DET,13.7
+LAC,89, Blake Griffin ,,,73,Tayshaun,Prince,FA,12
+LAC,81, DeAndre Jordan,,,73,Mike,Dunleavy,CHI,11.6
+LAC,80, Jamal Crawford,,,73,Rasual,Butler,FA,11.4
+LAC,77, J.J. Redick ,,,73,Terrence,Ross,TOR,11.2
+LAC,76, Matt Barnes ,,,73,Solomon,Hill,IND,10.2
+LAC,76, Spencer Hawes ,,,73,Stanley,Johnson,DET,
+LAC,74, Glen Davis,,,72,T.J.,Warren,PHX,14
+LAC,74, Jared Dudley,,,72,Otto,Porter,WAS,11.6
+LAC,72, Jordan Farmar ,,,72,Derrick,Williams,NYK,12.8
+LAC,69, Reggie Bullock ,,,72,Quincy,Pondexter,NOP,9.9
+LAC,67, C.J. Wilcox,,,72,Rondae,Hollis-Jefferson,BKN,
+LAL,89, Kobe Bryant ,,,71,Kyle,Anderson,SAS,8.2
+LAL,78, Carlos Boozer ,,,71,Kelly,Oubre,WAS,
+LAL,78, Nick Young ,,,70,K.J.,McDaniels,HOU,10.6
+LAL,77, Jeremy Lin ,,,70,Sam,Dekker,HOU,
+LAL,76, Jordan Hill ,,,67,Devyn,Marble,ORL,5.9
+LAL,76, Steve Nash ,,,92,Anthony,Davis,NOP,30.8
+LAL,76, Julius Randle ,,,88,LaMarcus,Aldridge,SAS,22.8
+LAL,73, Ed Davis ,,,88,Blake,Griffin,LAC,22.8
+LAL,73, Wesley Johnson ,,,87,Tim,Duncan,SAS,22.6
+LAL,73, Xavier Henry ,,,86,Pau,Gasol,CHI,22.7
+LAL,71, Ryan Kelly ,,,84,Chris,Bosh,MIA,19.8
+LAL,70, Jordan Clarkson ,,,84,Zach,Randolph,MEM,19.5
+LAL,67, Robert Sacre,,,84,Dirk,Nowitzki,DAL,19.2
+MEM,85, Marc Gasol ,,,83,Paul,Millsap,ATL,20
+MEM,84, Zach Randolph,,,83,Kevin,Love,CLE,18.8
+MEM,83, Mike Conley,,,82,Greg,Monroe,MIL,21.2
+MEM,78, Tony Allen ,,,82,Derrick,Favors,UTA,21.8
+MEM,76, Courtney Lee,,,82,Draymond,Green,GSW,16.4
+MEM,77, Vince Carter ,,,80,Serge,Ibaka,OKC,16.6
+MEM,75, Tayshaun Prince ,,,79,Kenneth,Faried,DEN,18.4
+MEM,74, Beno Udrih ,,,78,Markieff,Morris,PHX,15.8
+MEM,72, Kosta Koufos ,,,77,Jared,Sullinger,BOS,17.9
+MEM,72, Nick Calathes ,,,77,David,West,SAS,16
+MEM,71, Jordan Adams ,,,77,Tristan,Thompson,CLE,15.6
+MEM,71, Jarnell Stokes ,,,76,Ed,Davis,POR,20
+MEM,69, Jon Leuer,,,76,Nikola,Mirotic,CHI,17.9
+MEM,69, Jamaal Franklin,,,76,David,Lee,BOS,17.8
+MEM,68, Quincy Pondexter,,,76,Taj,Gibson,CHI,16.1
+MIA,86, Dwyane Wade ,,,76,Ryan,Anderson,NOP,15.6
+MIA,84, Chris Bosh,,,76,Amir,Johnson,BOS,15.4
+MIA,79, Luol Deng ,,,76,Kevin,Garnett,MIN,15.2
+MIA,76, Danny Granger ,,,76,Nene,NENE,WAS,14.3
+MIA,75, Mario Chalmers ,,,75,Terrence,Jones,HOU,18.3
+MIA,75, Chris Andersen ,,,75,Thaddeus,Young,BKN,15.7
+MIA,75, Norris Cole ,,,75,Josh,Smith,LAC,14.9
+MIA,74, Josh McRoberts ,,,75,Luis,Scola,TOR,
+MIA,74, Shabazz Napier ,,,75,Donatas,Motiejunas,HOU,
+MIA,72, Udonis Haslem ,,,74,Brandon,Bass,LAL,
+MIA,70, James Ennis ,,,74,Ersan,Ilyasova,DET,16.8
+MIA,69, Justin Hamilton ,,,74,Carl,Landry,PHI,
+MIA,66, Reggie Williams,,,74,Cody,Zeller,CHA,14.1
+MIL,79, Brandon Knight ,,,74,Trevor,Booker,UTA,
+MIL,79, Larry Sanders ,,,74,Aaron,Gordon,ORL,
+MIL,78, Jabari Parker ,,,74,Patrick,Patterson,TOR,
+MIL,77, O.J. Mayo,,,74,Carlos,Boozer,FA,
+MIL,75, Khris Middleton ,,,74,Andrea,Bargnani,BKN,
+MIL,75, John Henson ,,,74,Julius,Randle,LAL,-7.5
+MIL,75, Nate Wolters,,,74,Kristaps,Porzingis,NYK,
+MIL,74, Jerryd Bayless,,,73,Thomas,Robinson,BKN,15.3
+MIL,74, Kendall Marshall,,,73,Tyler,Hansbrough,CHA,
+MIL,74, Giannis Antetokounmpo ,,,72,Charlie,Villaneuva,DAL,
+MIL,73, Ersan Ilyasova ,,,72,Jon,Leuer,PHX,
+MIL,70, Carlos Delfino ,,,72,Noah,Vonleh,POR,
+MIL,69, Zaza Pachulia,,,72,Kris,Humphries,WAS,
+MIL,67, Miroslav Raduljica ,,,72,Trey,Lyles,UTA,
+MIL,67, Johnny O'Bryant,,,70,Anthony,Tolliver,DET,11.1
+MIN,81, Nikola Pekovic,,,69,Quincy,Acy,SAC,12.8
+MIN,79, Ricky Rubio,,,69,Perry,Jones,BOS,6.9
+MIN,79, Kevin Martin ,,,87,DeMarcus,Cousins,SAC,25.2
+MIN,78, Thaddeus Young ,,,87,Marc,Gasol,MEM,21.7
+MIN,77, Andrew Wiggins ,,,85,Dwight,Howard,HOU,19.2
+MIN,76, Mo Williams ,,,84,DeAndre,Jordan,LAC,21
+MIN,75, Corey Brewer ,,,83,Brook,Lopez,BKN,22.7
+MIN,74, J.J. Barea ,,,83,Al,Horford,ATL,21.4
+MIN,72, Gorgui Dieng ,,,83,Nikola,Vucevic,ORL,21.5
+MIN,72, Zach LaVine ,,,83,Andre,Drummond,DET,21.4
+MIN,70, Anthony Bennett ,,,83,Al,Jefferson,CHA,19.7
+MIN,70, Chase Budinger,,,81,Hassan,Whiteside,MIA,26.2
+MIN,68, Robbie Hummel ,,,80,Enes,Kanter,OKC,20.3
+MIN,68, Ronny Turiaf ,,,79,Rudy,Gobert,UTA,21.6
+MIN,67, Shabazz Muhammad,,,79,Tyson,Chandler,PHX,20.1
+NO,88, Anthony Davis ,,,79,Joakim,Noah,CHI,15.3
+NO,82, Jrue Holiday,,,78,Jonas,Valanciunas,TOR,20.6
+NO,79, Eric Gordon ,,,78,Marcin,Gortat,WAS,18.2
+NO,78, Tyreke Evans ,,,78,Karl-Anthony,Towns,MIN,
+NO,77, Ryan Anderson ,,,77,Timofey,Mozgov,CLE,16.6
+NO,76, Omer Asik ,,,77,Andrew,Bogut,GSW,15.8
+NO,73, John Salmons ,,,77,Roy,Hibbert,LAL,15.4
+NO,72, Jimmer Fredette ,,,77,Nerlens,Noel,PHI,15
+NO,72, Austin Rivers,,,77,Jahlil,Okafor,PHI,
+NO,69, Russ Smith ,,,76,Brandan,Wright,MEM,20.4
+NO,69, Darius Miller ,,,76,Amare,Stoudemire,MIA,20.3
+NO,69, Jeff Withey ,,,76,Marreese,Speights,GSW,19.5
+NO,68, Alexis Ajinca ,,,76,Tiago,Splitter,ATL,18.9
+NO,66, Luke Babbitt,,,76,Tyler,Zeller,BOS,18.9
+NYK,89, Carmelo Anthony ,,,76,Mason,Plumlee,POR,18
+NYK,78, Jose Calderon ,,,76,Anderson,Varejao,CLE,17.7
+NYK,78, J.R. Smith,,,76,Chris,Kaman,POR,17.3
+NYK,77, Amar'e Stoudemire ,,,76,Nikola,Pekovic,MIN,16.6
+NYK,77, Iman Shumpert ,,,76,Omer,Asik,NOP,15.5
+NYK,77, Tim Hardaway Jr ,,,76,Larry,Sanders,FA,15.2
+NYK,76, Samuel Dalembert ,,,76,Joel,Embiid,PHI,
+NYK,72, Pablo Prigioni ,,,75,Robin,Lopez,NYK,16.2
+NYK,72, Jason Smith ,,,75,Jordan,Hill,IND,16.2
+NYK,72, Andrea Bargnani ,,,74,Alexis,Ajinca,NOP,19.9
+NYK,72, Shane Larkin ,,,74,Andray,Blatche,FA,18.8
+NYK,70, Cleanthony Early ,,,74,John,Henson,MIL,18
+NYK,69, Travis Outlaw ,,,74,Gorgui,Dieng,MIN,17.2
+NYK,67, Quincy Acy ,,,74,Jusuf,Nurkic,DEN,14.8
+NYK,67, Cole Aldrich,,,74,Steven,Adams,OKC,14.1
+OKC,95, Kevin Durant ,,,74,Alex,Len,PHX,13.5
+OKC,88, Russell Westbrook ,,,74,Willie,Cauley-Stein,SAC,
+OKC,84, Serge Ibaka,,,73,Mitch,McGary,OKC,16.6
+OKC,78, Reggie Jackson ,,,73,Zaza,Pachulia,DAL,15.6
+OKC,74, Kendrick Perkins ,,,73,J.J.,Hickson,DEN,14.3
+OKC,74, Nick Collison ,,,73,Samuel,Dalembert,FA,11.8
+OKC,74, Steven Adams ,,,73,Ian,Mahinmi,IND,10.8
+OKC,73, Jeremy Lamb ,,,73,Myles,Turner,IND,
+OKC,73, Anthony Morrow ,,,72,Kyle,O'Quinn,NYK,14.8
+OKC,69, Perry Jones III,,,72,Kevin,Seraphin,NYK,12.5
+OKC,68, Andre Roberson ,,,72,Jason,Smith,ORL,12
+OKC,68, Mitch McGary ,,,,,,,
+OKC,65, Josh Huestis ,,,,,,,
+OKC,65, Hasheem Thabeet,,,,,,,
+ORL,80, Nikola Vucevic,,,,,,,
+ORL,78, Victor Oladipo ,,,,,,,
+ORL,76, Channing Frye ,,,,,,,
+ORL,76, Tobias Harris ,,,,,,,
+ORL,74, Elfrid Payton ,,,,,,,
+ORL,74, Aaron Gordon ,,,,,,,
+ORL,74, Maurice Harkless ,,,,,,,
+ORL,72, Luke Ridnour ,,,,,,,
+ORL,72, Ben Gordon ,,,,,,,
+ORL,72, Evan Fournier ,,,,,,,
+ORL,71, Willie Green ,,,,,,,
+ORL,71, Andrew Nicholson ,,,,,,,
+ORL,70, Kyle O'Quinn ,,,,,,,
+ORL,66, Dewayne Dedmon,,,,,,,
+PHI,80, Michael Carter-Williams,,,,,,,
+PHI,77, Joel Embiid ,,,,,,,
+PHI,76, Nerlens Noel,,,,,,,
+PHI,74, Luc Mbah a Moute,,,,,,,
+PHI,74, Tony Wroten ,,,,,,,
+PHI,73, Jason Richardson ,,,,,,,
+PHI,71, Hollis Thompson,,,,,,,
+PHI,70, Elliot Williams ,,,,,,,
+PHI,70, Alexey Shved ,,,,,,,
+PHI,69, Henry Sims ,,,,,,,
+PHI,68, Arnett Moultrie ,,,,,,,
+PHI,68, Jerami Grant ,,,,,,,
+PHI,67, Jarvis Varnado ,,,,,,,
+PHI,65, Brandon Davies,,,,,,,
+PHO,84, Goran Dragic,,,,,,,
+PHO,81, Eric Bledsoe,,,,,,,
+PHO,80, Isaiah Thomas,,,,,,,
+PHO,78, Markieff Morris ,,,,,,,
+PHO,78, Miles Plumlee ,,,,,,,
+PHO,78, Gerald Green ,,,,,,,
+PHO,76, P.J. Tucker ,,,,,,,
+PHO,75, Marcus Morris ,,,,,,,
+PHO,73, Anthony Tolliver ,,,,,,,
+PHO,72, T.J. Warren ,,,,,,,
+PHO,71, Tyler Ennis ,,,,,,,
+PHO,69, Archie Goodwin ,,,,,,,
+PHO,67, Alex Len ,,,,,,,
+PHO,64, Shavlik Randolph,,,,,,,
+POR,88, LaMarcus Aldridge ,,,,,,,
+POR,87, Damian Lillard ,,,,,,,
+POR,79, Nicolas Batum ,,,,,,,
+POR,78, Wesley Matthews ,,,,,,,
+POR,77, Robin Lopez ,,,,,,,
+POR,76, Chris Kaman ,,,,,,,
+POR,75, Thomas Robinson,,,,,,,
+POR,72, Dorell Wright ,,,,,,,
+POR,72, C.J. McCollum ,,,,,,,
+POR,71, Steve Blake ,,,,,,,
+POR,70, Will Barton ,,,,,,,
+POR,68, Meyers Leonard ,,,,,,,
+POR,68, Joel Freeland ,,,,,,,
+POR,67, Allen Crabbe ,,,,,,,
+POR,66, Victor Claver,,,,,,,
+SAC,86, DeMarcus Cousins ,,,,,,,
+SAC,82, Rudy Gay,,,,,,,
+SAC,79, Darren Collison ,,,,,,,
+SAC,75, Jason Thompson ,,,,,,,
+SAC,75, Carl Landry ,,,,,,,
+SAC,74, Nik Stauskas,,,,,,,
+SAC,74, Ray McCallum ,,,,,,,
+SAC,74, Ben McLemore,,,,,,,
+SAC,74, Jason Terry ,,,,,,,
+SAC,74, Reggie Evans ,,,,,,,
+SAC,71, Derrick Williams ,,,,,,,
+SAC,71, Wayne Ellington ,,,,,,,
+SAC,67, Jeremy Tyler,,,,,,,
+SAS,90, Tim Duncan ,,,,,,,
+SAS,88, Tony Parker ,,,,,,,
+SAS,85, Kawhi Leonard ,,,,,,,
+SAS,83, Manu Ginobili,,,,,,,
+SAS,78, Danny Green,,,,,,,
+SAS,78, Boris Diaw ,,,,,,,
+SAS,77, Tiago Splitter ,,,,,,,
+SAS,77, Patrick Mills ,,,,,,,
+SAS,75, Marco Belinelli,,,,,,,
+SAS,73, Matt Bonner ,,,,,,,
+SAS,73, Cory Joseph ,,,,,,,
+SAS,67, Jeff Ayres,,,,,,,
+SAS,67, Austin Daye ,,,,,,,
+SAS,67, Kyle Anderson,,,,,,,
+TOR,85, Kyle Lowry,,,,,,,
+TOR,85, DeMar DeRozan,,,,,,,
+TOR,78, Jonas Valanciunas ,,,,,,,
+TOR,77, Amir Johnson ,,,,,,,
+TOR,77, Louis Williams ,,,,,,,
+TOR,76, Terrence Ross ,,,,,,,
+TOR,76, Greivis Vasquez ,,,,,,,
+TOR,75, Patrick Patterson ,,,,,,,
+TOR,73, Tyler Hansbrough ,,,,,,,
+TOR,70, James Johnson ,,,,,,,
+TOR,69, Chuck Hayes ,,,,,,,
+TOR,69, Landry Fields ,,,,,,,
+TOR,64, Bruno Caboclo,,,,,,,
+UTH,79, Gordon Hayward,,,,,,,
+UTH,78, Derrick Favors ,,,,,,,
+UTH,76, Alec Burks ,,,,,,,
+UTH,75, Trey Burke ,,,,,,,
+UTH,75, Enes Kanter ,,,,,,,
+UTH,74, Dante Exum ,,,,,,,
+UTH,74, Trevor Booker ,,,,,,,
+UTH,72, Steve Novak ,,,,,,,
+UTH,71, Rodney Hood ,,,,,,,
+UTH,71, Rudy Gobert ,,,,,,,
+UTH,70, Jeremy Evans ,,,,,,,
+UTH,68, Carrick Felix ,,,,,,,
+UTH,67, Ian Clark,,,,,,,
+WAS,86, John Wall,,,,,,,
+WAS,81, Bradley Beal,,,,,,,
+WAS,81, Paul Pierce,,,,,,,
+WAS,81, Marcin Gortat,,,,,,,
+WAS,80, Nene,,,,,,,
+WAS,76, Andre Miller ,,,,,,,
+WAS,74, Kevin Seraphin ,,,,,,,
+WAS,73, Kris Humphries ,,,,,,,
+WAS,73, Martell Webster ,,,,,,,
+WAS,71, DeJuan Blair ,,,,,,,
+WAS,70, Drew Gooden ,,,,,,,
+WAS,69, Glen Rice Jr ,,,,,,,
+WAS,68, Garrett Temple ,,,,,,,
+WAS,68, Otto Porter,,,,,,,
