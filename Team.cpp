@@ -126,11 +126,35 @@ void Team::aftergame(char WoL) {
             break;
     }
     //REQUIRE THAT ALL OF THE PLAYERS ARE PASSED BY REFERENCE
-    int i;
-    int Starterminadded=
+    int i,j;
+	//mins added to starters playing time
+    int StarterMinAdded=25;
+	//mins added to backup playing time
+    int backupMinAdded=23;
+	//keep track of player names so they arent updated twice
+	string playersupdated[5];
+	//buffer for searching
+	string holdName;
+	bool YN;
+
+	//updates the starters mins played and creates array with starter names
     for (i=0; i<5; i++){
-        starters[i].addMinPl(50);
+        starters[i].addMinPl(StarterMinAdded);
+		playersupdated[i]=starters[i].getName();
     }
+	//updates the mins played of non starters by searching for starters and filtering them out of the update
+	for (i=0;i<10;i++){
+		holdName=roster[i].getName();
+		YN=false;
+		for (j=0;j<5;j++){
+			if (holdName==playersupdated[i]){
+				YN=true;
+			}
+		}
+		if (!YN){
+			roster[i].addMinPl(backupMinAdded);
+		}
+	}
 
 }
 

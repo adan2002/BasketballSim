@@ -6,8 +6,12 @@
 #define BASKETBALLSIM_PLAYER_H
 
 
+#include <string>
+using namespace std;
+
 class Player {
 private:
+    string name;
     int age;
     int position; //1-PG,2-SG,3-SF,4-PF,5-C
 	int rank; // 1 = starter, 2 = backup
@@ -18,7 +22,7 @@ private:
     int gamesWithInjleft; //games played with injury
 public:
     Player();
-    Player(int yo, int pos, int PofI, int rtng, bool inj, int GWIL);
+    Player(string namein, int yo, int pos, int PofI, int rtng, bool inj, int GWIL);
     ~Player();
     //set age
     void setAge(int age);
@@ -49,7 +53,10 @@ public:
     int getGamesOut();
     //decrease games with injury left
     void decGamesOut();
-
+    //sets player name
+    void setName(string inName);
+    //returns name of player
+    string getName();
 };
 
 
