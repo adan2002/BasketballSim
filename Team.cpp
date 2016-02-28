@@ -92,3 +92,22 @@ void Team::setpig()
 {
 
 }
+
+void Team::changeLstreak() {
+    if (lstreak){
+        lstreak=false;
+    }
+    else {lstreak=true;}
+}
+
+void Team::changeWstreak() {
+    if (wstreak){
+        wstreak=false;
+    }
+    else {wstreak=true;}
+}
+
+void Team::setName(string namein) {
+    name=namein;
+}
+

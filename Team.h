@@ -41,7 +41,7 @@ public:
 	//set pig
 	void setpig();
 
-	void setName(string name);
+	void setName(string namein);
 
 	void enumerate(int num);
 
