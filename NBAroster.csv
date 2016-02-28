@@ -1,0 +1,441 @@
+,NO.,FirstName,LastName,POS,AGE,HT,WT,COLLEGE,2015-2016 SALARY,Team
+1,24,Kent,Bazemore,SF,26,5-Jun,201,Old Dominion,"$2,000,000 ",ATL
+2,10,Tim,Hardaway Jr.,SG,23,6-Jun,205,Michigan,"$1,304,520 ",ATL
+3,12,Kirk,Hinrich,SG,35,4-Jun,190,Kansas,"$2,854,940 ",ATL
+4,15,Al,Horford,C,29,10-Jun,245,Florida,"$12,000,000 ",ATL
+5,26,Kyle,Korver,SG,34,7-Jun,212,Creighton,"$5,746,479 ",ATL
+6,4,Paul,Millsap,PF,31,8-Jun,246,Louisiana Tech,"$18,671,659 ",ATL
+7,31,Mike,Muscala,PF,24,11-Jun,240,Bucknell,"$947,276 ",ATL
+8,13,Lamar,Patterson,SG,24,5-Jun,225,Pittsburgh,"$525,093 ",ATL
+9,17,Dennis,Schroder,PG,22,1-Jun,172, ,"$1,763,400 ",ATL
+10,32,Mike,Scott,PF,27,8-Jun,237,Virginia,"$3,333,333 ",ATL
+11,25,Thabo,Sefolosha,SF,31,7-Jun,220, ,"$4,000,000 ",ATL
+12,11,Tiago,Splitter,C,31,11-Jun,245, ,"$9,756,250 ",ATL
+13,22,Walter,Tavares,C,23,3-Jul,260, ,"$1,000,000 ",ATL
+14,0,Jeff,Teague,PG,27,2-Jun,186,Wake Forest,"$8,000,000 ",ATL
+15,0,Avery,Bradley,PG,25,2-Jun,180,Texas,"$7,730,337 ",BOS
+16,99,Jae,Crowder,SF,25,6-Jun,235,Marquette,"$6,796,117 ",BOS
+17,28,R.J.,Hunter,SG,22,5-Jun,185,Georgia State,"$1,148,640 ",BOS
+18,8,Jonas,Jerebko,PF,28,10-Jun,231, ,"$5,000,000 ",BOS
+19,90,Amir,Johnson,PF,28,9-Jun,240, ,"$12,000,000 ",BOS
+20,55,Jordan,Mickey,PF,21,8-Jun,235,LSU,"$1,170,960 ",BOS
+21,41,Kelly,Olynyk,C,24,Jul-00,238,Gonzaga,"$2,165,160 ",BOS
+22,12,Terry,Rozier,PG,21,2-Jun,190,Louisville,"$1,824,360 ",BOS
+23,36,Marcus,Smart,PG,21,4-Jun,220,Oklahoma State,"$3,431,040 ",BOS
+24,7,Jared,Sullinger,C,23,9-Jun,260,Ohio State,"$2,569,260 ",BOS
+25,4,Isaiah,Thomas,PG,27,9-May,185,Washington,"$6,912,869 ",BOS
+26,11,Evan,Turner,SG,27,7-Jun,220,Ohio State,"$3,425,510 ",BOS
+27,13,James,Young,SG,20,6-Jun,215,Kentucky,"$1,749,840 ",BOS
+28,44,Tyler,Zeller,C,26,Jul-00,253,North Carolina,"$2,616,975 ",BOS
+29,44,Bojan,Bogdanovic,SG,26,8-Jun,216, ,"$3,425,510 ",BKN
+30,22,Markel,Brown,SG,24,3-Jun,190,Oklahoma State,"$845,059 ",BKN
+31,21,Wayne,Ellington,SG,28,4-Jun,200,North Carolina,"$1,500,000 ",BKN
+32,24,Rondae,Hollis-Jefferson,SG,21,7-Jun,220,Arizona,"$1,335,480 ",BKN
+33,2,Jarrett,Jack,PG,32,3-Jun,200,Georgia Tech,"$6,300,000 ",BKN
+34,10,Sergey,Karasev,SG,22,7-Jun,208, ,"$1,599,840 ",BKN
+35,0,Shane,Larkin,PG,23,11-May,175,Miami (FL),"$1,500,000 ",BKN
+36,11,Brook,Lopez,C,27,Jul-00,275,Stanford,"$19,689,000 ",BKN
+37,1,Chris,McCullough,PF,21,11-Jun,200,Syracuse,"$1,140,240 ",BKN
+38,33,Willie,Reed,PF,25,10-Jun,220,Saint Louis,"$947,276 ",BKN
+39,41,Thomas,Robinson,PF,24,10-Jun,237,Kansas,"$981,348 ",BKN
+40,15,Donald,Sloan,PG,28,3-Jun,205,Texas A&M,"$947,276 ",BKN
+41,30,Thaddeus,Young,PF,27,8-Jun,221,Georgia Tech,"$11,235,955 ",BKN
+42,5,Nicolas,Batum,SG,27,8-Jun,200, ,"$13,125,306 ",CHA
+43,30,Troy,Daniels,SG,24,4-Jun,205,Virginia Commonwealth,"$947,276 ",CHA
+44,12,Jorge,Gutierrez,PG,27,3-Jun,189,California,"$947,276 ",CHA
+45,50,Tyler,Hansbrough,PF,30,9-Jun,250,North Carolina,"$947,276 ",CHA
+46,9,Aaron,Harrison,SG,21,6-Jun,210,Kentucky,"$525,093 ",CHA
+47,0,Spencer,Hawes,PF,27,1-Jul,245,Washington,"$6,110,034 ",CHA
+48,25,Al,Jefferson,C,31,10-Jun,289, ,"$13,500,000 ",CHA
+49,44,Frank,Kaminsky,C,22,Jul-00,240,Wisconsin,"$2,612,520 ",CHA
+50,14,Michael,Kidd-Gilchrist,SF,22,7-Jun,232,Kentucky,"$6,331,404 ",CHA
+51,3,Jeremy,Lamb,SG,23,5-Jun,185,Connecticut,"$3,034,356 ",CHA
+52,1,Courtney,Lee,SG,30,5-Jun,200,Western Kentucky,"$5,675,000 ",CHA
+53,7,Jeremy,Lin,PG,27,3-Jun,200,Harvard,"$2,139,000 ",CHA
+54,15,Kemba,Walker,PG,25,1-Jun,184,Connecticut,"$12,000,000 ",CHA
+55,2,Marvin,Williams,PF,29,9-Jun,237,North Carolina,"$7,000,000 ",CHA
+56,40,Cody,Zeller,C,23,Jul-00,240,Indiana,"$4,204,200 ",CHA
+57,41,Cameron,Bairstow,PF,25,9-Jun,250,New Mexico,"$845,059 ",CHI
+58,0,Aaron,Brooks,PG,31,Jun-00,161,Oregon,"$2,250,000 ",CHI
+59,21,Jimmy,Butler,SG,26,7-Jun,220,Marquette,"$16,407,500 ",CHI
+60,34,Mike,Dunleavy,SG,35,9-Jun,230,Duke,"$4,500,000 ",CHI
+61,6,Cristiano,Felicio,PF,23,10-Jun,275, ,"$525,093 ",CHI
+62,16,Pau,Gasol,C,35,Jul-00,250, ,"$7,448,760 ",CHI
+63,22,Taj,Gibson,PF,30,9-Jun,225,USC,"$8,500,000 ",CHI
+64,7,Justin,Holiday,SG,26,6-Jun,185,Washington,"$947,276 ",CHI
+65,3,Doug,McDermott,SF,24,8-Jun,225,Creighton,"$2,380,440 ",CHI
+66,44,Nikola,Mirotic,PF,25,10-Jun,220, ,"$5,543,725 ",CHI
+67,55,E'Twaun,Moore,SG,27,4-Jun,191,Purdue,"$1,015,421 ",CHI
+68,13,Joakim,Noah,C,31,11-Jun,232,Florida,"$13,400,000 ",CHI
+69,5,Bobby,Portis,PF,21,11-Jun,230,Arkansas,"$1,391,160 ",CHI
+70,1,Derrick,Rose,PG,27,3-Jun,190,Memphis,"$20,093,064 ",CHI
+71,20,Tony,Snell,SF,24,7-Jun,200,New Mexico,"$1,535,880 ",CHI
+72,8,Matthew,Dellavedova,PG,25,4-Jun,198,Saint Mary's,"$1,147,276 ",CLE
+73,9,Channing,Frye,PF,32,11-Jun,255,Arizona,"$8,193,029 ",CLE
+74,2,Kyrie,Irving,PG,23,3-Jun,193,Duke,"$16,407,501 ",CLE
+75,23,LeBron,James,SF,31,8-Jun,250, ,"$22,970,500 ",CLE
+76,24,Richard,Jefferson,SF,35,7-Jun,233,Arizona,"$947,276 ",CLE
+77,1,James,Jones,SG,35,8-Jun,218,Miami (FL),"$947,276 ",CLE
+78,14,Sasha,Kaun,C,30,11-Jun,260,Kansas,"$1,276,000 ",CLE
+79,0,Kevin,Love,PF,27,10-Jun,251,UCLA,"$19,689,000 ",CLE
+80,20,Timofey,Mozgov,C,29,1-Jul,275, ,"$4,950,000 ",CLE
+81,4,Iman,Shumpert,SG,25,5-Jun,220,Georgia Tech,"$8,988,765 ",CLE
+82,5,J.R.,Smith,SG,30,6-Jun,225, ,"$5,000,000 ",CLE
+83,13,Tristan,Thompson,C,24,9-Jun,238,Texas,"$14,260,870 ",CLE
+84,52,Mo,Williams,PG,33,1-Jun,198,Alabama,"$2,100,000 ",CLE
+85,1,Justin,Anderson,SG,22,6-Jun,228,Virginia,"$1,449,000 ",DAL
+86,5,J.J.,Barea,PG,31,Jun-00,185,Northeastern,"$4,290,000 ",DAL
+87,21,Jeremy,Evans,SF,28,9-Jun,200,Western Kentucky,"$1,100,602 ",DAL
+88,2,Raymond,Felton,PG,31,1-Jun,205,North Carolina,"$3,950,313 ",DAL
+89,34,Devin,Harris,PG,33,3-Jun,185,Wisconsin,"$4,053,446 ",DAL
+90,42,David,Lee,PF,32,9-Jun,245,Florida,"$15,493,680 ",DAL
+91,23,Wesley,Matthews,SG,29,5-Jun,220,Marquette,"$16,407,500 ",DAL
+92,11,JaVale,McGee,C,28,Jul-00,270,Nevada,"$1,270,964 ",DAL
+93,50,Salah,Mejri,C,29,2-Jul,245, ,"$525,093 ",DAL
+94,41,Dirk,Nowitzki,PF,37,Jul-00,245, ,"$8,333,334 ",DAL
+95,27,Zaza,Pachulia,C,32,11-Jun,275, ,"$5,200,000 ",DAL
+96,25,Chandler,Parsons,SF,27,10-Jun,230,Florida,"$15,361,500 ",DAL
+97,7,Dwight,Powell,PF,24,11-Jun,240,Stanford,"$845,059 ",DAL
+98,3,Charlie,Villanueva,PF,31,11-Jun,232,Connecticut,"$947,276 ",DAL
+99,8,Deron,Williams,PG,31,3-Jun,200,Illinois,"$5,378,974 ",DAL
+100,0,Darrell,Arthur,PF,27,9-Jun,235,Kansas,"$2,814,000 ",DEN
+101,12,D.J.,Augustin,PG,28,Jun-00,183,Texas,"$3,000,000 ",DEN
+102,5,Will,Barton,SF,25,6-Jun,175,Memphis,"$3,533,333 ",DEN
+103,21,Wilson,Chandler,SF,28,8-Jun,225,DePaul,"$10,449,438 ",DEN
+104,35,Kenneth,Faried,PF,26,8-Jun,228,Morehead State,"$11,235,955 ",DEN
+105,8,Danilo,Gallinari,SF,27,10-Jun,225, ,"$14,000,000 ",DEN
+106,14,Gary,Harris,SG,21,4-Jun,210,Michigan State,"$1,584,480 ",DEN
+107,15,Nikola,Jokic,C,21,10-Jun,250, ,"$1,300,000 ",DEN
+108,77,Joffrey,Lauvergne,C,24,11-Jun,220, ,"$1,709,719 ",DEN
+109,3,Mike,Miller,SG,36,8-Jun,218,Florida,"$947,276 ",DEN
+110,0,Emmanuel,Mudiay,PG,19,5-Jun,200, ,"$3,102,240 ",DEN
+111,1,Jameer,Nelson,PG,34,Jun-00,190,Saint Joseph's,"$4,345,000 ",DEN
+112,23,Jusuf,Nurkic,C,21,Jul-00,280, ,"$1,842,000 ",DEN
+113,9,JaKarr,Sampson,SG,22,9-Jun,214,St. John's,"$258,489 ",DEN
+114,50,Joel,Anthony,C,33,9-Jun,245,UNLV,"$2,500,000 ",DET
+115,12,Aron,Baynes,C,29,10-Jun,260,Washington State,"$6,500,000 ",DET
+116,22,Steve,Blake,PG,36,3-Jun,172,Maryland,"$2,170,465 ",DET
+117,25,Reggie,Bullock,SF,24,7-Jun,205,North Carolina,"$1,252,440 ",DET
+118,5,Kentavious,Caldwell-Pope,SG,23,5-Jun,205,Georgia,"$2,891,760 ",DET
+119,8,Spencer,Dinwiddie,PG,22,6-Jun,200,Colorado,"$845,059 ",DET
+120,0,Andre,Drummond,C,22,11-Jun,279,Connecticut,"$3,272,091 ",DET
+121,99,Justin,Harper,PF,26,10-Jun,225,Richmond, ,DET
+122,34,Tobias,Harris,SF,23,9-Jun,235,Tennessee,"$16,000,000 ",DET
+123,6,Darrun,Hilliard,SF,22,6-Jun,205,Villanova,"$600,000 ",DET
+124,1,Reggie,Jackson,PG,25,3-Jun,208,Boston College,"$13,913,044 ",DET
+125,3,Stanley,Johnson,SF,19,7-Jun,245,Arizona,"$2,841,960 ",DET
+126,20,Jodie,Meeks,SG,28,4-Jun,210,Kentucky,"$6,270,000 ",DET
+127,13,Marcus,Morris,PF,26,9-Jun,235,Kansas,"$5,000,000 ",DET
+128,43,Anthony,Tolliver,PF,30,8-Jun,240,Creighton,"$3,000,000 ",DET
+129,19,Leandro,Barbosa,SG,33,3-Jun,194, ,"$2,500,000 ",GSW
+130,40,Harrison,Barnes,SF,23,8-Jun,225,North Carolina,"$3,873,398 ",GSW
+131,12,Andrew,Bogut,C,31,Jul-00,260,Utah,"$13,800,000 ",GSW
+132,21,Ian,Clark,SG,24,3-Jun,175,Belmont,"$947,276 ",GSW
+133,30,Stephen,Curry,PG,27,3-Jun,190,Davidson,"$11,370,786 ",GSW
+134,31,Festus,Ezeli,C,26,11-Jun,265,Vanderbilt,"$2,008,748 ",GSW
+135,23,Draymond,Green,PF,25,7-Jun,230,Michigan State,"$14,260,870 ",GSW
+136,9,Andre,Iguodala,SF,32,6-Jun,215,Arizona,"$11,710,456 ",GSW
+137,34,Shaun,Livingston,PG,30,7-Jun,192, ,"$5,543,725 ",GSW
+138,36,Kevon,Looney,SF,20,9-Jun,220,UCLA,"$1,131,960 ",GSW
+139,20,James,McAdoo,SF,23,9-Jun,240,North Carolina,"$845,059 ",GSW
+140,4,Brandon,Rush,SF,30,6-Jun,220,Kansas,"$1,270,964 ",GSW
+141,5,Marreese,Speights,C,28,10-Jun,255,Florida,"$3,815,000 ",GSW
+142,11,Klay,Thompson,SG,26,7-Jun,215,Washington State,"$15,501,000 ",GSW
+143,18,Anderson,Varejao,PF,33,11-Jun,273, ,"$289,755 ",GSW
+144,1,Trevor,Ariza,SF,30,8-Jun,215,UCLA,"$8,193,030 ",HOU
+145,2,Patrick,Beverley,PG,27,1-Jun,185,Arkansas,"$6,486,486 ",HOU
+146,33,Corey,Brewer,SG,29,9-Jun,186,Florida,"$8,229,375 ",HOU
+147,15,Clint,Capela,PF,21,10-Jun,240, ,"$1,242,720 ",HOU
+148,7,Sam,Dekker,SF,21,9-Jun,230,Wisconsin,"$1,646,400 ",HOU
+149,13,James,Harden,SG,26,5-Jun,220,Arizona State,"$15,756,438 ",HOU
+150,35,Montrezl,Harrell,PF,22,8-Jun,240,Louisville,"$1,000,000 ",HOU
+151,12,Dwight,Howard,C,30,11-Jun,265, ,"$22,359,364 ",HOU
+152,6,Terrence,Jones,PF,24,9-Jun,252,Kentucky,"$2,489,530 ",HOU
+153,3,Ty,Lawson,PG,28,11-May,195,North Carolina,"$12,404,495 ",HOU
+154,32,K.J.,McDaniels,SG,23,6-Jun,205,Clemson,"$3,189,794 ",HOU
+155,20,Donatas,Motiejunas,PF,25,Jul-00,222, ,"$2,288,205 ",HOU
+156,5,Josh,Smith,C,30,9-Jun,225, ,"$947,276 ",HOU
+157,31,Jason,Terry,SG,38,2-Jun,185,Arizona,"$947,276 ",HOU
+158,10,Marcus,Thornton,SF,28,4-Jun,205,LSU,"$947,276 ",HOU
+159,5,Lavoy,Allen,PF,27,9-Jun,255,Temple,"$4,050,000 ",IND
+160,10,Chase,Budinger,SF,27,7-Jun,209,Arizona,"$5,000,000 ",IND
+161,25,Rakeem,Christmas,PF,24,9-Jun,250,Syracuse,"$1,007,026 ",IND
+162,11,Monta,Ellis,SG,30,3-Jun,185, ,"$10,300,000 ",IND
+163,13,Paul,George,SF,25,9-Jun,220,Fresno State,"$17,120,106 ",IND
+164,3,George,Hill,PG,29,3-Jun,188,IUPUI,"$8,000,000 ",IND
+165,27,Jordan,Hill,C,28,10-Jun,235,Arizona,"$4,000,000 ",IND
+166,44,Solomon,Hill,SF,24,7-Jun,225,Arizona,"$1,358,880 ",IND
+167,28,Ian,Mahinmi,C,29,11-Jun,250, ,"$4,000,000 ",IND
+168,0,C.J.,Miles,SF,28,6-Jun,231, ,"$4,394,225 ",IND
+169,40,Glenn,Robinson,SG,22,7-Jun,222,Michigan,"$1,100,000 ",IND
+170,2,Rodney,Stuckey,PG,29,5-Jun,205,Eastern Washington,"$7,000,000 ",IND
+171,33,Myles,Turner,PF,19,11-Jun,243,Texas,"$2,357,760 ",IND
+172,42,Shayne,Whittington,PF,24,11-Jun,250,Western Michigan,"$845,059 ",IND
+173,1,Joe,Young,PG,23,2-Jun,180,Oregon,"$1,007,026 ",IND
+174,45,Cole,Aldrich,C,27,11-Jun,250,Kansas,"$1,100,602 ",LAC
+175,19,Jeff,Ayres,PF,28,9-Jun,250,Arizona State,"$111,444 ",LAC
+176,11,Jamal,Crawford,SG,35,5-Jun,195,Michigan,"$5,675,000 ",LAC
+177,22,Branden,Dawson,SF,23,6-Jun,225,Michigan State,"$525,093 ",LAC
+178,8,Jeff,Green,SF,29,9-Jun,235,Georgetown,"$9,450,000 ",LAC
+179,32,Blake,Griffin,PF,26,10-Jun,251,Oklahoma,"$18,907,726 ",LAC
+180,33,Wesley,Johnson,SF,28,7-Jun,215,Syracuse,"$1,100,602 ",LAC
+181,6,DeAndre,Jordan,C,27,11-Jun,265,Texas A&M,"$19,689,000 ",LAC
+182,12,Luc,Mbah a Moute,PF,29,8-Jun,230,UCLA,"$947,276 ",LAC
+183,3,Chris,Paul,PG,30,Jun-00,175,Wake Forest,"$21,468,695 ",LAC
+184,34,Paul,Pierce,SF,38,7-Jun,235,Kansas,"$3,376,000 ",LAC
+185,9,Pablo,Prigioni,PG,38,3-Jun,185, ,"$947,726 ",LAC
+186,4,J.J.,Redick,SG,31,4-Jun,190,Duke,"$7,085,000 ",LAC
+187,25,Austin,Rivers,PG,23,4-Jun,200,Duke,"$3,110,796 ",LAC
+188,35,Alex,Stepheson,PF,28,10-Jun,270,USC, ,LAC
+189,30,C.J.,Wilcox,SG,25,5-Jun,195,Washington,"$1,159,680 ",LAC
+190,2,Brandon,Bass,PF,30,8-Jun,250,LSU,"$3,000,000 ",LAL
+191,28,Tarik,Black,C,24,9-Jun,250,Kansas,"$845,059 ",LAL
+192,3,Anthony,Brown,SF,23,7-Jun,210,Stanford,"$700,000 ",LAL
+193,24,Kobe,Bryant,SF,37,6-Jun,212, ,"$25,000,000 ",LAL
+194,6,Jordan,Clarkson,PG,23,5-Jun,194,Missouri,"$845,059 ",LAL
+195,17,Roy,Hibbert,C,29,2-Jul,270,Georgetown,"$15,592,217 ",LAL
+196,9,Marcelo,Huertas,PG,32,3-Jun,200, ,"$525,093 ",LAL
+197,4,Ryan,Kelly,PF,24,11-Jun,230,Duke,"$1,724,250 ",LAL
+198,7,Larry,Nance Jr.,PF,23,9-Jun,230,Wyoming,"$1,155,600 ",LAL
+199,30,Julius,Randle,PF,21,9-Jun,250,Kentucky,"$3,132,240 ",LAL
+200,1,D'Angelo,Russell,PG,20,5-Jun,195,Ohio State,"$5,103,120 ",LAL
+201,50,Robert,Sacre,C,26,Jul-00,270,Gonzaga,"$981,348 ",LAL
+202,23,Louis,Williams,SG,29,1-Jun,175, ,"$7,000,000 ",LAL
+203,37,Metta,World Peace,SF,36,7-Jun,260,St. John's,"$947,276 ",LAL
+204,0,Nick,Young,SF,30,7-Jun,210,USC,"$5,219,169 ",LAL
+205,3,Jordan,Adams,SG,21,5-Jun,209,UCLA,"$1,404,600 ",MEM
+206,9,Tony,Allen,SG,34,4-Jun,213,Oklahoma State,"$5,158,539 ",MEM
+207,7,Chris,Andersen,PF,37,10-Jun,245,Blinn College,"$5,000,000 ",MEM
+208,22,Matt,Barnes,SF,35,7-Jun,226,UCLA,"$3,542,500 ",MEM
+209,15,Vince,Carter,SG,39,6-Jun,220,North Carolina,"$4,088,019 ",MEM
+210,6,Mario,Chalmers,PG,29,2-Jun,190,Kansas,"$4,300,000 ",MEM
+211,11,Mike,Conley,PG,28,1-Jun,175,Ohio State,"$9,588,426 ",MEM
+212,8,James,Ennis,SF,25,7-Jun,210,Long Beach State,"$845,059 ",MEM
+213,33,Marc,Gasol,C,31,1-Jul,255, ,"$19,688,000 ",MEM
+214,0,JaMychal,Green,PF,25,9-Jun,227,Alabama,"$845,059 ",MEM
+215,19,P.J.,Hairston,SF,23,6-Jun,230,North Carolina,"$1,201,440 ",MEM
+216,10,Jarell,Martin,PF,21,10-Jun,239,LSU,"$1,230,840 ",MEM
+217,50,Zach,Randolph,PF,34,9-Jun,260,Michigan State,"$9,638,555 ",MEM
+218,1,Lance,Stephenson,SF,25,5-Jun,230,Cincinnati,"$9,000,000 ",MEM
+219,34,Brandan,Wright,PF,28,10-Jun,210,North Carolina,"$5,464,000 ",MEM
+220,1,Chris,Bosh,PF,31,11-Jun,235,Georgia Tech,"$22,192,730 ",MIA
+221,9,Luol,Deng,SF,30,9-Jun,220,Duke,"$10,151,612 ",MIA
+222,7,Goran,Dragic,PG,29,3-Jun,190, ,"$14,783,000 ",MIA
+223,14,Gerald,Green,SF,30,7-Jun,205, ,"$947,276 ",MIA
+224,40,Udonis,Haslem,PF,35,8-Jun,235,Florida,"$2,854,940 ",MIA
+225,--,Joe,Johnson,SF,34,7-Jun,240,Arkansas,"$24,894,863 ",MIA
+226,8,Tyler,Johnson,SG,23,4-Jun,186,Fresno State,"$845,059 ",MIA
+227,4,Josh,McRoberts,PF,28,10-Jun,240,Duke,"$5,543,725 ",MIA
+228,0,Josh,Richardson,SG,22,6-Jun,200,Tennessee,"$525,093 ",MIA
+229,5,Amar'e,Stoudemire,PF,33,10-Jun,245, ,"$947,276 ",MIA
+230,19,Beno,Udrih,PG,33,3-Jun,205, ,"$2,170,465 ",MIA
+231,3,Dwyane,Wade,SG,34,4-Jun,220,Marquette,"$20,000,000 ",MIA
+232,21,Hassan,Whiteside,C,26,Jul-00,265,Marshall,"$981,348 ",MIA
+233,20,Justise,Winslow,SF,19,7-Jun,225,Duke,"$2,481,720 ",MIA
+234,34,Giannis,Antetokounmpo,SF,21,11-Jun,222, ,"$1,953,960 ",MIL
+235,19,Jerryd,Bayless,PG,27,3-Jun,200,Arizona,"$3,000,000 ",MIL
+236,5,Michael,Carter-Williams,PG,24,6-Jun,190,Syracuse,"$2,399,040 ",MIL
+237,11,Tyler,Ennis,PG,21,3-Jun,194,Syracuse,"$1,662,360 ",MIL
+238,31,John,Henson,PF,25,11-Jun,229,North Carolina,"$2,943,221 ",MIL
+239,17,Damien,Inglis,SF,20,8-Jun,246, ,"$855,000 ",MIL
+240,3,O.J.,Mayo,SG,28,5-Jun,210,USC,"$8,000,000 ",MIL
+241,22,Khris,Middleton,SG,24,8-Jun,234,Texas A&M,"$14,700,000 ",MIL
+242,15,Greg,Monroe,C,25,11-Jun,265,Georgetown,"$16,407,500 ",MIL
+243,6,Steve,Novak,SF,32,10-Jun,225,Marquette,"$289,755 ",MIL
+244,77,Johnny,O'Bryant III,PF,22,9-Jun,257,LSU,"$845,059 ",MIL
+245,12,Jabari,Parker,PF,20,8-Jun,250,Duke,"$5,152,440 ",MIL
+246,18,Miles,Plumlee,C,27,11-Jun,249,Duke,"$2,109,294 ",MIL
+247,21,Greivis,Vasquez,PG,29,6-Jun,217,Maryland,"$6,600,000 ",MIL
+248,20,Rashad,Vaughn,SG,19,6-Jun,202,UNLV,"$1,733,040 ",MIL
+249,88,Nemanja,Bjelica,PF,27,10-Jun,240, ,"$3,950,001 ",MIN
+250,5,Gorgui,Dieng,C,26,11-Jun,241,Louisville,"$1,474,440 ",MIN
+251,21,Kevin,Garnett,PF,39,11-Jun,240, ,"$8,500,000 ",MIN
+252,1,Tyus,Jones,PG,19,2-Jun,195,Duke,"$1,282,080 ",MIN
+253,8,Zach,LaVine,PG,20,5-Jun,189,UCLA,"$2,148,360 ",MIN
+254,23,Kevin,Martin,SG,33,7-Jun,199,Western Carolina,"$7,085,000 ",MIN
+255,15,Shabazz,Muhammad,SF,23,6-Jun,223,UCLA,"$2,056,920 ",MIN
+256,33,Adreian,Payne,PF,25,10-Jun,237,Michigan State,"$1,938,840 ",MIN
+257,14,Nikola,Pekovic,C,30,11-Jun,307, ,"$12,100,000 ",MIN
+258,12,Tayshaun,Prince,SF,36,9-Jun,212,Kentucky,"$947,276 ",MIN
+259,9,Ricky,Rubio,PG,25,4-Jun,194, ,"$12,700,000 ",MIN
+260,10,Damjan,Rudez,SF,29,9-Jun,230, ,"$1,149,500 ",MIN
+261,32,Karl-Anthony,Towns,C,20,Jul-00,244,Kentucky,"$5,703,600 ",MIN
+262,22,Andrew,Wiggins,SG,21,8-Jun,199,Kansas,"$5,758,680 ",MIN
+263,42,Alexis,Ajinca,C,27,2-Jul,248, ,"$4,389,607 ",NO
+264,33,Ryan,Anderson,PF,27,10-Jun,240,California,"$8,500,000 ",NO
+265,3,Omer,Asik,C,29,Jul-00,255, ,"$9,213,483 ",NO
+266,8,Luke,Babbitt,SF,26,9-Jun,225,Nevada,"$1,100,602 ",NO
+267,30,Norris,Cole,PG,27,2-Jun,175,Cleveland State,"$3,036,927 ",NO
+268,44,Dante,Cunningham,PF,28,8-Jun,230,Villanova,"$2,850,000 ",NO
+269,23,Anthony,Davis,PF,22,10-Jun,253,Kentucky,"$7,070,730 ",NO
+270,31,Bryce,Dejean-Jones,SG,23,6-Jun,203,Iowa State,"$169,883 ",NO
+271,16,Toney,Douglas,PG,29,2-Jun,195,Florida State,"$1,164,858 ",NO
+272,1,Tyreke,Evans,SG,26,6-Jun,220,Memphis,"$10,734,586 ",NO
+273,15,Alonzo,Gee,SF,28,6-Jun,225,Alabama,"$1,320,000 ",NO
+274,10,Eric,Gordon,SG,27,4-Jun,215,Indiana,"$15,514,031 ",NO
+275,11,Jrue,Holiday,PG,25,4-Jun,205,UCLA,"$10,595,507 ",NO
+276,5,Kendrick,Perkins,C,31,10-Jun,270, ,"$947,276 ",NO
+277,20,Quincy,Pondexter,SF,27,7-Jun,220,Washington,"$3,382,023 ",NO
+278,4,Arron,Afflalo,SG,30,5-Jun,210,UCLA,"$8,000,000 ",NYK
+279,17,Lou,Amundson,PF,33,9-Jun,220,UNLV,"$1,635,476 ",NYK
+280,7,Carmelo,Anthony,SF,31,8-Jun,240,Syracuse,"$22,875,000 ",NYK
+281,3,Jose,Calderon,PG,34,3-Jun,200, ,"$7,402,812 ",NYK
+282,11,Cleanthony,Early,SF,24,8-Jun,210,Wichita State,"$845,059 ",NYK
+283,32,Jimmer,Fredette,PG,27,2-Jun,195,BYU,"$874,837 ",NYK
+284,2,Langston,Galloway,SG,24,2-Jun,200,Saint Joseph's,"$845,059 ",NYK
+285,13,Jerian,Grant,PG,23,4-Jun,195,Notre Dame,"$1,572,360 ",NYK
+286,8,Robin,Lopez,C,27,Jul-00,255,Stanford,"$12,650,000 ",NYK
+287,9,Kyle,O'Quinn,PF,25,10-Jun,250,Norfolk State,"$3,750,000 ",NYK
+288,6,Kristaps,Porzingis,PF,20,3-Jul,240, ,"$4,131,720 ",NYK
+289,1,Kevin,Seraphin,C,26,10-Jun,278, ,"$2,814,000 ",NYK
+290,42,Lance,Thomas,SF,27,8-Jun,235,Duke,"$1,636,842 ",NYK
+291,18,Sasha,Vujacic,SG,31,7-Jun,195, ,"$947,276 ",NYK
+292,23,Derrick,Williams,PF,24,8-Jun,240,Arizona,"$4,000,000 ",NYK
+293,12,Steven,Adams,C,22,Jul-00,255,Pittsburgh,"$2,279,040 ",OKC
+294,4,Nick,Collison,PF,35,10-Jun,255,Kansas,"$3,750,000 ",OKC
+295,35,Kevin,Durant,SF,27,9-Jun,240,Texas,"$20,158,622 ",OKC
+296,6,Randy,Foye,SG,32,4-Jun,213,Villanova,"$3,135,000 ",OKC
+297,34,Josh,Huestis,SF,24,7-Jun,230,Stanford,"$1,140,240 ",OKC
+298,9,Serge,Ibaka,PF,26,10-Jun,245, ,"$12,250,000 ",OKC
+299,11,Enes,Kanter,C,23,11-Jun,245,Kentucky,"$16,407,500 ",OKC
+300,33,Mitch,McGary,PF,23,10-Jun,255,Michigan,"$1,463,040 ",OKC
+301,2,Anthony,Morrow,SG,30,5-Jun,210,Georgia Tech,"$3,344,000 ",OKC
+302,22,Cameron,Payne,PG,21,3-Jun,185,Murray State,"$2,021,520 ",OKC
+303,21,Andre,Roberson,SG,24,7-Jun,210,Colorado,"$1,210,800 ",OKC
+304,5,Kyle,Singler,SF,27,8-Jun,228,Duke,"$4,500,000 ",OKC
+305,3,Dion,Waiters,SG,24,4-Jun,220,Syracuse,"$5,138,430 ",OKC
+306,0,Russell,Westbrook,PG,27,3-Jun,200,UCLA,"$16,744,218 ",OKC
+307,8,Jared,Cunningham,SG,24,4-Jun,195,Oregon State,"$947,276 ",ORL
+308,3,Dewayne,Dedmon,C,26,Jul-00,245,USC,"$947,276 ",ORL
+309,10,Evan,Fournier,SG,23,7-Jun,205, ,"$2,288,205 ",ORL
+310,0,Aaron,Gordon,PF,20,9-Jun,220,Arizona,"$4,171,680 ",ORL
+311,23,Mario,Hezonja,SG,21,8-Jun,218, ,"$3,741,480 ",ORL
+312,7,Ersan,Ilyasova,PF,28,10-Jun,235, ,"$7,900,000 ",ORL
+313,55,Brandon,Jennings,PG,26,1-Jun,169, ,"$8,344,497 ",ORL
+314,11,Devyn,Marble,SF,23,6-Jun,200,Iowa,"$845,059 ",ORL
+315,13,Shabazz,Napier,PG,24,1-Jun,175,Connecticut,"$1,294,440 ",ORL
+316,44,Andrew,Nicholson,PF,26,9-Jun,250,St. Bonaventure,"$2,380,593 ",ORL
+317,5,Victor,Oladipo,SG,23,4-Jun,210,Indiana,"$5,192,520 ",ORL
+318,4,Elfrid,Payton,PG,22,4-Jun,185,Louisiana-Lafayette,"$2,505,720 ",ORL
+319,14,Jason,Smith,PF,29,Jul-00,240,Colorado State,"$4,300,000 ",ORL
+320,9,Nikola,Vucevic,C,25,Jul-00,260,USC,"$11,250,000 ",ORL
+321,32,C.J.,Watson,PG,31,2-Jun,175,Tennessee,"$5,000,000 ",ORL
+322,42,Elton,Brand,PF,36,9-Jun,254,Duke, ,PHI
+323,0,Isaiah,Canaan,PG,24,Jun-00,201,Murray State,"$947,276 ",PHI
+324,33,Robert,Covington,SF,25,9-Jun,215,Tennessee State,"$1,000,000 ",PHI
+325,21,Joel,Embiid,C,21,Jul-00,250,Kansas,"$4,626,960 ",PHI
+326,39,Jerami,Grant,SF,21,8-Jun,210,Syracuse,"$845,059 ",PHI
+327,22,Richaun,Holmes,PF,22,10-Jun,245,Bowling Green,"$1,074,169 ",PHI
+328,7,Carl,Landry,PF,32,9-Jun,248,Purdue,"$6,500,000 ",PHI
+329,5,Kendall,Marshall,PG,24,4-Jun,200,North Carolina,"$2,144,772 ",PHI
+330,12,T.J.,McConnell,PG,23,2-Jun,200,Arizona,"$525,093 ",PHI
+331,4,Nerlens,Noel,PF,21,11-Jun,228,Kentucky,"$3,457,800 ",PHI
+332,8,Jahlil,Okafor,C,20,11-Jun,275,Duke,"$4,582,680 ",PHI
+333,1,Ish,Smith,PG,27,Jun-00,175,Wake Forest,"$947,276 ",PHI
+334,11,Nik,Stauskas,SG,22,6-Jun,205,Michigan,"$2,869,440 ",PHI
+335,31,Hollis,Thompson,SG,24,8-Jun,206,Georgetown,"$947,276 ",PHI
+336,2,Eric,Bledsoe,PG,26,1-Jun,190,Kentucky,"$13,500,000 ",PHO
+337,1,Devin,Booker,SG,19,6-Jun,206,Kentucky,"$2,127,840 ",PHO
+338,4,Tyson,Chandler,C,33,1-Jul,240, ,"$13,000,000 ",PHO
+339,20,Archie,Goodwin,SG,21,5-Jun,200,Kentucky,"$1,160,160 ",PHO
+340,43,Kris,Humphries,PF,31,9-Jun,235,Minnesota,"$4,440,000 ",PHO
+341,12,John,Jenkins,SG,24,4-Jun,215,Vanderbilt,"$981,348 ",PHO
+342,3,Brandon,Knight,PG,24,3-Jun,189,Kentucky,"$13,500,000 ",PHO
+343,21,Alex,Len,C,22,1-Jul,260,Maryland,"$3,807,120 ",PHO
+344,30,Jon,Leuer,PF,26,10-Jun,228,Wisconsin,"$1,035,000 ",PHO
+345,25,Phil,Pressey,PG,25,11-May,175,Missouri,"$55,722 ",PHO
+346,14,Ronnie,Price,PG,32,2-Jun,190,Utah Valley,"$947,276 ",PHO
+347,35,Mirza,Teletovic,PF,30,9-Jun,242, ,"$5,500,000 ",PHO
+348,17,P.J.,Tucker,SF,30,6-Jun,245,Texas,"$5,500,000 ",PHO
+349,12,T.J.,Warren,SF,22,8-Jun,230,North Carolina State,"$2,041,080 ",PHO
+350,10,Sonny,Weems,SG,29,6-Jun,205,Arkansas,"$2,814,000 ",PHO
+351,34,Cliff,Alexander,PF,20,8-Jun,240,Kansas,"$525,093 ",POR
+352,8,Al-Farouq,Aminu,SF,25,9-Jun,215,Wake Forest,"$8,042,895 ",POR
+353,5,Pat,Connaughton,SG,23,5-Jun,206,Notre Dame,"$625,093 ",POR
+354,23,Allen,Crabbe,SG,23,6-Jun,210,California,"$947,276 ",POR
+355,17,Ed,Davis,C,26,10-Jun,240,North Carolina,"$6,980,802 ",POR
+356,4,Maurice,Harkless,SF,22,9-Jun,215,St. John's,"$2,894,059 ",POR
+357,9,Gerald,Henderson,SG,28,5-Jun,215,Duke,"$6,000,000 ",POR
+358,35,Chris,Kaman,C,33,Jul-00,265,Central Michigan,"$5,016,000 ",POR
+359,11,Meyers,Leonard,PF,24,1-Jul,245,Illinois,"$3,075,880 ",POR
+360,0,Damian,Lillard,PG,25,3-Jun,195,Weber State,"$4,236,287 ",POR
+361,3,C.J.,McCollum,SG,24,4-Jun,200,Lehigh,"$2,525,160 ",POR
+362,44,Luis,Montero,SG,22,7-Jun,185,Westchester CC,"$525,093 ",POR
+363,24,Mason,Plumlee,C,25,11-Jun,235,Duke,"$1,415,520 ",POR
+364,2,Brian,Roberts,PG,30,1-Jun,173,Dayton,"$2,854,940 ",POR
+365,21,Noah,Vonleh,PF,20,9-Jun,240,Indiana,"$2,637,720 ",POR
+366,13,Quincy,Acy,SF,25,7-Jun,240,Baylor,"$981,348 ",SAC
+367,5,James,Anderson,SG,26,6-Jun,213,Oklahoma State,"$1,015,421 ",SAC
+368,3,Marco,Belinelli,SG,29,5-Jun,210, ,"$6,060,606 ",SAC
+369,31,Caron,Butler,SF,35,7-Jun,228,Connecticut,"$1,449,187 ",SAC
+370,18,Omri,Casspi,SF,27,9-Jun,225, ,"$2,836,186 ",SAC
+371,0,Willie,Cauley-Stein,C,22,Jul-00,240,Kentucky,"$3,398,280 ",SAC
+372,7,Darren,Collison,PG,28,Jun-00,175,UCLA,"$5,013,559 ",SAC
+373,15,DeMarcus,Cousins,C,25,11-Jun,270,Kentucky,"$15,851,950 ",SAC
+374,30,Seth,Curry,SG,25,2-Jun,185,Duke,"$947,276 ",SAC
+375,26,Duje,Dukan,PF,24,9-Jun,220,Wisconsin,"$525,093 ",SAC
+376,8,Rudy,Gay,SF,29,8-Jun,230,Connecticut,"$12,403,101 ",SAC
+377,41,Kosta,Koufos,C,27,Jul-00,265,Ohio State,"$7,700,000 ",SAC
+378,23,Ben,McLemore,SG,23,5-Jun,195,Kansas,"$3,156,600 ",SAC
+379,25,Eric,Moreland,PF,24,10-Jun,238,Oregon State,"$845,059 ",SAC
+380,9,Rajon,Rondo,PG,30,1-Jun,186,Kentucky,"$9,500,000 ",SAC
+381,12,LaMarcus,Aldridge,PF,30,11-Jun,240,Texas,"$19,689,000 ",SAS
+382,1,Kyle,Anderson,SF,22,9-Jun,230,UCLA,"$1,142,880 ",SAS
+383,15,Matt,Bonner,C,35,10-Jun,235,Florida,"$947,276 ",SAS
+384,18,Rasual,Butler,SF,36,7-Jun,215,La Salle,"$947,276 ",SAS
+385,33,Boris,Diaw,C,33,8-Jun,250, ,"$7,500,000 ",SAS
+386,21,Tim,Duncan,C,39,11-Jun,250,Wake Forest,"$5,250,000 ",SAS
+387,20,Manu,Ginobili,SG,38,6-Jun,205, ,"$2,814,000 ",SAS
+388,14,Danny,Green,SG,28,6-Jun,215,North Carolina,"$10,000,000 ",SAS
+389,2,Kawhi,Leonard,SF,24,7-Jun,230,San Diego State,"$16,407,500 ",SAS
+390,40,Boban,Marjanovic,C,27,3-Jul,290, ,"$1,200,000 ",SAS
+391,3,Ray,McCallum,PG,24,3-Jun,190,Detroit,"$947,276 ",SAS
+392,8,Patty,Mills,PG,27,Jun-00,185,Saint Mary's,"$3,578,947 ",SAS
+393,9,Tony,Parker,PG,33,2-Jun,185, ,"$13,437,500 ",SAS
+394,17,Jonathon,Simmons,SG,26,6-Jun,195,Houston,"$525,093 ",SAS
+395,30,David,West,PF,35,9-Jun,250,Xavier,"$1,499,187 ",SAS
+396,15,Anthony,Bennett,PF,22,8-Jun,245,UNLV,"$947,276 ",TOR
+397,8,Bismack,Biyombo,C,23,9-Jun,245, ,"$2,814,000 ",TOR
+398,20,Bruno,Caboclo,SF,20,9-Jun,205, ,"$1,524,000 ",TOR
+399,5,DeMarre,Carroll,SF,29,8-Jun,212,Missouri,"$13,600,000 ",TOR
+400,10,DeMar,DeRozan,SG,26,7-Jun,220,USC,"$10,050,000 ",TOR
+401,3,James,Johnson,PF,29,9-Jun,250,Wake Forest,"$2,500,000 ",TOR
+402,6,Cory,Joseph,PG,24,3-Jun,190,Texas,"$7,000,000 ",TOR
+403,7,Kyle,Lowry,PG,29,Jun-00,205,Villanova,"$12,000,000 ",TOR
+404,92,Lucas,Nogueira,C,23,Jul-00,220, ,"$1,842,000 ",TOR
+405,54,Patrick,Patterson,PF,26,9-Jun,235,Kentucky,"$6,268,675 ",TOR
+406,24,Norman,Powell,SG,22,4-Jun,215,UCLA,"$650,000 ",TOR
+407,31,Terrence,Ross,SF,25,7-Jun,195,Washington,"$3,553,917 ",TOR
+408,4,Luis,Scola,PF,35,9-Jun,240, ,"$2,900,000 ",TOR
+409,17,Jonas,Valanciunas,C,23,Jul-00,255, ,"$4,660,482 ",TOR
+410,55,Delon,Wright,PG,23,5-Jun,190,Utah,"$1,509,360 ",TOR
+411,33,Trevor,Booker,PF,28,8-Jun,228,Clemson,"$4,775,000 ",UTH
+412,3,Trey,Burke,PG,23,1-Jun,191,Michigan,"$2,658,240 ",UTH
+413,10,Alec,Burks,SG,24,6-Jun,214,Colorado,"$9,463,484 ",UTH
+414,11,Dante,Exum,PG,20,6-Jun,190, ,"$3,777,720 ",UTH
+415,15,Derrick,Favors,PF,24,10-Jun,265,Georgia Tech,"$12,000,000 ",UTH
+416,27,Rudy,Gobert,C,23,1-Jul,245, ,"$1,175,880 ",UTH
+417,20,Gordon,Hayward,SF,25,8-Jun,226,Butler,"$15,409,570 ",UTH
+418,5,Rodney,Hood,SG,23,8-Jun,206,Duke,"$1,348,440 ",UTH
+419,2,Joe,Ingles,SF,28,8-Jun,226, ,"$2,050,000 ",UTH
+420,23,Chris,Johnson,SF,25,6-Jun,206,Dayton,"$981,348 ",UTH
+421,41,Trey,Lyles,PF,20,10-Jun,234,Kentucky,"$2,239,800 ",UTH
+422,8,Shelvin,Mack,PG,25,3-Jun,203,Butler,"$2,433,333 ",UTH
+423,25,Raul,Neto,PG,23,1-Jun,179, ,"$900,000 ",UTH
+424,21,Tibor,Pleiss,C,26,3-Jul,256, ,"$2,900,000 ",UTH
+425,24,Jeff,Withey,C,25,Jul-00,231,Kansas,"$947,276 ",UTH
+426,6,Alan,Anderson,SG,33,6-Jun,220,Michigan State,"$4,000,000 ",WAS
+427,3,Bradley,Beal,SG,22,5-Jun,207,Florida,"$5,694,674 ",WAS
+428,1,Jared,Dudley,SF,30,7-Jun,225,Boston College,"$4,375,000 ",WAS
+429,8,Jarell,Eddie,SG,24,7-Jun,218,Virginia Tech,"$561,716 ",WAS
+430,90,Drew,Gooden,PF,34,10-Jun,250,Kansas,"$3,300,000 ",WAS
+431,13,Marcin,Gortat,C,32,11-Jun,240, ,"$11,217,391 ",WAS
+432,7,JJ,Hickson,C,27,9-Jun,242,North Carolina State,"$5,613,500 ",WAS
+433,42,Nene,Hilario,C,33,11-Jun,250, ,"$13,000,000 ",WAS
+434,5,Markieff,Morris,PF,26,10-Jun,245,Kansas,"$8,000,000 ",WAS
+435,14,Gary,Neal,PG,31,4-Jun,210,Towson,"$2,139,000 ",WAS
+436,12,Kelly,Oubre Jr.,SF,20,7-Jun,205,Kansas,"$1,920,240 ",WAS
+437,22,Otto,Porter Jr.,SF,22,8-Jun,198,Georgetown,"$4,662,960 ",WAS
+438,7,Ramon,Sessions,PG,29,3-Jun,190,Nevada,"$2,170,465 ",WAS
+439,17,Garrett,Temple,SG,29,6-Jun,195,LSU,"$1,100,602 ",WAS
+440,2,John,Wall,PG,25,4-Jun,195,Kentucky,"$15,851,950 ",WAS

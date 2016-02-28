@@ -1,0 +1,413 @@
+"","Rating","FirstName","LastName","X","NO.","POS","AGE","HT","WT","COLLEGE","X2015.2016.SALARY","Team"
+"1",85,"Paul","Millsap",6,"4","PF",31,"8-Jun",246,"Louisiana Tech","$18,671,659 ","ATL"
+"2",83,"Al","Horford",4,"15","C",29,"10-Jun",245,"Florida","$12,000,000 ","ATL"
+"3",78,"Jeff","Teague",14,"0","PG",27,"2-Jun",186,"Wake Forest","$8,000,000 ","ATL"
+"4",78,"Kyle","Korver",5,"26","SG",34,"7-Jun",212,"Creighton","$5,746,479 ","ATL"
+"5",75,"DeMarre","Carroll",399,"5","SF",29,"8-Jun",212,"Missouri","$13,600,000 ","TOR"
+"6",74,"Thabo","Sefolosha",11,"25","SF",31,"7-Jun",220,"Â ","$4,000,000 ","ATL"
+"7",74,"Kent","Bazemore",1,"24","SF",26,"5-Jun",201,"Old Dominion","$2,000,000 ","ATL"
+"8",72,"Mike","Scott",10,"32","PF",27,"8-Jun",237,"Virginia","$3,333,333 ","ATL"
+"9",71,"Adreian","Payne",256,"33","PF",25,"10-Jun",237,"Michigan State","$1,938,840 ","MIN"
+"10",71,"Shelvin","Mack",422,"8","PG",25,"3-Jun",203,"Butler","$2,433,333 ","UTH"
+"11",70,"Dennis","Schroder",9,"17","PG",22,"1-Jun",172,"Â ","$1,763,400 ","ATL"
+"12",69,"Pero","Antic",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"13",68,"John","Jenkins",341,"12","SG",24,"4-Jun",215,"Vanderbilt","$981,348 ","PHO"
+"14",87,"Rajon","Rondo",380,"9","PG",30,"1-Jun",186,"Kentucky","$9,500,000 ","SAC"
+"15",78,"Avery","Bradley",15,"0","PG",25,"2-Jun",180,"Texas","$7,730,337 ","BOS"
+"16",78,"Jeff","Green",178,"8","SF",29,"9-Jun",235,"Georgetown","$9,450,000 ","LAC"
+"17",78,"Jared","Sullinger ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"18",76,"Marcus","Smart ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"19",76,"Marcus","Thornton ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"20",75,"Brandon","Bass",190,"2","PF",30,"8-Jun",250,"LSU","$3,000,000 ","LAL"
+"21",74,"Gerald","Wallace ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"22",74,"Kelly","Olynyk ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"23",72,"Vitor","Faverani ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"24",70,"Tyler","Zeller ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"25",70,"Phil","Pressey ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"26",68,"James","Young ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"27",66,"Joel","Anthony",114,"50","C",33,"9-Jun",245,"UNLV","$2,500,000 ","DET"
+"28",84,"Deron","Williams",99,"8","PG",31,"3-Jun",200,"Illinois","$5,378,974 ","DAL"
+"29",83,"Brook","Lopez",36,"11","C",27,"Jul-00",275,"Stanford","$19,689,000 ","BKN"
+"30",82,"Joe","Johnson",225,"--","SF",34,"7-Jun",240,"Arkansas","$24,894,863 ","MIA"
+"31",77,"Mason","Plumlee ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"32",77,"Kevin","Garnett",251,"21","PF",39,"11-Jun",240,"Â ","$8,500,000 ","MIN"
+"33",74,"Andrei","Kirilenko",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"34",74,"Bojan","Bogdanovic ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"35",74,"Jarrett","Jack",33,"2","PG",32,"3-Jun",200,"Georgia Tech","$6,300,000 ","BKN"
+"36",71,"Mirza","Teletovic ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"37",71,"Alan","Anderson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"38",69,"Marquis","Teague ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"39",68,"Markel","Brown ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"40",66,"Sergey","Karasev",34,"10","SG",22,"7-Jun",208,"Â ","$1,599,840 ","BKN"
+"41",87,"Al","Jefferson",48,"25","C",31,"10-Jun",289,"Â ","$13,500,000 ","CHA"
+"42",84,"Lance","Stephenson",218,"1","SF",25,"5-Jun",230,"Cincinnati","$9,000,000 ","MEM"
+"43",82,"Kemba","Walker",54,"15","PG",25,"1-Jun",184,"Connecticut","$12,000,000 ","CHA"
+"44",78,"Gerald","Henderson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"45",77,"Michael","Kidd-Gilchrist ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"46",75,"Gary","Neal ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"47",74,"Brian","Roberts ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"48",73,"Cody","Zeller",56,"40","C",23,"Jul-00",240,"Indiana","$4,204,200 ","CHA"
+"49",73,"Marvin","Williams ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"50",73,"Bismack","Biyombo",397,"8","C",23,"9-Jun",245,"Â ","$2,814,000 ","TOR"
+"51",72,"Noah","Vonleh",365,"21","PF",20,"9-Jun",240,"Indiana","$2,637,720 ","POR"
+"52",72,"Jeff","Taylor ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"53",71,"P.J.","Hairston ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"54",67,"Jannero","Pargo",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"55",88,"Derrick","Rose",70,"1","PG",27,"3-Jun",190,"Memphis","$20,093,064 ","CHI"
+"56",87,"Joakim","Noah ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"57",82,"Pau","Gasol",62,"16","C",35,"Jul-00",250,"Â ","$7,448,760 ","CHI"
+"58",80,"Taj","Gibson",63,"22","PF",30,"9-Jun",225,"USC","$8,500,000 ","CHI"
+"59",80,"Jimmy","Butler",59,"21","SG",26,"7-Jun",220,"Marquette","$16,407,500 ","CHI"
+"60",76,"Kirk","Hinrich ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"61",75,"Doug","McDermott ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"62",75,"Nikola","Mirotic ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"63",74,"Mike","Dunleavy ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"64",73,"Aaron","Brooks ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"65",72,"Tony","Snell ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"66",66,"Cameron","Bairstow",57,"41","PF",25,"9-Jun",250,"New Mexico","$845,059 ","CHI"
+"67",98,"LeBron","James ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"68",89,"Kevin","Love ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"69",86,"Kyrie","Irving ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"70",78,"Dion","Waiters ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"71",77,"Shawn","Marion ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"72",76,"Tristan","Thompson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"73",75,"Anderson","Varejao ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"74",74,"Mike","Miller ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"75",72,"Matthew","Dellavedova ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"76",69,"James","Jones ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"77",69,"John","Lucas ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"78",66,"Malcolm","Thomas ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"79",65,"Brendan","Haywood",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"80",88,"Dirk","Nowitzki ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"81",82,"Monta","Ellis",162,"11","SG",30,"3-Jun",185,"Â ","$10,300,000 ","IND"
+"82",79,"Chandler","Parsons",96,"25","SF",27,"10-Jun",230,"Florida","$15,361,500 ","DAL"
+"83",79,"Tyson","Chandler ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"84",76,"Jameer","Nelson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"85",75,"Devin","Harris ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"86",75,"Brandan","Wright ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"87",74,"Raymond","Felton ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"88",74,"Al-Farouq","Aminu ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"89",72,"Jae","Crowder ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"90",72,"Richard","Jefferson",76,"24","SF",35,"7-Jun",233,"Arizona","$947,276 ","CLE"
+"91",67,"Gal","Mekel ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"92",67,"Ricky","Ledo ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"93",67,"Greg","Smith",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"94",84,"Ty","Lawson",153,"3","PG",28,"11-May",195,"North Carolina","$12,404,495 ","HOU"
+"95",81,"Kenneth","Faried",104,"35","PF",26,"8-Jun",228,"Morehead State","$11,235,955 ","DEN"
+"96",78,"Arron","Afflalo ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"97",78,"Wilson","Chandler",103,"21","SF",28,"8-Jun",225,"DePaul","$10,449,438 ","DEN"
+"98",77,"Danilo","Gallinari ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"99",77,"J.J.","Hickson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"100",76,"Nate","Robinson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"101",74,"JaVale","McGee ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"102",74,"Randy","Foye ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"103",74,"Timofey","Mozgov ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"104",71,"Gary","Harris ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"105",69,"Jusuf","Nurkic ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"106",69,"Darrell","Arthur ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"107",68,"Quincy","Miller",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"108",83,"Andre","Drummond",120,"0","C",22,"11-Jun",279,"Connecticut","$3,272,091 ","DET"
+"109",80,"Brandon","Jennings",313,"55","PG",26,"1-Jun",169,"Â ","$8,344,497 ","ORL"
+"110",80,"Josh","Smith",156,"5","C",30,"9-Jun",225,"Â ","$947,276 ","HOU"
+"111",80,"Greg","Monroe",242,"15","C",25,"11-Jun",265,"Georgetown","$16,407,500 ","MIL"
+"112",76,"Caron","Butler ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"113",76,"D.J.","Augustin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"114",75,"Jodie","Meeks ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"115",74,"Kyle","Singler ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"116",72,"Kentavious","Caldwell-Pope",118,"5","SG",23,"5-Jun",205,"Georgia","$2,891,760 ","DET"
+"117",71,"Jonas","Jerebko ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"118",70,"Will","Bynum ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"119",70,"Cartier","Martin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"120",68,"Tony","Mitchell ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"121",67,"Luigi","Datome ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"122",67,"Aaron","Gray",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"123",89,"Stephen","Curry ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"124",82,"Klay","Thompson",142,"11","SG",26,"7-Jun",215,"Washington State","$15,501,000 ","GSW"
+"125",82,"Andre","Iguodala",136,"9","SF",32,"6-Jun",215,"Arizona","$11,710,456 ","GSW"
+"126",82,"David","Lee",90,"42","PF",32,"9-Jun",245,"Florida","$15,493,680 ","DAL"
+"127",80,"Andrew","Bogut",131,"12","C",31,"Jul-00",260,"Utah","$13,800,000 ","GSW"
+"128",77,"Draymond","Green ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"129",76,"Harrison","Barnes ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"130",74,"Shaun","Livingston ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"131",72,"Marreese","Speights ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"132",69,"Brandon","Rush ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"133",67,"Ognjen","Kuzmic",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"134",67,"Nemanja","Nedovic",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"135",67,"Festus","Ezeli",134,"31","C",26,"11-Jun",265,"Vanderbilt","$2,008,748 ","GSW"
+"136",88,"James","Harden ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"137",88,"Dwight","Howard ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"138",78,"Patrick","Beverley",145,"2","PG",27,"1-Jun",185,"Arkansas","$6,486,486 ","HOU"
+"139",78,"Trevor","Ariza ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"140",77,"Terrence","Jones ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"141",72,"Isaiah","Canaan ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"142",71,"Troy","Daniels ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"143",71,"Jeff","Adrien ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"144",71,"Nick","Johnson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"145",69,"Alonzo","Gee ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"146",69,"Donatas","Motiejunas ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"147",69,"Robert","Covington ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"148",68,"Ish","Smith ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"149",67,"Josh","Powell",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"150",89,"Paul","George",163,"13","SF",25,"9-Jun",220,"Fresno State","$17,120,106 ","IND"
+"151",80,"David","West",395,"30","PF",35,"9-Jun",250,"Xavier","$1,499,187 ","SAS"
+"152",80,"Roy","Hibbert",195,"17","C",29,"2-Jul",270,"Georgetown","$15,592,217 ","LAL"
+"153",78,"George","Hill ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"154",77,"Luis","Scola ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"155",75,"Rodney","Stuckey ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"156",75,"Ian","Mahinmi ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"157",75,"C.J.","Watson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"158",73,"C.J.","Miles ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"159",71,"Chris","Copeland ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"160",68,"Lavoy","Allen ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"161",66,"Solomon","Hill ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"162",65,"Donald","Sloan",40,"15","PG",28,"3-Jun",205,"Texas A&M","$947,276 ","BKN"
+"163",91,"Chris","Paul ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"164",89,"Blake","Griffin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"165",81,"DeAndre","Jordan",181,"6","C",27,"11-Jun",265,"Texas A&M","$19,689,000 ","LAC"
+"166",80,"Jamal","Crawford",176,"11","SG",35,"5-Jun",195,"Michigan","$5,675,000 ","LAC"
+"167",77,"J.J.","Redick ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"168",76,"Matt","Barnes ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"169",76,"Spencer","Hawes ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"170",74,"Glen","Davis",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"171",74,"Jared","Dudley",428,"1","SF",30,"7-Jun",225,"Boston College","$4,375,000 ","WAS"
+"172",72,"Jordan","Farmar ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"173",69,"Reggie","Bullock ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"174",67,"C.J.","Wilcox",189,"30","SG",25,"5-Jun",195,"Washington","$1,159,680 ","LAC"
+"175",89,"Kobe","Bryant ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"176",78,"Carlos","Boozer ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"177",78,"Nick","Young ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"178",77,"Jeremy","Lin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"179",76,"Jordan","Hill ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"180",76,"Steve","Nash ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"181",76,"Julius","Randle ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"182",73,"Ed","Davis ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"183",73,"Wesley","Johnson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"184",73,"Xavier","Henry ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"185",71,"Ryan","Kelly ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"186",70,"Jordan","Clarkson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"187",67,"Robert","Sacre",201,"50","C",26,"Jul-00",270,"Gonzaga","$981,348 ","LAL"
+"188",85,"Marc","Gasol ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"189",84,"Zach","Randolph",217,"50","PF",34,"9-Jun",260,"Michigan State","$9,638,555 ","MEM"
+"190",83,"Mike","Conley",211,"11","PG",28,"1-Jun",175,"Ohio State","$9,588,426 ","MEM"
+"191",78,"Tony","Allen ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"192",76,"Courtney","Lee",52,"1","SG",30,"5-Jun",200,"Western Kentucky","$5,675,000 ","CHA"
+"193",77,"Vince","Carter ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"194",75,"Tayshaun","Prince ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"195",74,"Beno","Udrih ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"196",72,"Kosta","Koufos ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"197",72,"Nick","Calathes ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"198",71,"Jordan","Adams ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"199",71,"Jarnell","Stokes ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"200",69,"Jon","Leuer",344,"30","PF",26,"10-Jun",228,"Wisconsin","$1,035,000 ","PHO"
+"201",69,"Jamaal","Franklin",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"202",68,"Quincy","Pondexter",277,"20","SF",27,"7-Jun",220,"Washington","$3,382,023 ","NO"
+"203",86,"Dwyane","Wade ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"204",84,"Chris","Bosh",220,"1","PF",31,"11-Jun",235,"Georgia Tech","$22,192,730 ","MIA"
+"205",79,"Luol","Deng ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"206",76,"Danny","Granger ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"207",75,"Mario","Chalmers ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"208",75,"Chris","Andersen ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"209",75,"Norris","Cole ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"210",74,"Josh","McRoberts ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"211",74,"Shabazz","Napier ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"212",72,"Udonis","Haslem ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"213",70,"James","Ennis ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"214",69,"Justin","Hamilton ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"215",66,"Reggie","Williams",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"216",79,"Brandon","Knight ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"217",79,"Larry","Sanders ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"218",78,"Jabari","Parker ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"219",77,"O.J.","Mayo",240,"3","SG",28,"5-Jun",210,"USC","$8,000,000 ","MIL"
+"220",75,"Khris","Middleton ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"221",75,"John","Henson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"222",75,"Nate","Wolters",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"223",74,"Jerryd","Bayless",235,"19","PG",27,"3-Jun",200,"Arizona","$3,000,000 ","MIL"
+"224",74,"Kendall","Marshall",329,"5","PG",24,"4-Jun",200,"North Carolina","$2,144,772 ","PHI"
+"225",74,"Giannis","Antetokounmpo ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"226",73,"Ersan","Ilyasova ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"227",70,"Carlos","Delfino ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"228",69,"Zaza","Pachulia",95,"27","C",32,"11-Jun",275,"Â ","$5,200,000 ","DAL"
+"229",67,"Miroslav","Raduljica ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"230",67,"Johnny","O'Bryant",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"231",81,"Nikola","Pekovic",257,"14","C",30,"11-Jun",307,"Â ","$12,100,000 ","MIN"
+"232",79,"Ricky","Rubio",259,"9","PG",25,"4-Jun",194,"Â ","$12,700,000 ","MIN"
+"233",79,"Kevin","Martin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"234",78,"Thaddeus","Young ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"235",77,"Andrew","Wiggins ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"236",76,"Mo","Williams ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"237",75,"Corey","Brewer ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"238",74,"J.J.","Barea ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"239",72,"Gorgui","Dieng ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"240",72,"Zach","LaVine ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"241",70,"Anthony","Bennett ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"242",70,"Chase","Budinger",160,"10","SF",27,"7-Jun",209,"Arizona","$5,000,000 ","IND"
+"243",68,"Robbie","Hummel ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"244",68,"Ronny","Turiaf ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"245",67,"Shabazz","Muhammad",255,"15","SF",23,"6-Jun",223,"UCLA","$2,056,920 ","MIN"
+"246",88,"Anthony","Davis ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"247",82,"Jrue","Holiday",275,"11","PG",25,"4-Jun",205,"UCLA","$10,595,507 ","NO"
+"248",79,"Eric","Gordon ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"249",78,"Tyreke","Evans ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"250",77,"Ryan","Anderson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"251",76,"Omer","Asik ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"252",73,"John","Salmons ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"253",72,"Jimmer","Fredette ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"254",72,"Austin","Rivers",187,"25","PG",23,"4-Jun",200,"Duke","$3,110,796 ","LAC"
+"255",69,"Russ","Smith ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"256",69,"Darius","Miller ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"257",69,"Jeff","Withey ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"258",68,"Alexis","Ajinca ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"259",66,"Luke","Babbitt",266,"8","SF",26,"9-Jun",225,"Nevada","$1,100,602 ","NO"
+"260",89,"Carmelo","Anthony ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"261",78,"Jose","Calderon ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"262",78,"J.R.","Smith",82,"5","SG",30,"6-Jun",225,"Â ","$5,000,000 ","CLE"
+"263",77,"Amar'e","Stoudemire ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"264",77,"Iman","Shumpert ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"265",77,"Tim","Hardaway Jr",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"266",76,"Samuel","Dalembert ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"267",72,"Pablo","Prigioni ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"268",72,"Jason","Smith ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"269",72,"Andrea","Bargnani ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"270",72,"Shane","Larkin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"271",70,"Cleanthony","Early ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"272",69,"Travis","Outlaw ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"273",67,"Quincy","Acy ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"274",67,"Cole","Aldrich",174,"45","C",27,"11-Jun",250,"Kansas","$1,100,602 ","LAC"
+"275",95,"Kevin","Durant ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"276",88,"Russell","Westbrook ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"277",84,"Serge","Ibaka",298,"9","PF",26,"10-Jun",245,"Â ","$12,250,000 ","OKC"
+"278",78,"Reggie","Jackson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"279",74,"Kendrick","Perkins ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"280",74,"Nick","Collison ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"281",74,"Steven","Adams ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"282",73,"Jeremy","Lamb ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"283",73,"Anthony","Morrow ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"284",69,"Perry","Jones III",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"285",68,"Andre","Roberson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"286",68,"Mitch","McGary ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"287",65,"","Josh",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"288",65,"Hasheem","Thabeet",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"289",80,"Nikola","Vucevic",320,"9","C",25,"Jul-00",260,"USC","$11,250,000 ","ORL"
+"290",78,"Victor","Olaipo",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"291",76,"Channing","Frye ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"292",76,"Tobias","Harris ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"293",74,"Elfrid","Payton ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"294",74,"Aaron","Gordon ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"295",74,"Maurice","Harkless ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"296",72,"Luke","Ridnour ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"297",72,"Ben","Gordon ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"298",72,"Evan","Fournier ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"299",71,"Willie","Green ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"300",71,"Andrew","Nicholson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"301",70,"Kyle","O'Quinn ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"302",66,"Dewayne","Dedmon",308,"3","C",26,"Jul-00",245,"USC","$947,276 ","ORL"
+"303",80,"Michael","Carter-Williams",236,"5","PG",24,"6-Jun",190,"Syracuse","$2,399,040 ","MIL"
+"304",77,"Joel","Embiid",325,"21","C",21,"Jul-00",250,"Kansas","$4,626,960 ","PHI"
+"305",76,"Nerlens","Noel",331,"4","PF",21,"11-Jun",228,"Kentucky","$3,457,800 ","PHI"
+"306",74,"Luc","Mbah a Moute",182,"12","PF",29,"8-Jun",230,"UCLA","$947,276 ","LAC"
+"307",74,"Tony","Wroten ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"308",73,"Jason","Richardson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"309",71,"Hollis","Thompson",335,"31","SG",24,"8-Jun",206,"Georgetown","$947,276 ","PHI"
+"310",70,"Elliot","Williams ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"311",70,"Alexey","Shved ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"312",69,"Henry","Sims ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"313",68,"Arnett","Moultrie ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"314",68,"Jerami","Grant",326,"39","SF",21,"8-Jun",210,"Syracuse","$845,059 ","PHI"
+"315",67,"Jarvis","Varnado ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"316",65,"Brandon","Davies",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"317",84,"Goran","Dragic",222,"7","PG",29,"3-Jun",190,"Â ","$14,783,000 ","MIA"
+"318",81,"Eric","Bledsoe",336,"2","PG",26,"1-Jun",190,"Kentucky","$13,500,000 ","PHO"
+"319",80,"Isaiah","Thomas",25,"4","PG",27,"9-May",185,"Washington","$6,912,869 ","BOS"
+"320",78,"Markieff","Morris ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"321",78,"Miles","Plumlee ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"322",78,"Gerald","Green ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"323",76,"P.J.","Tucker ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"324",75,"Marcus","Morris ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"325",73,"Anthony","Tolliver ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"326",72,"T.J.","Warren",349,"12","SF",22,"8-Jun",230,"North Carolina State","$2,041,080 ","PHO"
+"327",71,"Tyler","Ennis",237,"11","PG",21,"3-Jun",194,"Syracuse","$1,662,360 ","MIL"
+"328",69,"Archie","Goodwin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"329",67,"Alex","Len ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"330",64,"Shavlik","Randolph",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"331",88,"LaMarcus","Aldridge ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"332",87,"Damian","Lillard ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"333",79,"Nicolas","Batum",42,"5","SG",27,"8-Jun",200,"Â ","$13,125,306 ","CHA"
+"334",78,"Wesley","Matthews",91,"23","SG",29,"5-Jun",220,"Marquette","$16,407,500 ","DAL"
+"335",77,"Robin","Lopez ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"336",76,"Chris","Kaman ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"337",75,"Thomas","Robinson",39,"41","PF",24,"10-Jun",237,"Kansas","$981,348 ","BKN"
+"338",72,"Dorell","Wright ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"339",72,"C.J.","McCollu",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"340",71,"Steve","Blake ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"341",70,"Will","Barton ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"342",68,"Meyers","Leonard ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"343",68,"Joel","Freeland ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"344",67,"Allen","Crabbe ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"345",66,"Victor","Claver",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"346",86,"DeMarcus","Cousins ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"347",82,"Rudy","Gay",376,"8","SF",29,"8-Jun",230,"Connecticut","$12,403,101 ","SAC"
+"348",79,"Darren","Collinson",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"349",75,"Jason","Thompson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"350",75,"Carl","Landry ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"351",74,"Nik","Stauskas",334,"11","SG",22,"6-Jun",205,"Michigan","$2,869,440 ","PHI"
+"352",74,"Ray","McCallum",391,"3","PG",24,"3-Jun",190,"Detroit","$947,276 ","SAS"
+"353",74,"Ben","McLemore",378,"23","SG",23,"5-Jun",195,"Kansas","$3,156,600 ","SAC"
+"354",74,"Jason","Terry ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"355",74,"Reggie","Evans ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"356",71,"Derrick","Williams ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"357",71,"Wayne","Ellington",31,"21","SG",28,"4-Jun",200,"North Carolina","$1,500,000 ","BKN"
+"358",67,"Jeremy","Tyler",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"359",90,"Tim","Duncan ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"360",88,"Tony","Parker ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"361",85,"Kawhi","Leonard ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"362",83,"Manu","Ginobili",387,"20","SG",38,"6-Jun",205,"Â ","$2,814,000 ","SAS"
+"363",78,"Danny","Green",388,"14","SG",28,"6-Jun",215,"North Carolina","$10,000,000 ","SAS"
+"364",78,"Boris","Diaw",385,"33","C",33,"8-Jun",250,"Â ","$7,500,000 ","SAS"
+"365",77,"Tiago","Splitter ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"366",77,"Patrick","Mills",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"367",75,"Marco","Belinelli",368,"3","SG",29,"5-Jun",210,"Â ","$6,060,606 ","SAC"
+"368",73,"Matt","Bonner ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"369",73,"Cory","Joseph ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"370",67,"Jeff","Ayres",175,"19","PF",28,"9-Jun",250,"Arizona State","$111,444 ","LAC"
+"371",67,"Austin","Daye ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"372",67,"Kyle","Anderson",382,"1","SF",22,"9-Jun",230,"UCLA","$1,142,880 ","SAS"
+"373",85,"Kyle","Lowry",403,"7","PG",29,"Jun-00",205,"Villanova","$12,000,000 ","TOR"
+"374",85,"DeMar","DeRozan",400,"10","SG",26,"7-Jun",220,"USC","$10,050,000 ","TOR"
+"375",78,"Jonas","Valanciunas",409,"17","C",23,"Jul-00",255,"Â ","$4,660,482 ","TOR"
+"376",77,"Amir","Johnson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"377",77,"Louis","Williams",202,"23","SG",29,"1-Jun",175,"Â ","$7,000,000 ","LAL"
+"378",76,"Terrence","Ross ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"379",76,"Greivis","Vasquez ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"380",75,"Patrick","Patterson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"381",73,"Tyler","Hansbrough ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"382",70,"James","Johnson ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"383",69,"Chuck","Hayes ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"384",69,"Landry","Fields ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"385",64,"Bruno","Caboclo",398,"20","SF",20,"9-Jun",205,"Â ","$1,524,000 ","TOR"
+"386",79,"Gordon","Hayward",417,"20","SF",25,"8-Jun",226,"Butler","$15,409,570 ","UTH"
+"387",78,"Derrick","Favors",415,"15","PF",24,"10-Jun",265,"Georgia Tech","$12,000,000 ","UTH"
+"388",76,"Alec","Burks ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"389",75,"Trey","Burke ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"390",75,"Enes","Kanter ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"391",74,"Dante","Exum ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"392",74,"Trevor","Booker ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"393",72,"Steve","Novak ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"394",71,"Rodney","Hood ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"395",71,"Rudy","Gobert ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"396",70,"Jeremy","Evans ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"397",68,"Carrick","Felix ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"398",67,"Ian","Clark",132,"21","SG",24,"3-Jun",175,"Belmont","$947,276 ","GSW"
+"399",86,"John","Wall",440,"2","PG",25,"4-Jun",195,"Kentucky","$15,851,950 ","WAS"
+"400",81,"Bradley","Beal",427,"3","SG",22,"5-Jun",207,"Florida","$5,694,674 ","WAS"
+"401",81,"Paul","Pierce",184,"34","SF",38,"7-Jun",235,"Kansas","$3,376,000 ","LAC"
+"402",81,"Marcin","Gortat",431,"13","C",32,"11-Jun",240,"Â ","$11,217,391 ","WAS"
+"403",80,"Nene","Hilario",433,"42","C",33,"11-Jun",250,"Â ","$13,000,000 ","WAS"
+"404",76,"Andre","Miller ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"405",74,"Kevin","Seraphin ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"406",73,"Kris","Humphries ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"407",73,"Martell","Webster ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"408",71,"DeJuan","Blair ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"409",70,"Drew","Gooden ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"410",69,"Glen","Rice Jr",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"411",68,"Garrett","Temple ",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"412",68,"Otto","Porter",NA,NA,NA,NA,NA,NA,NA,NA,NA

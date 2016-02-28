@@ -6,16 +6,15 @@ ProbMatrix::ProbMatrix() // default constructor
 {
 	n = 0;
 	matrix = 0;
-	teams = 0;
+	teams = new Team[]; // empty array
 }
 
-
 ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constructor
-{
-	teams = new Team[num_teams];
+{  // think about linkin ProbMatrix with Team class
+	teams = new Team [num_teams]; //  create an array of Teams
 	for (int i=0; i < num_teams; i++){
-		teams[i] = list_teams[i];
-		//a.enumerate(i); // enumerate each variable
+		teams[i] = list_teams[i]; // copy over
+		teams[i].enumerate(i); // enumerate each variable
 	}
 	n = 0;
 
@@ -38,11 +37,6 @@ ProbMatrix::~ProbMatrix()
 {
 }
 
-
-
-
-// other functions
-
 // overload [] operator to 
 void ProbMatrix::setProb(int row, int col) // requries index in table
 {
@@ -50,3 +44,7 @@ void ProbMatrix::setProb(int row, int col) // requries index in table
 
 	matrix[row][col] = r;
 }
+
+
+// other functions
+
