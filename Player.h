@@ -38,6 +38,7 @@ public:
     int getRating();
     //set minutes played
     void setMinPl(int mins);
+    void addMinPl(int minsadded);
     //get minutes
     int getMinPl();
     //did player get injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss season

@@ -90,6 +90,10 @@ void Player::setMinPl(int mins){
     minutes=mins;
 }
 
+void Player::addMinPl(int minsadded) {
+    minutes+=minsadded;
+}
+
 //get minutes
 int Player::getMinPl(){
     return minutes;

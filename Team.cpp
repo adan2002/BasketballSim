@@ -111,3 +111,26 @@ void Team::setName(string namein) {
     name=namein;
 }
 
+void Team::aftergame(char WoL) {
+    //adds a win or a loss depending on the outcome of the game
+    switch (WoL){
+        case 'w':
+        case 'W':
+            wins++;
+            break;
+        case 'l':
+        case 'L':
+            losses++;
+            break;
+        default:
+            break;
+    }
+    //REQUIRE THAT ALL OF THE PLAYERS ARE PASSED BY REFERENCE
+    int i;
+    int Starterminadded=
+    for (i=0; i<5; i++){
+        starters[i].addMinPl(50);
+    }
+
+}
+
