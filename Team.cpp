@@ -14,8 +14,8 @@ Team::Team() // default constructor
 	roster[10] = {}; // empty array of players
 	starters[5] = {}; // empty array of players
 	pig[5] = {}; // empty array
-	wstreak = 0; // why bool?
-	lstreak = 0; // why bool?
+	wstreak = 0; // why bool? --b/c it can be-if wstreak the +.1 to prob of winning next game
+	lstreak = 0; // why bool? --same as above
 	index = -1; // id in matrix
 }
 
@@ -52,7 +52,7 @@ void Team::uploss(){
 	losses += 1;
 }
 
-
+//do we need a function that allows you to add/subtract players one at a time?
 void Team::setroster(Player* players) // first 5 players should be the starters
 {
 	roster = new Player[10]; // instantiate array
@@ -62,6 +62,9 @@ void Team::setroster(Player* players) // first 5 players should be the starters
 	}
 }
 
+
+//i thought setstarters might be a static array, and pig would pull from this and subout players that are injured-j
+//but i think that if we have the starters in the first 5 of roster- your way works -j
 void Team::setstarters(Player[5])
 {
 	// account for case where both players
@@ -72,7 +75,7 @@ void Team::setstarters(Player[5])
 		int player_id = 0;
 		Player player = roster[player_id];
 
-		while (player.getPosition() != (i + 1) & player.ifInjured() != 1){ // position doesn't match
+		while (player.getPosition() != (i + 1) && player.ifInjured() != 1){ // position doesn't match
 								// and player not injured
 			player_id += 1; // look at next player in roster
 			player = roster[player_id];
@@ -81,6 +84,9 @@ void Team::setstarters(Player[5])
 	}
 }
 
+
+//i think we probably dont need this one anymore. after each game we can add a standard amt of time to the starters
+//and a standard amount of time to the non-starters that is less than that of the starters
 // think more about...
 void Team::setpig()
 {
