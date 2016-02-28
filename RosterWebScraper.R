@@ -37,3 +37,18 @@ rownames(NBA_players) <- seq(length=nrow(NBA_players))
 
 # player rating
 ratings <- tbl_df(read.csv(file = 'NBA 2K16 Ratings.csv', header = T))
+roster <- tbl_df(read.csv(file = 'NBAplayers.csv', header = T))
+
+finalroster <- na.omit(left_join(ratings, roster, by = c("FirstName", "LastName")))
+finalroster <- select(finalroster, -c(HT, X, COLLEGE, X2015.2016.SALARY, WT, NO.)) 
+names(finalroster) <- tolower(names(finalroster)) # make headers lowercase
+
+# get team counts
+t <- finalroster %>% 
+  group_by(team) %>%
+  summarise( cnt = n())
+
+
+
+write.csv(t, file = 'team_counts.csv')
+write.csv(finalroster, file = 'NBA_roster_ratings.csv')
