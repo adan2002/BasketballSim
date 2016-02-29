@@ -30,6 +30,14 @@ complement of the entery (home, away)
 #include "Player.h"
 #include "ProbMatrix.h"
 
+void runGame(Team home, Team away){
+	//get probability of winning for the home team
+	//see if there are any probability additons for the home team and add it to a dummy variable
+	//see if there are any probability additions for the away team and subtract that from the dummy variable
+	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
+	//if larger, home team loses, if smaller home team wins
+	//run team.aftergame for both teams.
+}
 
 using namespace std;
 
@@ -206,4 +214,5 @@ int main()
 	return 0;
 
 }
+
 

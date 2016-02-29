@@ -63,7 +63,7 @@ void Team::setroster(Player* players) // first 5 players should be the starters
 	}
 }
 
-
+//still need to look at this
 //i thought setstarters might be a static array, and pig would pull from this and subout players that are injured-j
 //but i think that if we have the starters in the first 5 of roster- your way works -j
 void Team::setstarters(Player[5])
