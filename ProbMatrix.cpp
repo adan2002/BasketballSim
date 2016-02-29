@@ -46,5 +46,10 @@ void ProbMatrix::setProb(int row, int col) // requries index in table
 }
 
 
+//function that returns probability of hometeam winning
+float ProbMatrix::getProb(int home, int away){
+	return(matrix[home][away]);
+}
+
 // other functions
 
