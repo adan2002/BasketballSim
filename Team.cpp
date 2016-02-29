@@ -3,6 +3,7 @@
 //
 
 #include "Team.h"
+#include <stdlib.h>
 
 
 Team::Team() // default constructor
@@ -127,6 +128,7 @@ void Team::aftergame(char WoL) {
     }
     //REQUIRE THAT ALL OF THE PLAYERS ARE PASSED BY REFERENCE
     int i,j;
+	float rand;
 	//mins added to starters playing time
     int StarterMinAdded=25;
 	//mins added to backup playing time
@@ -140,6 +142,7 @@ void Team::aftergame(char WoL) {
 	//updates the starters mins played and creates array with starter names
     for (i=0; i<5; i++){
         starters[i].addMinPl(StarterMinAdded);
+		starters[i].InjuredInGame();
 		playersupdated[i]=starters[i].getName();
     }
 	//updates the mins played of non starters by searching for starters and filtering them out of the update
@@ -147,7 +150,8 @@ void Team::aftergame(char WoL) {
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
-			if (holdName==playersupdated[i]){
+			//won't update if player is injured
+			if (holdName==playersupdated[i]||!roster[i].ifInjured()){
 				YN=true;
 			}
 		}
@@ -155,6 +159,7 @@ void Team::aftergame(char WoL) {
 			roster[i].addMinPl(backupMinAdded);
 		}
 	}
+
 
 }
 

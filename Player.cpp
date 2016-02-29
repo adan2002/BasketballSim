@@ -38,6 +38,7 @@ Player::~Player(){}
 //set age
 void Player::setAge(int agein){
     age=agein;
+    this->setProbInj();
 }
 
 //getage
@@ -73,6 +74,7 @@ void Player::setProbInj(){
 
 //get prob of inj
 float Player::getProbofInj(){
+    this->setProbInj();
     return pOFi;
 }
 
