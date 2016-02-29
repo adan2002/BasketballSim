@@ -22,7 +22,7 @@ private:
     int gamesWithInjleft; //games played with injury
 public:
     Player();
-    Player(string namein, int yo, int pos, int PofI, int rtng, bool inj, int GWIL);
+    Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, bool inj, int GWIL);
     ~Player();
     //set age
     void setAge(int age);

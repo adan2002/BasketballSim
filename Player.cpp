@@ -16,15 +16,17 @@ Player::Player() {
     position=0;
     pOFi=0;
     rating=0;
+    rank=0;
     injury=false;
     gamesWithInjleft=0;
 }
 
 //input constructor
-Player::Player(string namein, int yo, int pos, int PofI, int rtng, bool inj, int GWIL){
+Player::Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, bool inj, int GWIL){
     name=namein;
     age=yo;
     position=pos;
+    rank=rankin;
     pOFi=PofI;
     rating=rtng;
     injury=inj;
