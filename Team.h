@@ -53,7 +53,8 @@ public:
 	//things that should happen to team after the game...
 	//idk if this is the best way to implement
 	void aftergame(char WoL);
-
+	float getAddedProb();
+	int getIndex();
 
 };
 

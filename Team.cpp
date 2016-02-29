@@ -159,7 +159,12 @@ void Team::aftergame(char WoL) {
 			roster[i].addMinPl(backupMinAdded);
 		}
 	}
-
-
 }
 
+int Team::getIndex() {
+	return (index);
+}
+
+float Team::getAddedProb() {
+	return(addedProb);
+}
