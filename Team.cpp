@@ -130,9 +130,9 @@ void Team::aftergame(char WoL) {
     int i,j;
 	float rand;
 	//mins added to starters playing time
-    int StarterMinAdded=25;
+    int StarterMinAdded=30;
 	//mins added to backup playing time
-    int backupMinAdded=23;
+    int backupMinAdded=90/(legthOFroster-5);
 	//keep track of player names so they arent updated twice
 	string playersupdated[5];
 	//buffer for searching
@@ -141,22 +141,26 @@ void Team::aftergame(char WoL) {
 
 	//updates the starters mins played and creates array with starter names
     for (i=0; i<5; i++){
-        starters[i].addMinPl(StarterMinAdded);
-		starters[i].InjuredInGame();
-		playersupdated[i]=starters[i].getName();
+        roster[starters[i]].addMinPl(StarterMinAdded);
+		roster[starters[i]].InjuredInGame();
+		playersupdated[i]=roster[starters[i]].getName();
     }
-	//updates the mins played of non starters by searching for starters and filtering them out of the update
-	for (i=0;i<10;i++){
+	//updates the mins played of non starters by searching for starters and injured players and filtering them out of the update
+	//update includes running the probability that a player is injured
+	for (i=0;i<legthOFroster-1;i++){
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
 			//won't update if player is injured
-			if (holdName==playersupdated[i]||!roster[i].ifInjured()){
+			if (holdName==playersupdated[i]||roster[i].ifInjured()){
 				YN=true;
+				//if injured decrement games out
+				if (roster[i].ifInjured()){roster[i].decGamesOut();}
 			}
 		}
 		if (!YN){
 			roster[i].addMinPl(backupMinAdded);
+			roster[i].InjuredInGame();
 		}
 	}
 }
@@ -165,6 +169,14 @@ int Team::getIndex() {
 	return (index);
 }
 
+void Team::setLengthofRoster(int inLength) {
+	legthOFroster=inLength;
+}
+
 float Team::getAddedProb() {
 	return(addedProb);
+}
+
+void Team::addProb(float inProb) {
+	addedProb=+inProb;
 }

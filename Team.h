@@ -18,10 +18,11 @@ private:
 	int losses;
 	float addedProb; //needs function that will updatate( this is the added probability that a team will win)
 	Player* roster;
-	Player* starters;
+	int starters[5];
 	Player* pig; //players in game
 	bool wstreak; 
 	bool lstreak;
+	int legthOFroster;
 	int index; // id in matrix
 public:
 	Team();
@@ -55,6 +56,8 @@ public:
 	void aftergame(char WoL);
 	float getAddedProb();
 	int getIndex();
+	void setLengthofRoster(int inLength);
+	void addProb(float inProb);
 
 };
 

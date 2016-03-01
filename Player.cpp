@@ -109,11 +109,10 @@ int Player::getMinPl(){
 void Player::InjuredInGame(){
     float rando;
     rando=(float)rand()/RAND_MAX;
-    rando=(float)rand()/RAND_MAX;
     cout<<"r"<<rando<<endl;
     injury=rando<pOFi;
     if (injury){
-        rando=(float)rand()/RAND_MAX;
+        //subtract from added probability that a team wins
         rando=(float)rand()/RAND_MAX;
         cout<<"r"<<rand<<endl; //DEBUG
         if (rando<=.7){
@@ -126,6 +125,7 @@ void Player::InjuredInGame(){
             gamesWithInjleft=20;
         }
         }
+
 }
 
 bool Player::ifInjured(){
@@ -137,9 +137,13 @@ int Player::getGamesOut(){
     return gamesWithInjleft;
 }
 
-//decrease games with injury left
+//decrease games with injury left, if one injury left-set injury to false
 void Player::decGamesOut() {
-    if(gamesWithInjleft>0){
+    if (gamesWithInjleft==1){
+        gamesWithInjleft=0;
+        injury=false;
+        //add probability back to the team winning
+    }else if (gamesWithInjleft>1){
     gamesWithInjleft--;}
 }
 
