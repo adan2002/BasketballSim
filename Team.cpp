@@ -3,6 +3,7 @@
 //
 
 #include "Team.h"
+#include <iostream>
 #include <stdlib.h>
 
 
@@ -68,6 +69,7 @@ void Team::setroster(Player* players) // first 5 players should be the starters
 //but i think that if we have the starters in the first 5 of roster- your way works -j
 void Team::setstarters(Player[5])
 {
+	//CASE if both players from a position is hurt
 	// account for case where both players
 	// think about adding a function that returns
 	// players for a given position
@@ -79,7 +81,10 @@ void Team::setstarters(Player[5])
 		while (player.getPosition() != (i + 1) && player.ifInjured() != 1){ // position doesn't match
 								// and player not injured
 			player_id += 1; // look at next player in roster
-			player = roster[player_id];
+			if (player_id>=15){
+				cout<<"ERROR-set starter loop circulating"<<endl;
+				break;}
+			starters[i] = player_id; //passes the player index into starter array
 		}
 		
 	}
