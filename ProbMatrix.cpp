@@ -6,7 +6,7 @@ ProbMatrix::ProbMatrix() // default constructor
 {
 	n = 0;
 	matrix = 0;
-	teams = new Team[]; // empty array
+	teams = new Team[0]; // empty array
 }
 
 ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constructor
@@ -46,5 +46,33 @@ void ProbMatrix::setProb(int row, int col) // requries index in table
 }
 
 
+//function that returns probability of hometeam winning
+float ProbMatrix::getProb(Team home, Team away){
+	return(matrix[home.getIndex()][away.getIndex()]);
+}
+
 // other functions
+
+void ProbMatrix::runGame(Team home, Team away){
+	float rando;
+	//get probability of winning for the home team
+	float hometeamwins=getProb(home, away);
+
+	//see if there are any probability additons for the home team and add it to a dummy variable
+	//see if there are any probability additions for the away team and subtract that from the dummy variable
+	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb();
+
+	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
+	rando=rand()/RAND_MAX;
+	//if larger, home team loses, if smaller home team wins
+	//run aftergame
+	if (rando<hometeamwins){
+		home.aftergame('W');
+		away.aftergame('L');
+	}else{
+		home.aftergame('L');
+		away.aftergame('W');
+	}
+
+}
 

@@ -16,15 +16,17 @@ Player::Player() {
     position=0;
     pOFi=0;
     rating=0;
+    rank=0;
     injury=false;
     gamesWithInjleft=0;
 }
 
 //input constructor
-Player::Player(string namein, int yo, int pos, int PofI, int rtng, bool inj, int GWIL){
+Player::Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, bool inj, int GWIL){
     name=namein;
     age=yo;
     position=pos;
+    rank=rankin;
     pOFi=PofI;
     rating=rtng;
     injury=inj;
@@ -38,6 +40,7 @@ Player::~Player(){}
 //set age
 void Player::setAge(int agein){
     age=agein;
+    this->setProbInj();
 }
 
 //getage
@@ -73,6 +76,7 @@ void Player::setProbInj(){
 
 //get prob of inj
 float Player::getProbofInj(){
+    this->setProbInj();
     return pOFi;
 }
 
@@ -105,11 +109,10 @@ int Player::getMinPl(){
 void Player::InjuredInGame(){
     float rando;
     rando=(float)rand()/RAND_MAX;
-    rando=(float)rand()/RAND_MAX;
     cout<<"r"<<rando<<endl;
     injury=rando<pOFi;
     if (injury){
-        rando=(float)rand()/RAND_MAX;
+        //subtract from added probability that a team wins
         rando=(float)rand()/RAND_MAX;
         cout<<"r"<<rand<<endl; //DEBUG
         if (rando<=.7){
@@ -122,6 +125,7 @@ void Player::InjuredInGame(){
             gamesWithInjleft=20;
         }
         }
+
 }
 
 bool Player::ifInjured(){
@@ -133,9 +137,13 @@ int Player::getGamesOut(){
     return gamesWithInjleft;
 }
 
-//decrease games with injury left
+//decrease games with injury left, if one injury left-set injury to false
 void Player::decGamesOut() {
-    if(gamesWithInjleft>0){
+    if (gamesWithInjleft==1){
+        gamesWithInjleft=0;
+        injury=false;
+        //add probability back to the team winning
+    }else if (gamesWithInjleft>1){
     gamesWithInjleft--;}
 }
 

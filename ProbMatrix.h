@@ -15,6 +15,8 @@ public:
 	ProbMatrix(int num_teams, Team* list_teams);
 	~ProbMatrix();
 	void setProb(int row, int col);
+	float getProb(Team home, Team away);
+	void runGame(Team home, Team away);
 };
 
 // other functions

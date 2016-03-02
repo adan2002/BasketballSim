@@ -3,6 +3,8 @@
 //
 
 #include "Team.h"
+#include <iostream>
+#include <stdlib.h>
 
 
 Team::Team() // default constructor
@@ -63,11 +65,12 @@ void Team::setroster(Player* players, int num_players) // first 5 players should
 	}
 }
 
-
+//still need to look at this-don't want to update roster!
 //i thought setstarters might be a static array, and pig would pull from this and subout players that are injured-j
 //but i think that if we have the starters in the first 5 of roster- your way works -j
 void Team::setstarters(Player[5])
 {
+	//CASE if both players from a position is hurt
 	// account for case where both players
 	// think about adding a function that returns
 	// players for a given position
@@ -79,7 +82,10 @@ void Team::setstarters(Player[5])
 		while (player.getPosition() != (i + 1) && player.ifInjured() != 1){ // position doesn't match
 								// and player not injured
 			player_id += 1; // look at next player in roster
-			player = roster[player_id];
+			if (player_id>=15){
+				cout<<"ERROR-set starter loop circulating"<<endl;
+				break;}
+			starters[i] = player_id; //passes the player index into starter array
 		}
 		
 	}
@@ -128,10 +134,11 @@ void Team::aftergame(char WoL) {
     }
     //REQUIRE THAT ALL OF THE PLAYERS ARE PASSED BY REFERENCE
     int i,j;
+	float rand;
 	//mins added to starters playing time
-    int StarterMinAdded=25;
+    int StarterMinAdded=30;
 	//mins added to backup playing time
-    int backupMinAdded=23;
+    int backupMinAdded=90/(legthOFroster-5);
 	//keep track of player names so they arent updated twice
 	string playersupdated[5];
 	//buffer for searching
@@ -140,22 +147,42 @@ void Team::aftergame(char WoL) {
 
 	//updates the starters mins played and creates array with starter names
     for (i=0; i<5; i++){
-        starters[i].addMinPl(StarterMinAdded);
-		playersupdated[i]=starters[i].getName();
+        roster[starters[i]].addMinPl(StarterMinAdded);
+		roster[starters[i]].InjuredInGame();
+		playersupdated[i]=roster[starters[i]].getName();
     }
-	//updates the mins played of non starters by searching for starters and filtering them out of the update
-	for (i=0;i<10;i++){
+	//updates the mins played of non starters by searching for starters and injured players and filtering them out of the update
+	//update includes running the probability that a player is injured
+	for (i=0;i<legthOFroster-1;i++){
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
-			if (holdName==playersupdated[i]){
+			//won't update if player is injured
+			if (holdName==playersupdated[i]||roster[i].ifInjured()){
 				YN=true;
+				//if injured decrement games out
+				if (roster[i].ifInjured()){roster[i].decGamesOut();}
 			}
 		}
 		if (!YN){
 			roster[i].addMinPl(backupMinAdded);
+			roster[i].InjuredInGame();
 		}
 	}
-
 }
 
+int Team::getIndex() {
+	return (index);
+}
+
+void Team::setLengthofRoster(int inLength) {
+	legthOFroster=inLength;
+}
+
+float Team::getAddedProb() {
+	return(addedProb);
+}
+
+void Team::addProb(float inProb) {
+	addedProb=+inProb;
+}
