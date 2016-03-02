@@ -1,22 +1,43 @@
 #include "ProbMatrix.h"
 #include "Team.h"
+
+#include <iostream>
 #include <stdlib.h> // srand rand 
+#include <vector>
+#include <sstream> // reading in strings as buffers
+#include <fstream> // read in data
+
+using namespace std;
 
 ProbMatrix::ProbMatrix() // default constructor
 {
-	n = 0;
-	matrix = 0;
-	teams = new Team[0]; // empty array
+	numTeams = 0;
 }
 
+void ProbMatrix::setSize(int num_teams)
+{
+	numTeams = num_teams;
+}
+
+void ProbMatrix::addTeams(Team* list_teams, int num_teams) // parameterized constructor
+
+{  // think about linking ProbMatrix with Team class
+	teams = new Team[num_teams]; //  create an array of Teams
+	for (int i = 0; i < num_teams; i++){
+		teams[i] = list_teams[i]; // copy over
+	}
+}
+
+
 ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constructor
-{  // think about linkin ProbMatrix with Team class
+
+{  // think about linking ProbMatrix with Team class
 	teams = new Team [num_teams]; //  create an array of Teams
 	for (int i=0; i < num_teams; i++){
 		teams[i] = list_teams[i]; // copy over
 		teams[i].enumerate(i); // enumerate each variable
 	}
-	n = 0;
+	
 
 	float** matrix = new float*[num_teams]; //allocate array of float pointers
 
@@ -26,23 +47,48 @@ ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constru
 		matrix[j] = new float[num_teams]; //allocate each array of floats
 		for (int k = 0; k < num_teams; k++)
 		{
-			setProb(j, k); // assign a value
+			matrix[j][k] = 4;
 		}
 	}
 	
-	teams = 0;
+	
 }
 
-ProbMatrix::~ProbMatrix()
-{
+ProbMatrix::~ProbMatrix() // destructor
+{ 
 }
 
 // overload [] operator to 
-void ProbMatrix::setProb(int row, int col) // requries index in table
+void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 {
-	float r = ((float)rand() / (RAND_MAX)); // random number between 0 and 1
+	// read csv file
 
-	matrix[row][col] = r;
+	string line, bit;
+	ifstream  inFile(fname);
+	
+	if (!inFile){
+		cout << "Error opening - " << fname << endl;
+		cout << "\Press enter to exit." << endl;
+		cin.get();
+		exit;
+	}
+
+	matrix = new float*[num_teams];
+	
+	for (int row = 0; row < numTeams; row++){
+		matrix[row] = new float[num_teams]; // add a row
+		getline(inFile, line); // read in row
+
+		for (int col = 0; col < numTeams; col++){
+			stringstream lineStream(line);
+			getline(lineStream, bit, ',');
+			matrix[row][col] = stof(bit);
+
+
+		}
+	}
+	float r = 4.0;//((float)rand() / (RAND_MAX)); // random number between 0 and 1
+
 }
 
 

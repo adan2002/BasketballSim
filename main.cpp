@@ -25,10 +25,9 @@ complement of the entery (home, away)
 #include <string>
 #include <stdlib.h> // srand rand 
 #include <vector>
-#include <sstream> // reading in strings
+#include <sstream> // reading in strings as buffers
 #include <fstream> // read in data
 
-#include "sym_mat.h"
 #include "Team.h"
 #include "Player.h"
 #include "ProbMatrix.h"
@@ -54,12 +53,13 @@ int main()
 
 	cout << "creating NBA teams..." << endl;
 
-	int num_teams = 30;
+	int numTeams = 30;
 
-	vector<Team> teams(num_teams, Team()); // vector of Team class
+	// replace vector with array of Teams
+	Team* teams; // create empty array of Teams
+	teams = new Team[numTeams];
 
-	string filename, line;
-	vector<string>DataStore; // objec to store data
+	string line;
 
 	string file = "team_counts.csv"; // establish size of rosters
 
@@ -67,7 +67,9 @@ int main()
 
 
 	if (!inFile){
-		cout << "Error opening - " << filename << endl;
+		cout << "Error opening - " << file << endl;
+		cout << "\nPress enter to exit." << endl;
+		cin.get();
 		return -1;
 	}
 
@@ -77,7 +79,7 @@ int main()
 	while (getline(inFile, line))
 	{
 		teams[i].enumerate(i);
-		
+				
 		stringstream lineStream(line);
 		string bit;
 		getline(lineStream, bit, ','); // get first element (i.e. team name)
@@ -86,19 +88,20 @@ int main()
 		teams[i].setName(name);
 		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
 		int num_players = stoi(bit); // store number
+		teams[i].setNumPlayers(num_players);
 
 		// intialize roster
 		Player* players; // create empty array
 		players = new Player[num_players];
 
-		cout << name << " has " << num_players << " in main rotation.\n\n";
+		//cout << name << " has " << num_players << " in main rotation.\n\n";
 
 		string fname = "NBA_roster_ratings.csv"; 
 		ifstream  roster(fname); // open new file
 		
 		if (!roster){
 			cout << "\nError opening - " << fname << endl;
-			cout << "\Press enter to exit." << endl;
+			cout << "\nPress enter to exit." << endl;
 			cin.get();
 
 			return -1;
@@ -109,21 +112,17 @@ int main()
 		int j = 0;
 		while (getline(roster, line)){
 			// read file line by line
-			stringstream lineStream2(line);
+			stringstream lineStream(line);
 
-			getline(lineStream2, bit, ','); // get first element (i.e. team name)
-			cout << "team name: " << bit << endl;
+			getline(lineStream, bit, ','); // get first element (i.e. team name)
 			int idx = 0; // keep track of player in array
 			
-			//cout << name << " vs " << bit << endl;
 			if (name == bit){ // do the team names match?
 
-				cout << (name == bit) << endl;
-				cout << name << " : " << idx;
-				
+					
 				getline(lineStream, bit, ','); // get second element (i.e. player rating)
-				players[idx].setRating(stoi(bit));
-
+				players[idx].setRating(86);
+				
 				getline(lineStream, bit, ','); // get third element (i.e. player rank)
 				players[idx].setRank(stoi(bit));
 
@@ -161,9 +160,6 @@ int main()
 				
 			}
 
-			
-
-			//cout << j << endl;
 			j++;
 		}
 		
@@ -171,49 +167,20 @@ int main()
 		i++; // move to next element in vector
 	}
 
-
+	cout << "Closing CSV files\n\n";
+	inFile.close();
 	
 
-		//ATL, BKN, BOS, CHA, CHI, CLE,
-		//DAL, DEN, DET, GSW, HOU, IND };
-		/*
-		//LAC, LAL; }
-		//MEM MIA MIL MIN NO NYK OKC ORL
-		//PHI PHO POR SAC SAS TOR UTH WAS
+	cout << "Filling in probability matrix: " << endl;
+	ProbMatrix pmat;
+	pmat.setSize(numTeams);
+	pmat.addTeams(teams, numTeams);
 
-		*/
-
-
-
-	//data.close();
+	string fn = "probs.txt"; // probabilities file
+				
 
 	/*
-	// create struct for teams
-
-	struct team{
-		int num; // factor
-		int count; // keeps track of wins
-		string name;
-	};
-
-	team Atl, Bos, Chi, Det, LA, NY;
-	
-	// set team names
-	Atl.name = "Atlanta";
-	Bos.name = "Boston";
-	Chi.name = "Chicago";
-	Det.name = "Detroit";
-	LA.name = "Los Angeles";
-	NY.name = "New York";
-
-	// enumerate city names by index in table
-	Atl.num = 0;
-	Bos.num = 1;
-	Chi.num = 2;
-	Det.num = 3;
-	LA.num = 4;
-	NY.num = 5;
-
+		
 	// initialize counts to zero
 
 	Atl.count = 0;
@@ -329,39 +296,15 @@ int main()
 		}
 	}
 
-	// initialize class
-	Sym_Mat sym_matrix(num_of_cities, miles_tbl); // creat class
-	
-	cout << "Distance from Detroit to Chicago: ";
-	cout << sym_matrix.get_distance(Det, Chi) << endl;
-	cout << endl; // add white space
-	
-	// Test change distance member function
-	cout << "Update distance between Boston and Chicago. " << endl;
-	cout << "Original value: " << sym_matrix.get_distance(Bos, Chi) << endl;
-	sym_matrix.change_distance(Bos, Chi, 200);
-	cout << "New value: " << sym_matrix.get_distance(Bos, Chi) << endl;
-	cout << "Distance from Chicago to Boston: ";
-	cout << sym_matrix.get_distance(Chi, Bos) << endl;
-	cout << endl;
-	
-	cout << "convert table indices to corresponding vector ones: \n";
-	cout << "(LA, NY) = " << fromMatrixToVector(LA, NY) << endl;
-	cout << "(5, 2) = " << fromMatrixToVector(5, 2) << endl;
-	
 	*/
-
-
 	cout << "\nExiting program. Press enter to exit." << endl;
 
 	cin.get();
 
 	return 0;
 
-<<<<<<< HEAD
-}
-=======
 }
 
 
->>>>>>> 019d197e271151eff38cdb6dd462644a7e39e06f
+
+

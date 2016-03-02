@@ -24,6 +24,7 @@ private:
 	bool lstreak;
 	int legthOFroster;
 	int index; // id in matrix
+	int numplayers;
 public:
 	Team();
 	~Team();
@@ -45,6 +46,8 @@ public:
 	void setName(string namein);
 
 	void enumerate(int num);
+
+	void setNumPlayers(int num);
 
 	//win streak on/off
 	void changeWstreak();

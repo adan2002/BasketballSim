@@ -19,7 +19,7 @@ Team::Team() // default constructor
 	wstreak = 0; // why bool? --b/c it can be-if wstreak the +.1 to prob of winning next game
 	lstreak = 0; // why bool? --same as above
 	index = -1; // id in matrix
-	num_players = 0;
+	numplayers = 0;
 }
 
 Team::~Team() 
@@ -116,6 +116,10 @@ void Team::changeWstreak() {
 
 void Team::setName(string namein) {
     name=namein;
+}
+
+void Team::setNumPlayers(int num){
+	numplayers = num;
 }
 
 void Team::aftergame(char WoL) {

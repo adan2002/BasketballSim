@@ -154,3 +154,4 @@ for (team in Team_names){
 
 probMat
 
+write.table(probMat,file="probs.txt", sep = ',', row.names =F, col.names = F)
