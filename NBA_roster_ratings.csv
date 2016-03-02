@@ -1,326 +1,323 @@
-"","rating","firstname","lastname","pos","age","team"
-"1",85,"Paul","Millsap","PF",31,"ATL"
-"2",83,"Al","Horford","C",29,"ATL"
-"3",78,"Jeff","Teague","PG",27,"ATL"
-"4",78,"Kyle","Korver","SG",34,"ATL"
-"5",75,"DeMarre","Carroll","SF",29,"TOR"
-"6",74,"Thabo","Sefolosha","SF",31,"ATL"
-"7",74,"Kent","Bazemore","SF",26,"ATL"
-"8",72,"Mike","Scott","PF",27,"ATL"
-"9",71,"Adreian","Payne","PF",25,"MIN"
-"10",71,"Shelvin","Mack","PG",25,"UTH"
-"11",70,"Dennis","Schroder","PG",22,"ATL"
-"12",68,"John","Jenkins","SG",24,"PHO"
-"13",87,"Rajon","Rondo","PG",30,"SAC"
-"14",78,"Avery","Bradley","PG",25,"BOS"
-"15",78,"Jeff","Green","SF",29,"LAC"
-"16",78,"Jared","Sullinger","C",23,"BOS"
-"17",76,"Marcus","Smart","PG",21,"BOS"
-"18",76,"Marcus","Thornton","SF",28,"HOU"
-"19",75,"Brandon","Bass","PF",30,"LAL"
-"20",74,"Kelly","Olynyk","C",24,"BOS"
-"21",70,"Tyler","Zeller","C",26,"BOS"
-"22",70,"Phil","Pressey","PG",25,"PHO"
-"23",68,"James","Young","SG",20,"BOS"
-"24",66,"Joel","Anthony","C",33,"DET"
-"25",84,"Deron","Williams","PG",31,"DAL"
-"26",83,"Brook","Lopez","C",27,"BKN"
-"27",82,"Joe","Johnson","SF",34,"MIA"
-"28",77,"Mason","Plumlee","C",25,"POR"
-"29",77,"Kevin","Garnett","PF",39,"MIN"
-"30",74,"Bojan","Bogdanovic","SG",26,"BKN"
-"31",74,"Jarrett","Jack","PG",32,"BKN"
-"32",71,"Mirza","Teletovic","PF",30,"PHO"
-"33",71,"Alan","Anderson","SG",33,"WAS"
-"34",68,"Markel","Brown","SG",24,"BKN"
-"35",66,"Sergey","Karasev","SG",22,"BKN"
-"36",87,"Al","Jefferson","C",31,"CHA"
-"37",84,"Lance","Stephenson","SF",25,"MEM"
-"38",82,"Kemba","Walker","PG",25,"CHA"
-"39",78,"Gerald","Henderson","SG",28,"POR"
-"40",77,"Michael","Kidd-Gilchrist","SF",22,"CHA"
-"41",75,"Gary","Neal","PG",31,"WAS"
-"42",74,"Brian","Roberts","PG",30,"POR"
-"43",73,"Cody","Zeller","C",23,"CHA"
-"44",73,"Marvin","Williams","PF",29,"CHA"
-"45",73,"Bismack","Biyombo","C",23,"TOR"
-"46",72,"Noah","Vonleh","PF",20,"POR"
-"47",71,"P.J.","Hairston","SF",23,"MEM"
-"48",88,"Derrick","Rose","PG",27,"CHI"
-"49",87,"Joakim","Noah","C",31,"CHI"
-"50",82,"Pau","Gasol","C",35,"CHI"
-"51",80,"Taj","Gibson","PF",30,"CHI"
-"52",80,"Jimmy","Butler","SG",26,"CHI"
-"53",76,"Kirk","Hinrich","SG",35,"ATL"
-"54",75,"Doug","McDermott","SF",24,"CHI"
-"55",75,"Nikola","Mirotic","PF",25,"CHI"
-"56",74,"Mike","Dunleavy","SG",35,"CHI"
-"57",73,"Aaron","Brooks","PG",31,"CHI"
-"58",72,"Tony","Snell","SF",24,"CHI"
-"59",66,"Cameron","Bairstow","PF",25,"CHI"
-"60",98,"LeBron","James","SF",31,"CLE"
-"61",89,"Kevin","Love","PF",27,"CLE"
-"62",86,"Kyrie","Irving","PG",23,"CLE"
-"63",78,"Dion","Waiters","SG",24,"OKC"
-"64",76,"Tristan","Thompson","C",24,"CLE"
-"65",75,"Anderson","Varejao","PF",33,"GSW"
-"66",74,"Mike","Miller","SG",36,"DEN"
-"67",72,"Matthew","Dellavedova","PG",25,"CLE"
-"68",69,"James","Jones","SG",35,"CLE"
-"69",88,"Dirk","Nowitzki","PF",37,"DAL"
-"70",82,"Monta","Ellis","SG",30,"IND"
-"71",79,"Chandler","Parsons","SF",27,"DAL"
-"72",79,"Tyson","Chandler","C",33,"PHO"
-"73",76,"Jameer","Nelson","PG",34,"DEN"
-"74",75,"Devin","Harris","PG",33,"DAL"
-"75",75,"Brandan","Wright","PF",28,"MEM"
-"76",74,"Raymond","Felton","PG",31,"DAL"
-"77",74,"Al-Farouq","Aminu","SF",25,"POR"
-"78",72,"Jae","Crowder","SF",25,"BOS"
-"79",72,"Richard","Jefferson","SF",35,"CLE"
-"80",84,"Ty","Lawson","PG",28,"HOU"
-"81",81,"Kenneth","Faried","PF",26,"DEN"
-"82",78,"Arron","Afflalo","SG",30,"NYK"
-"83",78,"Wilson","Chandler","SF",28,"DEN"
-"84",77,"Danilo","Gallinari","SF",27,"DEN"
-"85",74,"JaVale","McGee","C",28,"DAL"
-"86",74,"Randy","Foye","SG",32,"OKC"
-"87",74,"Timofey","Mozgov","C",29,"CLE"
-"88",71,"Gary","Harris","SG",21,"DEN"
-"89",69,"Jusuf","Nurkic","C",21,"DEN"
-"90",69,"Darrell","Arthur","PF",27,"DEN"
-"91",83,"Andre","Drummond","C",22,"DET"
-"92",80,"Brandon","Jennings","PG",26,"ORL"
-"93",80,"Josh","Smith","C",30,"HOU"
-"94",80,"Greg","Monroe","C",25,"MIL"
-"95",76,"Caron","Butler","SF",35,"SAC"
-"96",76,"D.J.","Augustin","PG",28,"DEN"
-"97",75,"Jodie","Meeks","SG",28,"DET"
-"98",74,"Kyle","Singler","SF",27,"OKC"
-"99",72,"Kentavious","Caldwell-Pope","SG",23,"DET"
-"100",71,"Jonas","Jerebko","PF",28,"BOS"
-"101",89,"Stephen","Curry","PG",27,"GSW"
-"102",82,"Klay","Thompson","SG",26,"GSW"
-"103",82,"Andre","Iguodala","SF",32,"GSW"
-"104",82,"David","Lee","PF",32,"DAL"
-"105",80,"Andrew","Bogut","C",31,"GSW"
-"106",77,"Draymond","Green","PF",25,"GSW"
-"107",76,"Harrison","Barnes","SF",23,"GSW"
-"108",74,"Shaun","Livingston","PG",30,"GSW"
-"109",72,"Marreese","Speights","C",28,"GSW"
-"110",69,"Brandon","Rush","SF",30,"GSW"
-"111",67,"Festus","Ezeli","C",26,"GSW"
-"112",88,"James","Harden","SG",26,"HOU"
-"113",88,"Dwight","Howard","C",30,"HOU"
-"114",78,"Patrick","Beverley","PG",27,"HOU"
-"115",78,"Trevor","Ariza","SF",30,"HOU"
-"116",77,"Terrence","Jones","PF",24,"HOU"
-"117",72,"Isaiah","Canaan","PG",24,"PHI"
-"118",71,"Troy","Daniels","SG",24,"CHA"
-"119",69,"Alonzo","Gee","SF",28,"NO"
-"120",69,"Donatas","Motiejunas","PF",25,"HOU"
-"121",69,"Robert","Covington","SF",25,"PHI"
-"122",68,"Ish","Smith","PG",27,"PHI"
-"123",89,"Paul","George","SF",25,"IND"
-"124",80,"David","West","PF",35,"SAS"
-"125",80,"Roy","Hibbert","C",29,"LAL"
-"126",78,"George","Hill","PG",29,"IND"
-"127",77,"Luis","Scola","PF",35,"TOR"
-"128",75,"Rodney","Stuckey","PG",29,"IND"
-"129",75,"Ian","Mahinmi","C",29,"IND"
-"130",75,"C.J.","Watson","PG",31,"ORL"
-"131",73,"C.J.","Miles","SF",28,"IND"
-"132",68,"Lavoy","Allen","PF",27,"IND"
-"133",66,"Solomon","Hill","SF",24,"IND"
-"134",65,"Donald","Sloan","PG",28,"BKN"
-"135",91,"Chris","Paul","PG",30,"LAC"
-"136",89,"Blake","Griffin","PF",26,"LAC"
-"137",81,"DeAndre","Jordan","C",27,"LAC"
-"138",80,"Jamal","Crawford","SG",35,"LAC"
-"139",77,"J.J.","Redick","SG",31,"LAC"
-"140",76,"Matt","Barnes","SF",35,"MEM"
-"141",76,"Spencer","Hawes","PF",27,"CHA"
-"142",74,"Jared","Dudley","SF",30,"WAS"
-"143",69,"Reggie","Bullock","SF",24,"DET"
-"144",67,"C.J.","Wilcox","SG",25,"LAC"
-"145",89,"Kobe","Bryant","SF",37,"LAL"
-"146",78,"Nick","Young","SF",30,"LAL"
-"147",77,"Jeremy","Lin","PG",27,"CHA"
-"148",76,"Jordan","Hill","C",28,"IND"
-"149",76,"Julius","Randle","PF",21,"LAL"
-"150",73,"Ed","Davis","C",26,"POR"
-"151",73,"Wesley","Johnson","SF",28,"LAC"
-"152",71,"Ryan","Kelly","PF",24,"LAL"
-"153",70,"Jordan","Clarkson","PG",23,"LAL"
-"154",67,"Robert","Sacre","C",26,"LAL"
-"155",85,"Marc","Gasol","C",31,"MEM"
-"156",84,"Zach","Randolph","PF",34,"MEM"
-"157",83,"Mike","Conley","PG",28,"MEM"
-"158",78,"Tony","Allen","SG",34,"MEM"
-"159",76,"Courtney","Lee","SG",30,"CHA"
-"160",77,"Vince","Carter","SG",39,"MEM"
-"161",75,"Tayshaun","Prince","SF",36,"MIN"
-"162",74,"Beno","Udrih","PG",33,"MIA"
-"163",72,"Kosta","Koufos","C",27,"SAC"
-"164",71,"Jordan","Adams","SG",21,"MEM"
-"165",69,"Jon","Leuer","PF",26,"PHO"
-"166",68,"Quincy","Pondexter","SF",27,"NO"
-"167",86,"Dwyane","Wade","SG",34,"MIA"
-"168",84,"Chris","Bosh","PF",31,"MIA"
-"169",79,"Luol","Deng","SF",30,"MIA"
-"170",75,"Mario","Chalmers","PG",29,"MEM"
-"171",75,"Chris","Andersen","PF",37,"MEM"
-"172",75,"Norris","Cole","PG",27,"NO"
-"173",74,"Josh","McRoberts","PF",28,"MIA"
-"174",74,"Shabazz","Napier","PG",24,"ORL"
-"175",72,"Udonis","Haslem","PF",35,"MIA"
-"176",70,"James","Ennis","SF",25,"MEM"
-"177",79,"Brandon","Knight","PG",24,"PHO"
-"178",78,"Jabari","Parker","PF",20,"MIL"
-"179",77,"O.J.","Mayo","SG",28,"MIL"
-"180",75,"Khris","Middleton","SG",24,"MIL"
-"181",75,"John","Henson","PF",25,"MIL"
-"182",74,"Jerryd","Bayless","PG",27,"MIL"
-"183",74,"Kendall","Marshall","PG",24,"PHI"
-"184",74,"Giannis","Antetokounmpo","SF",21,"MIL"
-"185",73,"Ersan","Ilyasova","PF",28,"ORL"
-"186",69,"Zaza","Pachulia","C",32,"DAL"
-"187",81,"Nikola","Pekovic","C",30,"MIN"
-"188",79,"Ricky","Rubio","PG",25,"MIN"
-"189",79,"Kevin","Martin","SG",33,"MIN"
-"190",78,"Thaddeus","Young","PF",27,"BKN"
-"191",77,"Andrew","Wiggins","SG",21,"MIN"
-"192",76,"Mo","Williams","PG",33,"CLE"
-"193",75,"Corey","Brewer","SG",29,"HOU"
-"194",74,"J.J.","Barea","PG",31,"DAL"
-"195",72,"Gorgui","Dieng","C",26,"MIN"
-"196",72,"Zach","LaVine","PG",20,"MIN"
-"197",70,"Anthony","Bennett","PF",22,"TOR"
-"198",70,"Chase","Budinger","SF",27,"IND"
-"199",67,"Shabazz","Muhammad","SF",23,"MIN"
-"200",88,"Anthony","Davis","PF",22,"NO"
-"201",82,"Jrue","Holiday","PG",25,"NO"
-"202",79,"Eric","Gordon","SG",27,"NO"
-"203",78,"Tyreke","Evans","SG",26,"NO"
-"204",77,"Ryan","Anderson","PF",27,"NO"
-"205",76,"Omer","Asik","C",29,"NO"
-"206",72,"Jimmer","Fredette","PG",27,"NYK"
-"207",72,"Austin","Rivers","PG",23,"LAC"
-"208",69,"Jeff","Withey","C",25,"UTH"
-"209",68,"Alexis","Ajinca","C",27,"NO"
-"210",66,"Luke","Babbitt","SF",26,"NO"
-"211",89,"Carmelo","Anthony","SF",31,"NYK"
-"212",78,"Jose","Calderon","PG",34,"NYK"
-"213",78,"J.R.","Smith","SG",30,"CLE"
-"214",77,"Amar'e","Stoudemire","PF",33,"MIA"
-"215",77,"Iman","Shumpert","SG",25,"CLE"
-"216",72,"Pablo","Prigioni","PG",38,"LAC"
-"217",72,"Jason","Smith","PF",29,"ORL"
-"218",72,"Shane","Larkin","PG",23,"BKN"
-"219",70,"Cleanthony","Early","SF",24,"NYK"
-"220",67,"Quincy","Acy","SF",25,"SAC"
-"221",67,"Cole","Aldrich","C",27,"LAC"
-"222",95,"Kevin","Durant","SF",27,"OKC"
-"223",88,"Russell","Westbrook","PG",27,"OKC"
-"224",84,"Serge","Ibaka","PF",26,"OKC"
-"225",78,"Reggie","Jackson","PG",25,"DET"
-"226",74,"Kendrick","Perkins","C",31,"NO"
-"227",74,"Nick","Collison","PF",35,"OKC"
-"228",74,"Steven","Adams","C",22,"OKC"
-"229",73,"Jeremy","Lamb","SG",23,"CHA"
-"230",73,"Anthony","Morrow","SG",30,"OKC"
-"231",68,"Andre","Roberson","SG",24,"OKC"
-"232",68,"Mitch","McGary","PF",23,"OKC"
-"233",80,"Nikola","Vucevic","C",25,"ORL"
-"234",76,"Channing","Frye","PF",32,"CLE"
-"235",76,"Tobias","Harris","SF",23,"DET"
-"236",74,"Elfrid","Payton","PG",22,"ORL"
-"237",74,"Aaron","Gordon","PF",20,"ORL"
-"238",74,"Maurice","Harkless","SF",22,"POR"
-"239",72,"Evan","Fournier","SG",23,"ORL"
-"240",71,"Andrew","Nicholson","PF",26,"ORL"
-"241",70,"Kyle","O'Quinn","PF",25,"NYK"
-"242",66,"Dewayne","Dedmon","C",26,"ORL"
-"243",80,"Michael","Carter-Williams","PG",24,"MIL"
-"244",77,"Joel","Embiid","C",21,"PHI"
-"245",76,"Nerlens","Noel","PF",21,"PHI"
-"246",74,"Luc","Mbah a Moute","PF",29,"LAC"
-"247",71,"Hollis","Thompson","SG",24,"PHI"
-"248",68,"Jerami","Grant","SF",21,"PHI"
-"249",84,"Goran","Dragic","PG",29,"MIA"
-"250",81,"Eric","Bledsoe","PG",26,"PHO"
-"251",80,"Isaiah","Thomas","PG",27,"BOS"
-"252",78,"Markieff","Morris","PF",26,"WAS"
-"253",78,"Miles","Plumlee","C",27,"MIL"
-"254",78,"Gerald","Green","SF",30,"MIA"
-"255",76,"P.J.","Tucker","SF",30,"PHO"
-"256",75,"Marcus","Morris","PF",26,"DET"
-"257",73,"Anthony","Tolliver","PF",30,"DET"
-"258",72,"T.J.","Warren","SF",22,"PHO"
-"259",71,"Tyler","Ennis","PG",21,"MIL"
-"260",69,"Archie","Goodwin","SG",21,"PHO"
-"261",67,"Alex","Len","C",22,"PHO"
-"262",88,"LaMarcus","Aldridge","PF",30,"SAS"
-"263",87,"Damian","Lillard","PG",25,"POR"
-"264",79,"Nicolas","Batum","SG",27,"CHA"
-"265",78,"Wesley","Matthews","SG",29,"DAL"
-"266",77,"Robin","Lopez","C",27,"NYK"
-"267",76,"Chris","Kaman","C",33,"POR"
-"268",75,"Thomas","Robinson","PF",24,"BKN"
-"269",71,"Steve","Blake","PG",36,"DET"
-"270",70,"Will","Barton","SF",25,"DEN"
-"271",68,"Meyers","Leonard","PF",24,"POR"
-"272",67,"Allen","Crabbe","SG",23,"POR"
-"273",86,"DeMarcus","Cousins","C",25,"SAC"
-"274",82,"Rudy","Gay","SF",29,"SAC"
-"275",75,"Carl","Landry","PF",32,"PHI"
-"276",74,"Nik","Stauskas","SG",22,"PHI"
-"277",74,"Ray","McCallum","PG",24,"SAS"
-"278",74,"Ben","McLemore","SG",23,"SAC"
-"279",74,"Jason","Terry","SG",38,"HOU"
-"280",71,"Derrick","Williams","PF",24,"NYK"
-"281",71,"Wayne","Ellington","SG",28,"BKN"
-"282",90,"Tim","Duncan","C",39,"SAS"
-"283",88,"Tony","Parker","PG",33,"SAS"
-"284",85,"Kawhi","Leonard","SF",24,"SAS"
-"285",83,"Manu","Ginobili","SG",38,"SAS"
-"286",78,"Danny","Green","SG",28,"SAS"
-"287",78,"Boris","Diaw","C",33,"SAS"
-"288",77,"Tiago","Splitter","C",31,"ATL"
-"289",75,"Marco","Belinelli","SG",29,"SAC"
-"290",73,"Matt","Bonner","C",35,"SAS"
-"291",73,"Cory","Joseph","PG",24,"TOR"
-"292",67,"Jeff","Ayres","PF",28,"LAC"
-"293",67,"Kyle","Anderson","SF",22,"SAS"
-"294",85,"Kyle","Lowry","PG",29,"TOR"
-"295",85,"DeMar","DeRozan","SG",26,"TOR"
-"296",78,"Jonas","Valanciunas","C",23,"TOR"
-"297",77,"Amir","Johnson","PF",28,"BOS"
-"298",77,"Louis","Williams","SG",29,"LAL"
-"299",76,"Terrence","Ross","SF",25,"TOR"
-"300",76,"Greivis","Vasquez","PG",29,"MIL"
-"301",75,"Patrick","Patterson","PF",26,"TOR"
-"302",73,"Tyler","Hansbrough","PF",30,"CHA"
-"303",70,"James","Johnson","PF",29,"TOR"
-"304",64,"Bruno","Caboclo","SF",20,"TOR"
-"305",79,"Gordon","Hayward","SF",25,"UTH"
-"306",78,"Derrick","Favors","PF",24,"UTH"
-"307",76,"Alec","Burks","SG",24,"UTH"
-"308",75,"Trey","Burke","PG",23,"UTH"
-"309",75,"Enes","Kanter","C",23,"OKC"
-"310",74,"Dante","Exum","PG",20,"UTH"
-"311",74,"Trevor","Booker","PF",28,"UTH"
-"312",72,"Steve","Novak","SF",32,"MIL"
-"313",71,"Rodney","Hood","SG",23,"UTH"
-"314",71,"Rudy","Gobert","C",23,"UTH"
-"315",70,"Jeremy","Evans","SF",28,"DAL"
-"316",67,"Ian","Clark","SG",24,"GSW"
-"317",86,"John","Wall","PG",25,"WAS"
-"318",81,"Bradley","Beal","SG",22,"WAS"
-"319",81,"Paul","Pierce","SF",38,"LAC"
-"320",81,"Marcin","Gortat","C",32,"WAS"
-"321",80,"Nene","Hilario","C",33,"WAS"
-"322",74,"Kevin","Seraphin","C",26,"NYK"
-"323",73,"Kris","Humphries","PF",31,"PHO"
-"324",70,"Drew","Gooden","PF",34,"WAS"
-"325",68,"Garrett","Temple","SG",29,"WAS"
+team,rating,rank,name,position,age
+ATL,85,1,Paul Millsap,PF,31
+ATL,83,1,Al Horford,C,29
+ATL,78,1,Jeff Teague,PG,27
+ATL,78,1,Kyle Korver,SG,34
+TOR,75,3,DeMarre Carroll,SF,29
+ATL,74,2,Thabo Sefolosha,SF,31
+ATL,74,1,Kent Bazemore,SF,26
+ATL,72,2,Mike Scott,PF,27
+MIN,71,3,Adreian Payne,PF,25
+UTH,71,3,Shelvin Mack,PG,25
+ATL,70,2,Dennis Schroder,PG,22
+PHO,68,3,John Jenkins,SG,24
+SAC,87,1,Rajon Rondo,PG,30
+BOS,78,1,Avery Bradley,PG,25
+LAC,78,2,Jeff Green,SF,29
+BOS,78,1,Jared Sullinger,C,23
+BOS,76,2,Marcus Smart,PG,21
+LAL,75,3,Brandon Bass,PF,30
+BOS,74,2,Kelly Olynyk,C,24
+BOS,70,3,Tyler Zeller,C,26
+PHO,70,4,Phil Pressey,PG,25
+BOS,68,2,James Young,SG,20
+DET,66,2,Joel Anthony,C,33
+DAL,84,1,Deron Williams,PG,31
+BKN,83,1,Brook Lopez,C,27
+MIA,82,2,Joe Johnson,SF,34
+POR,77,1,Mason Plumlee,C,25
+MIN,77,1,Kevin Garnett,PF,39
+BKN,74,1,Bojan Bogdanovic,SG,26
+BKN,74,3,Jarrett Jack,PG,32
+PHO,71,1,Mirza Teletovic,PF,30
+WAS,71,4,Alan Anderson,SG,33
+BKN,68,2,Markel Brown,SG,24
+BKN,66,2,Sergey Karasev,SG,22
+CHA,87,3,Al Jefferson,C,31
+MEM,84,2,Lance Stephenson,SF,25
+CHA,82,1,Kemba Walker,PG,25
+POR,78,3,Gerald Henderson,SG,28
+CHA,77,3,Michael Kidd-Gilchrist,SF,22
+WAS,75,3,Gary Neal,PG,31
+POR,74,2,Brian Roberts,PG,30
+CHA,73,1,Cody Zeller,C,23
+CHA,73,1,Marvin Williams,PF,29
+TOR,73,2,Bismack Biyombo,C,23
+POR,72,1,Noah Vonleh,PF,20
+MEM,71,4,P.J. Hairston,SF,23
+CHI,88,1,Derrick Rose,PG,27
+CHI,87,2,Joakim Noah,C,31
+CHI,82,1,Pau Gasol,C,35
+CHI,80,1,Taj Gibson,PF,30
+CHI,80,2,Jimmy Butler,SG,26
+ATL,76,3,Kirk Hinrich,SG,35
+CHI,75,2,Doug McDermott,SF,24
+CHI,75,2,Nikola Mirotic,PF,25
+CHI,74,1,Mike Dunleavy,SG,35
+CHI,73,2,Aaron Brooks,PG,31
+CHI,72,3,Tony Snell,SF,24
+CHI,66,4,Cameron Bairstow,PF,25
+CLE,98,1,LeBron James,SF,31
+CLE,89,1,Kevin Love,PF,27
+CLE,86,1,Kyrie Irving,PG,23
+OKC,78,1,Dion Waiters,SG,24
+CLE,76,1,Tristan Thompson,C,24
+GSW,75,2,Anderson Varejao,PF,33
+DEN,74,2,Mike Miller,SG,36
+CLE,72,3,Matthew Dellavedova,PG,25
+CLE,69,3,James Jones,SG,35
+DAL,88,1,Dirk Nowitzki,PF,37
+IND,82,1,Monta Ellis,SG,30
+DAL,79,1,Chandler Parsons,SF,27
+PHO,79,1,Tyson Chandler,C,33
+DEN,76,2,Jameer Nelson,PG,34
+DAL,75,2,Devin Harris,PG,33
+MEM,75,1,Brandan Wright,PF,28
+DAL,74,3,Raymond Felton,PG,31
+POR,74,1,Al-Farouq Aminu,SF,25
+BOS,72,1,Jae Crowder,SF,25
+CLE,72,2,Richard Jefferson,SF,35
+HOU,84,3,Ty Lawson,PG,28
+DEN,81,1,Kenneth Faried,PF,26
+NYK,78,1,Arron Afflalo,SG,30
+DEN,78,4,Wilson Chandler,SF,28
+DEN,77,1,Danilo Gallinari,SF,27
+DAL,74,2,JaVale McGee,C,28
+OKC,74,3,Randy Foye,SG,32
+CLE,74,2,Timofey Mozgov,C,29
+DEN,71,1,Gary Harris,SG,21
+DEN,69,2,Jusuf Nurkic,C,21
+DEN,69,2,Darrell Arthur,PF,27
+DET,83,1,Andre Drummond,C,22
+ORL,80,2,Brandon Jennings,PG,26
+HOU,80,3,Josh Smith,C,30
+MIL,80,2,Greg Monroe,C,25
+SAC,76,2,Caron Butler,SF,35
+DEN,76,3,D.J. Augustin,PG,28
+DET,75,2,Jodie Meeks,SG,28
+OKC,74,2,Kyle Singler,SF,27
+DET,72,1,Kentavious Caldwell-Pope,SG,23
+BOS,71,2,Jonas Jerebko,PF,28
+GSW,89,1,Stephen Curry,PG,27
+GSW,82,1,Klay Thompson,SG,26
+GSW,82,2,Andre Iguodala,SF,32
+DAL,82,2,David Lee,PF,32
+GSW,80,1,Andrew Bogut,C,31
+GSW,77,1,Draymond Green,PF,25
+GSW,76,1,Harrison Barnes,SF,23
+GSW,74,2,Shaun Livingston,PG,30
+GSW,72,2,Marreese Speights,C,28
+GSW,69,2,Brandon Rush,SF,30
+GSW,67,3,Festus Ezeli,C,26
+HOU,88,1,James Harden,SG,26
+HOU,88,1,Dwight Howard,C,30
+HOU,78,1,Patrick Beverley,PG,27
+HOU,78,1,Trevor Ariza,SF,30
+HOU,77,2,Terrence Jones,PF,24
+PHI,72,2,Isaiah Canaan,PG,24
+CHA,71,2,Troy Daniels,SG,24
+NO,69,1,Alonzo Gee,SF,28
+HOU,69,4,Donatas Motiejunas,PF,25
+PHI,69,1,Robert Covington,SF,25
+PHI,68,1,Ish Smith,PG,27
+IND,89,1,Paul George,SF,25
+SAS,80,2,David West,PF,35
+LAL,80,1,Roy Hibbert,C,29
+IND,78,1,George Hill,PG,29
+TOR,77,1,Luis Scola,PF,35
+IND,75,2,Rodney Stuckey,PG,29
+IND,75,1,Ian Mahinmi,C,29
+ORL,75,4,C.J. Watson,PG,31
+IND,73,3,C.J. Miles,SF,28
+IND,68,2,Lavoy Allen,PF,27
+IND,66,4,Solomon Hill,SF,24
+BKN,65,1,Donald Sloan,PG,28
+LAC,91,1,Chris Paul,PG,30
+LAC,89,2,Blake Griffin,PF,26
+LAC,81,1,DeAndre Jordan,C,27
+LAC,80,2,Jamal Crawford,SG,35
+LAC,77,1,J.J. Redick,SG,31
+MEM,76,1,Matt Barnes,SF,35
+CHA,76,2,Spencer Hawes,PF,27
+WAS,74,1,Jared Dudley,SF,30
+DET,69,3,Reggie Bullock,SF,24
+LAC,67,3,C.J. Wilcox,SG,25
+LAL,89,1,Kobe Bryant,SF,37
+LAL,78,2,Nick Young,SF,30
+CHA,77,2,Jeremy Lin,PG,27
+IND,76,2,Jordan Hill,C,28
+LAL,76,2,Julius Randle,PF,21
+POR,73,2,Ed Davis,C,26
+LAC,73,3,Wesley Johnson,SF,28
+LAL,71,4,Ryan Kelly,PF,24
+LAL,70,1,Jordan Clarkson,PG,23
+LAL,67,2,Robert Sacre,C,26
+MEM,85,3,Marc Gasol,C,31
+MEM,84,1,Zach Randolph,PF,34
+MEM,83,1,Mike Conley,PG,28
+MEM,78,1,Tony Allen,SG,34
+CHA,76,1,Courtney Lee,SG,30
+MEM,77,2,Vince Carter,SG,39
+MIN,75,1,Tayshaun Prince,SF,36
+MIA,74,3,Beno Udrih,PG,33
+SAC,72,2,Kosta Koufos,C,27
+MEM,71,3,Jordan Adams,SG,21
+PHO,69,2,Jon Leuer,PF,26
+NO,68,3,Quincy Pondexter,SF,27
+MIA,86,1,Dwyane Wade,SG,34
+MIA,84,3,Chris Bosh,PF,31
+MIA,79,1,Luol Deng,SF,30
+MEM,75,2,Mario Chalmers,PG,29
+MEM,75,2,Chris Andersen,PF,37
+NO,75,1,Norris Cole,PG,27
+MIA,74,1,Josh McRoberts,PF,28
+ORL,74,3,Shabazz Napier,PG,24
+MIA,72,2,Udonis Haslem,PF,35
+MEM,70,3,James Ennis,SF,25
+PHO,79,3,Brandon Knight,PG,24
+MIL,78,1,Jabari Parker,PF,20
+MIL,77,1,O.J. Mayo,SG,28
+MIL,75,1,Khris Middleton,SG,24
+MIL,75,2,John Henson,PF,25
+MIL,74,2,Jerryd Bayless,PG,27
+PHI,74,4,Kendall Marshall,PG,24
+MIL,74,1,Giannis Antetokounmpo,SF,21
+ORL,73,1,Ersan Ilyasova,PF,28
+DAL,69,1,Zaza Pachulia,C,32
+MIN,81,3,Nikola Pekovic,C,30
+MIN,79,1,Ricky Rubio,PG,25
+MIN,79,3,Kevin Martin,SG,33
+BKN,78,1,Thaddeus Young,PF,27
+MIN,77,1,Andrew Wiggins,SG,21
+CLE,76,2,Mo Williams,PG,33
+HOU,75,2,Corey Brewer,SG,29
+DAL,74,2,J.J. Barea,PG,31
+MIN,72,2,Gorgui Dieng,C,26
+MIN,72,2,Zach LaVine,PG,20
+TOR,70,3,Anthony Bennett,PF,22
+IND,70,2,Chase Budinger,SF,27
+MIN,67,2,Shabazz Muhammad,SF,23
+NO,88,1,Anthony Davis,PF,22
+NO,82,1,Jrue Holiday,PG,25
+NO,79,4,Eric Gordon,SG,27
+NO,78,3,Tyreke Evans,SG,26
+NO,77,2,Ryan Anderson,PF,27
+NO,76,1,Omer Asik,C,29
+LAC,72,3,Austin Rivers,PG,23
+UTH,69,2,Jeff Withey,C,25
+NO,68,2,Alexis Ajinca,C,27
+NO,66,3,Luke Babbitt,SF,26
+NYK,89,1,Carmelo Anthony,SF,31
+NYK,78,1,Jose Calderon,PG,34
+CLE,78,1,J.R. Smith,SG,30
+MIA,77,2,Amar'e Stoudemire,PF,33
+CLE,77,2,Iman Shumpert,SG,25
+LAC,72,2,Pablo Prigioni,PG,38
+ORL,72,2,Jason Smith,PF,29
+BKN,72,2,Shane Larkin,PG,23
+NYK,70,2,Cleanthony Early,SF,24
+SAC,67,3,Quincy Acy,SF,25
+LAC,67,2,Cole Aldrich,C,27
+OKC,95,1,Kevin Durant,SF,27
+OKC,88,1,Russell Westbrook,PG,27
+OKC,84,1,Serge Ibaka,PF,26
+DET,78,1,Reggie Jackson,PG,25
+NO,74,3,Kendrick Perkins,C,31
+OKC,74,2,Nick Collison,PF,35
+OKC,74,1,Steven Adams,C,22
+CHA,73,2,Jeremy Lamb,SG,23
+OKC,73,2,Anthony Morrow,SG,30
+OKC,68,3,Andre Roberson,SG,24
+OKC,68,3,Mitch McGary,PF,23
+ORL,80,1,Nikola Vucevic,C,25
+CLE,76,2,Channing Frye,PF,32
+DET,76,1,Tobias Harris,SF,23
+ORL,74,1,Elfrid Payton,PG,22
+ORL,74,1,Aaron Gordon,PF,20
+POR,74,2,Maurice Harkless,SF,22
+ORL,72,2,Evan Fournier,SG,23
+ORL,71,2,Andrew Nicholson,PF,26
+NYK,70,3,Kyle O'Quinn,PF,25
+ORL,66,3,Dewayne Dedmon,C,26
+MIL,80,2,Michael Carter-Williams,PG,24
+PHI,77,3,Joel Embiid,C,21
+PHI,76,1,Nerlens Noel,PF,21
+LAC,74,1,Luc Mbah a Moute,PF,29
+PHI,71,2,Hollis Thompson,SG,24
+PHI,68,2,Jerami Grant,SF,21
+MIA,84,1,Goran Dragic,PG,29
+PHO,81,2,Eric Bledsoe,PG,26
+BOS,80,1,Isaiah Thomas,PG,27
+WAS,78,3,Markieff Morris,PF,26
+MIL,78,1,Miles Plumlee,C,27
+MIA,78,3,Gerald Green,SF,30
+PHO,76,1,P.J. Tucker,SF,30
+DET,75,1,Marcus Morris,PF,26
+DET,73,3,Anthony Tolliver,PF,30
+PHO,72,3,T.J. Warren,SF,22
+MIL,71,3,Tyler Ennis,PG,21
+PHO,69,2,Archie Goodwin,SG,21
+PHO,67,2,Alex Len,C,22
+SAS,88,1,LaMarcus Aldridge,PF,30
+POR,87,1,Damian Lillard,PG,25
+CHA,79,1,Nicolas Batum,SG,27
+DAL,78,1,Wesley Matthews,SG,29
+NYK,77,1,Robin Lopez,C,27
+POR,76,3,Chris Kaman,C,33
+BKN,75,2,Thomas Robinson,PF,24
+DET,71,2,Steve Blake,PG,36
+DEN,70,2,Will Barton,SF,25
+POR,68,2,Meyers Leonard,PF,24
+POR,67,2,Allen Crabbe,SG,23
+SAC,86,1,DeMarcus Cousins,C,25
+SAC,82,1,Rudy Gay,SF,29
+PHI,75,2,Carl Landry,PF,32
+PHI,74,1,Nik Stauskas,SG,22
+SAS,74,3,Ray McCallum,PG,24
+SAC,74,3,Ben McLemore,SG,23
+HOU,74,2,Jason Terry,SG,38
+NYK,71,2,Derrick Williams,PF,24
+BKN,71,1,Wayne Ellington,SG,28
+SAS,90,1,Tim Duncan,C,39
+SAS,88,1,Tony Parker,PG,33
+SAS,85,1,Kawhi Leonard,SF,24
+SAS,83,2,Manu Ginobili,SG,38
+SAS,78,1,Danny Green,SG,28
+SAS,78,2,Boris Diaw,C,33
+ATL,77,2,Tiago Splitter,C,31
+SAC,75,1,Marco Belinelli,SG,29
+SAS,73,3,Matt Bonner,C,35
+TOR,73,2,Cory Joseph,PG,24
+SAS,67,2,Kyle Anderson,SF,22
+TOR,85,1,Kyle Lowry,PG,29
+TOR,85,1,DeMar DeRozan,SG,26
+TOR,78,1,Jonas Valanciunas,C,23
+BOS,77,1,Amir Johnson,PF,28
+LAL,77,1,Louis Williams,SG,29
+TOR,76,2,Terrence Ross,SF,25
+MIL,76,4,Greivis Vasquez,PG,29
+TOR,75,2,Patrick Patterson,PF,26
+CHA,73,3,Tyler Hansbrough,PF,30
+TOR,70,1,James Johnson,PF,29
+TOR,64,2,Bruno Caboclo,SF,20
+UTH,79,1,Gordon Hayward,SF,25
+UTH,78,1,Derrick Favors,PF,24
+UTH,76,2,Alec Burks,SG,24
+UTH,75,2,Trey Burke,PG,23
+OKC,75,2,Enes Kanter,C,23
+UTH,74,3,Dante Exum,PG,20
+UTH,74,2,Trevor Booker,PF,28
+MIL,72,2,Steve Novak,SF,32
+UTH,71,1,Rodney Hood,SG,23
+UTH,71,1,Rudy Gobert,C,23
+DAL,70,2,Jeremy Evans,SF,28
+GSW,67,3,Ian Clark,SG,24
+WAS,86,1,John Wall,PG,25
+WAS,81,2,Bradley Beal,SG,22
+LAC,81,1,Paul Pierce,SF,38
+WAS,81,1,Marcin Gortat,C,32
+WAS,80,2,Nene Hilario,C,33
+NYK,74,2,Kevin Seraphin,C,26
+PHO,73,3,Kris Humphries,PF,31
+WAS,70,2,Drew Gooden,PF,34
+WAS,68,1,Garrett Temple,SG,29

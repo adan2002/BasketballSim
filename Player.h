@@ -57,6 +57,8 @@ public:
     void setName(string inName);
     //returns name of player
     string getName();
+
+	void setRank(int num);
 };
 
 

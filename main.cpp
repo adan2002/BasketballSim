@@ -24,6 +24,9 @@ complement of the entery (home, away)
 #include <iostream>
 #include <string>
 #include <stdlib.h> // srand rand 
+#include <vector>
+#include <sstream> // reading in strings
+#include <fstream> // read in data
 
 #include "sym_mat.h"
 #include "Team.h"
@@ -37,6 +40,146 @@ int main()
 {
 	cout << "program starting...\n\n";
 
+
+		
+	
+
+	cout << "creating NBA teams..." << endl;
+
+	int num_teams = 30;
+
+	vector<Team> teams(num_teams, Team()); // vector of Team class
+
+	string filename, line;
+	vector<string>DataStore; // objec to store data
+
+	string file = "team_counts.csv"; // establish size of rosters
+
+	ifstream  inFile(file);
+
+
+	if (!inFile){
+		cout << "Error opening - " << filename << endl;
+		return -1;
+	}
+
+	getline(inFile, line); // skip first row
+
+	int i = 0;
+	while (getline(inFile, line))
+	{
+		teams[i].enumerate(i);
+		
+		stringstream lineStream(line);
+		string bit;
+		getline(lineStream, bit, ','); // get first element (i.e. team name)
+		string name = bit; // locally store team name
+			
+		teams[i].setName(name);
+		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
+		int num_players = stoi(bit); // store number
+
+		// intialize roster
+		Player* players; // create empty array
+		players = new Player[num_players];
+
+		cout << name << " has " << num_players << " in main rotation.\n\n";
+
+		string fname = "NBA_roster_ratings.csv"; 
+		ifstream  roster(fname); // open new file
+		
+		if (!roster){
+			cout << "\nError opening - " << fname << endl;
+			cout << "\Press enter to exit." << endl;
+			cin.get();
+
+			return -1;
+		}
+
+		getline(roster, line); // skip first row (just header)
+
+		int j = 0;
+		while (getline(roster, line)){
+			// read file line by line
+			stringstream lineStream2(line);
+
+			getline(lineStream2, bit, ','); // get first element (i.e. team name)
+			cout << "team name: " << bit << endl;
+			int idx = 0; // keep track of player in array
+			
+			//cout << name << " vs " << bit << endl;
+			if (name == bit){ // do the team names match?
+
+				cout << (name == bit) << endl;
+				cout << name << " : " << idx;
+				
+				getline(lineStream, bit, ','); // get second element (i.e. player rating)
+				players[idx].setRating(stoi(bit));
+
+				getline(lineStream, bit, ','); // get third element (i.e. player rank)
+				players[idx].setRank(stoi(bit));
+
+				getline(lineStream, bit, ','); // get fourth element (i.e. player name)
+				players[idx].setName(bit);
+
+				getline(lineStream, bit, ','); // get fifth element (i.e. player position)
+				// enumerate player position
+				if (bit == "PG"){
+					players[idx].setPosition(1);
+				}
+
+				else if (bit == "SG"){
+					players[idx].setPosition(2);
+				}
+				
+				else if (bit == "SF"){
+					players[idx].setPosition(3);
+				}
+
+				else if (bit == "PF"){
+					players[idx].setPosition(4);
+				}
+
+				else{ // o.w. player is center
+					players[idx].setPosition(4);
+				}
+				
+
+				getline(lineStream, bit, ','); // get sixth element (i.e. player age)
+				players[idx].setAge(stoi(bit));
+			
+
+				idx++;
+				
+			}
+
+			
+
+			//cout << j << endl;
+			j++;
+		}
+		
+		roster.close();
+		i++; // move to next element in vector
+	}
+
+
+	
+
+		//ATL, BKN, BOS, CHA, CHI, CLE,
+		//DAL, DEN, DET, GSW, HOU, IND };
+		/*
+		//LAC, LAL; }
+		//MEM MIA MIL MIN NO NYK OKC ORL
+		//PHI PHO POR SAC SAS TOR UTH WAS
+
+		*/
+
+
+
+	//data.close();
+
+	/*
 	// create struct for teams
 
 	struct team{
@@ -161,6 +304,8 @@ int main()
 	}
 
 
+	*/
+
 	/*
 	// create mileage table through a dynamically allocated 2D array
 	cout << "creating dynamic 2D array\n" << endl; 
@@ -206,4 +351,3 @@ int main()
 	return 0;
 
 }
-

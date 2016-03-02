@@ -35,7 +35,7 @@ public:
 	//update loss
 	void uploss();
 	//set roster
-	void setroster(Player[10]);//first 5 players should be the starters
+	void setroster(Player* player, int num);//first 5 players should be the starters
 	//set starter
 	void setstarters(Player[5]);
 	//set pig

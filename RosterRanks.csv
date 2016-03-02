@@ -1,0 +1,436 @@
+Fint,LastName,Position,Rank,City
+J,Teague,PG,1,Atlanta
+D,Schroder,PG,2,Atlanta
+K,Hinrich,PG,3,Atlanta
+K,Korver,SG,1,Atlanta
+T,Hardaway Jr.,SG,2,Atlanta
+K,Bazemore,SF,1,Atlanta
+T,Sefolosha,SF,2,Atlanta
+L,Patterson,SF,3,Atlanta
+P,Millsap,PF,1,Atlanta
+M,Scott,PF,2,Atlanta
+M,Muscala,PF,3,Atlanta
+A,Horford,C,1,Atlanta
+T,Splitter,C,2,Atlanta
+W,Tavares,C,3,Atlanta
+I,Thomas,PG,1,Boston
+M,Smart,PG,2,Boston
+T,Rozier,PG,3,Boston
+A,Bradley,SG,1,Boston
+E,Turner,SG,2,Boston
+R,Hunter,SG,3,Boston
+J,Crowder,SF,1,Boston
+J,Young,SF,2,Boston
+A,Johnson,PF,1,Boston
+J,Jerebko,PF,2,Boston
+J,Mickey,PF,3,Boston
+J,Sullinger,C,1,Boston
+K,Olynyk,C,2,Boston
+T,Zeller,C,3,Boston
+D,Sloan,PG,1,Brooklyn
+S,Larkin,PG,2,Brooklyn
+J,Jack,PG,3,Brooklyn
+W,Ellington,SG,1,Brooklyn
+M,Brown,SG,2,Brooklyn
+R,Hollis-Jefferson,SG,3,Brooklyn
+B,Bogdanovic,SF,1,Brooklyn
+S,Karasev,SF,2,Brooklyn
+T,Young,PF,1,Brooklyn
+T,Robinson,PF,2,Brooklyn
+W,Reed,PF,3,Brooklyn
+C,McCullough,PF,4,Brooklyn
+B,Lopez,C,1,Brooklyn
+K,Walker,PG,1,Charlotte
+J,Lin,PG,2,Charlotte
+C,Lee,SG,1,Charlotte
+J,Lamb,SG,2,Charlotte
+A,Harrison,SG,3,Charlotte
+N,Batum,SF,1,Charlotte
+T,Daniels,SF,2,Charlotte
+M,Kidd-Gilchrist,SF,3,Charlotte
+M,Williams,PF,1,Charlotte
+F,Kaminsky III,PF,2,Charlotte
+T,Hansbrough,PF,3,Charlotte
+C,Zeller,C,1,Charlotte
+S,Hawes,C,2,Charlotte
+A,Jefferson,C,3,Charlotte
+D,Rose,PG,1,Chicago
+A,Brooks,PG,2,Chicago
+E,Moore,SG,1,Chicago
+J,Butler,SG,2,Chicago
+J,Holiday,SG,3,Chicago
+M,Dunleavy,SF,1,Chicago
+D,McDermott,SF,2,Chicago
+T,Snell,SF,3,Chicago
+T,Gibson,PF,1,Chicago
+N,Mirotic,PF,2,Chicago
+B,Portis,PF,3,Chicago
+C,Bairstow,PF,4,Chicago
+P,Gasol,C,1,Chicago
+J,Noah,C,2,Chicago
+C,Felicio,C,3,Chicago
+K,Irving,PG,1,Cleveland
+M,Williams,PG,2,Cleveland
+M,Dellavedova,PG,3,Cleveland
+J,Smith,SG,1,Cleveland
+I,Shumpert,SG,2,Cleveland
+L,James,SF,1,Cleveland
+R,Jefferson,SF,2,Cleveland
+K,Love,PF,1,Cleveland
+C,Frye,PF,2,Cleveland
+J,Jones,PF,3,Cleveland
+T,Thompson,C,1,Cleveland
+T,Mozgov,C,2,Cleveland
+S,Kaun,C,3,Cleveland
+D,Williams,PG,1,Dallas
+J,Barea,PG,2,Dallas
+R,Felton,PG,3,Dallas
+W,Matthews,SG,1,Dallas
+D,Harris,SG,2,Dallas
+J,Anderson,SG,3,Dallas
+C,Parsons,SF,1,Dallas
+J,Evans,SF,2,Dallas
+D,Nowitzki,PF,1,Dallas
+D,Lee,PF,2,Dallas
+C,Villanueva,PF,3,Dallas
+D,Powell,PF,4,Dallas
+Z,Pachulia,C,1,Dallas
+J,McGee,C,2,Dallas
+S,Mejri,C,3,Dallas
+E,Mudiay,PG,1,Denver
+J,Nelson,PG,2,Denver
+D,Augustin,PG,3,Denver
+G,Harris,SG,1,Denver
+M,Miller,SG,2,Denver
+D,Gallinari,SF,1,Denver
+W,Barton,SF,2,Denver
+J,Sampson,SF,3,Denver
+W,Chandler,SF,4,Denver
+K,Faried,PF,1,Denver
+D,Arthur,PF,2,Denver
+N,Jokic,C,1,Denver
+J,Nurkic,C,2,Denver
+J,Lauvergne,C,3,Denver
+R,Jackson,PG,1,Detroit
+S,Blake,PG,2,Detroit
+S,Dinwiddie,PG,3,Detroit
+K,Caldwell-Pope,SG,1,Detroit
+J,Meeks,SG,2,Detroit
+D,Hilliard,SG,3,Detroit
+M,Morris,SF,1,Detroit
+S,Johnson,SF,2,Detroit
+R,Bullock,SF,3,Detroit
+T,Harris,PF,1,Detroit
+J,Anthony,PF,2,Detroit
+A,Tolliver,PF,3,Detroit
+A,Drummond,C,1,Detroit
+A,Baynes,C,2,Detroit
+S,Curry,PG,1,Golden State
+S,Livingston,PG,2,Golden State
+L,Barbosa,PG,3,Golden State
+K,Thompson,SG,1,Golden State
+B,Rush,SG,2,Golden State
+I,Clark,SG,3,Golden State
+H,Barnes,SF,1,Golden State
+A,Iguodala,SF,2,Golden State
+K,Looney,SF,3,Golden State
+D,Green,PF,1,Golden State
+M,Speights,PF,2,Golden State
+J,McAdoo,PF,3,Golden State
+A,Bogut,C,1,Golden State
+A,Varejao,C,2,Golden State
+F,Ezeli,C,3,Golden State
+P,Beverley,PG,1,Houston
+J,Terry,PG,2,Houston
+T,Lawson,PG,3,Houston
+J,Harden,SG,1,Houston
+K,McDaniels,SG,2,Houston
+T,Ariza,SF,1,Houston
+C,Brewer,SF,2,Houston
+S,Dekker,SF,3,Houston
+C,Capela,PF,1,Houston
+T,Jones,PF,2,Houston
+J,Smith,PF,3,Houston
+D,Motiejunas,PF,4,Houston
+D,Howard,C,1,Houston
+M,Harrell,C,2,Houston
+G,Hill,PG,1,Indiana
+J,Young,PG,2,Indiana
+M,Ellis,SG,1,Indiana
+R,Stuckey,SG,2,Indiana
+G,Robinson III,SG,3,Indiana
+P,George,SF,1,Indiana
+C,Budinger,SF,2,Indiana
+C,Miles,SF,3,Indiana
+S,Hill,SF,4,Indiana
+M,Turner,PF,1,Indiana
+L,Allen,PF,2,Indiana
+R,Christmas,PF,3,Indiana
+I,Mahinmi,C,1,Indiana
+J,Hill,C,2,Indiana
+S,Whittington,C,3,Indiana
+C,Paul,PG,1,LA Clippers
+P,Prigioni,PG,2,LA Clippers
+A,Rivers,PG,3,LA Clippers
+J,Redick,SG,1,LA Clippers
+J,Crawford,SG,2,LA Clippers
+C,Wilcox,SG,3,LA Clippers
+P,Pierce,SF,1,LA Clippers
+J,Green,SF,2,LA Clippers
+W,Johnson,SF,3,LA Clippers
+B,Dawson,SF,4,LA Clippers
+L,Mbah a Moute,PF,1,LA Clippers
+B,Griffin,PF,2,LA Clippers
+D,Jordan,C,1,LA Clippers
+C,Aldrich,C,2,LA Clippers
+L,Williams,PG,1,LA Lakers
+D,Russell,PG,2,LA Lakers
+M,Huertas,PG,3,LA Lakers
+J,Clarkson,SG,1,LA Lakers
+K,Bryant,SF,1,LA Lakers
+N,Young,SF,2,LA Lakers
+A,Brown,SF,3,LA Lakers
+L,Nance Jr.,PF,1,LA Lakers
+J,Randle,PF,2,LA Lakers
+B,Bass,PF,3,LA Lakers
+R,Kelly,PF,4,LA Lakers
+M,World Peace,PF,5,LA Lakers
+R,Hibbert,C,1,LA Lakers
+R,Sacre,C,2,LA Lakers
+T,Black,C,3,LA Lakers
+M,Conley,PG,1,Memphis
+M,Chalmers,PG,2,Memphis
+T,Allen,SG,1,Memphis
+V,Carter,SG,2,Memphis
+J,Adams,SG,3,Memphis
+M,Barnes,SF,1,Memphis
+L,Stephenson,SF,2,Memphis
+J,Ennis,SF,3,Memphis
+P,Hairston,SF,4,Memphis
+Z,Randolph,PF,1,Memphis
+J,Green,PF,2,Memphis
+J,Martin,PF,3,Memphis
+B,Wright,C,1,Memphis
+C,Andersen,C,2,Memphis
+M,Gasol,C,3,Memphis
+G,Dragic,PG,1,Miami
+J,Richardson,PG,2,Miami
+B,Udrih,PG,3,Miami
+T,Johnson,PG,4,Miami
+D,Wade,SG,1,Miami
+J,Johnson,SG,2,Miami
+G,Green,SG,3,Miami
+L,Deng,SF,1,Miami
+J,Winslow,SF,2,Miami
+J,McRoberts,PF,1,Miami
+U,Haslem,PF,2,Miami
+C,Bosh,PF,3,Miami
+H,Whiteside,C,1,Miami
+A,Stoudemire,C,2,Miami
+O,Mayo,PG,1,Milwaukee
+M,Carter-Williams,PG,2,Milwaukee
+T,Ennis,PG,3,Milwaukee
+G,Vasquez,PG,4,Milwaukee
+K,Middleton,SG,1,Milwaukee
+J,Bayless,SG,2,Milwaukee
+R,Vaughn,SG,3,Milwaukee
+G,Antetokounmpo,SF,1,Milwaukee
+S,Novak,SF,2,Milwaukee
+D,Inglis,SF,3,Milwaukee
+J,Parker,PF,1,Milwaukee
+J,Henson,PF,2,Milwaukee
+J,O'Bryant III,PF,3,Milwaukee
+M,Plumlee,C,1,Milwaukee
+G,Monroe,C,2,Milwaukee
+R,Rubio,PG,1,Minnesota
+T,Jones,PG,2,Minnesota
+A,Wiggins,SG,1,Minnesota
+Z,LaVine,SG,2,Minnesota
+K,Martin,SG,3,Minnesota
+T,Prince,SF,1,Minnesota
+S,Muhammad,SF,2,Minnesota
+D,Rudez,SF,3,Minnesota
+K,Garnett,PF,1,Minnesota
+N,Bjelica,PF,2,Minnesota
+A,Payne,PF,3,Minnesota
+K,Towns,C,1,Minnesota
+G,Dieng,C,2,Minnesota
+N,Pekovic,C,3,Minnesota
+J,Holiday,PG,1,New Orleans
+T,Douglas,PG,2,New Orleans
+N,Cole,SG,1,New Orleans
+B,Dejean-Jones,SG,2,New Orleans
+T,Evans,SG,3,New Orleans
+E,Gordon,SG,4,New Orleans
+A,Gee,SF,1,New Orleans
+D,Cunningham,SF,2,New Orleans
+Q,Pondexter,SF,3,New Orleans
+A,Davis,PF,1,New Orleans
+R,Anderson,PF,2,New Orleans
+L,Babbitt,PF,3,New Orleans
+O,Asik,C,1,New Orleans
+A,Ajinca,C,2,New Orleans
+K,Perkins,C,3,New Orleans
+J,Calderon,PG,1,New York
+L,Galloway,PG,2,New York
+J,Grant,PG,3,New York
+A,Afflalo,SG,1,New York
+S,Vujacic,SG,2,New York
+C,Anthony,SF,1,New York
+C,Early,SF,2,New York
+L,Thomas,SF,3,New York
+K,Porzingis,PF,1,New York
+D,Williams,PF,2,New York
+L,Amundson,PF,3,New York
+R,Lopez,C,1,New York
+K,Seraphin,C,2,New York
+K,O'Quinn,C,3,New York
+R,Westbrook,PG,1,Oklahoma City
+C,Payne,PG,2,Oklahoma City
+R,Foye,PG,3,Oklahoma City
+D,Waiters,SG,1,Oklahoma City
+A,Morrow,SG,2,Oklahoma City
+A,Roberson,SG,3,Oklahoma City
+K,Durant,SF,1,Oklahoma City
+K,Singler,SF,2,Oklahoma City
+J,Huestis,SF,3,Oklahoma City
+S,Ibaka,PF,1,Oklahoma City
+N,Collison,PF,2,Oklahoma City
+S,Adams,C,1,Oklahoma City
+E,Kanter,C,2,Oklahoma City
+M,McGary,C,3,Oklahoma City
+E,Payton,PG,1,Orlando
+B,Jennings,PG,2,Orlando
+S,Napier,PG,3,Orlando
+C,Watson,PG,4,Orlando
+V,Oladipo,SG,1,Orlando
+E,Fournier,SG,2,Orlando
+D,Marble,SG,3,Orlando
+J,Cunningham,SG,4,Orlando
+A,Gordon,SF,1,Orlando
+M,Hezonja,SF,2,Orlando
+E,Ilyasova,PF,1,Orlando
+A,Nicholson,PF,2,Orlando
+N,Vucevic,C,1,Orlando
+J,Smith,C,2,Orlando
+D,Dedmon,C,3,Orlando
+I,Smith,PG,1,Philadelphia
+I,Canaan,PG,2,Philadelphia
+T,McConnell,PG,3,Philadelphia
+K,Marshall,PG,4,Philadelphia
+N,Stauskas,SG,1,Philadelphia
+H,Thompson,SG,2,Philadelphia
+R,Covington,SF,1,Philadelphia
+J,Grant,SF,2,Philadelphia
+N,Noel,PF,1,Philadelphia
+C,Landry,PF,2,Philadelphia
+R,Holmes,PF,3,Philadelphia
+E,Brand,PF,4,Philadelphia
+J,Okafor,C,1,Philadelphia
+J,Anthony,C,2,Philadelphia
+J,Embiid,C,3,Philadelphia
+R,Price,PG,1,Phoenix
+A,Goodwin,PG,2,Phoenix
+B,Knight,PG,3,Phoenix
+P,Pressey,PG,4,Phoenix
+D,Booker,SG,1,Phoenix
+E,Bledsoe,SG,2,Phoenix
+J,Jenkins,SG,3,Phoenix
+P,Tucker,SF,1,Phoenix
+S,Weems,SF,2,Phoenix
+T,Warren,SF,3,Phoenix
+M,Teletovic,PF,1,Phoenix
+J,Leuer,PF,2,Phoenix
+K,Humphries,PF,3,Phoenix
+T,Chandler,C,1,Phoenix
+A,Len,C,2,Phoenix
+D,Lillard,PG,1,Portland
+B,Roberts,PG,2,Portland
+C,McCollum,SG,1,Portland
+A,Crabbe,SG,2,Portland
+G,Henderson,SG,3,Portland
+P,Connaughton,SG,4,Portland
+A,Aminu,SF,1,Portland
+M,Harkless,SF,2,Portland
+L,Montero,SF,3,Portland
+N,Vonleh,PF,1,Portland
+M,Leonard,PF,2,Portland
+C,Alexander,PF,3,Portland
+M,Plumlee,C,1,Portland
+E,Davis,C,2,Portland
+C,Kaman,C,3,Portland
+R,Rondo,PG,1,Sacramento
+D,Collison,PG,2,Sacramento
+S,Curry,PG,3,Sacramento
+M,Belinelli,SG,1,Sacramento
+J,Anderson,SG,2,Sacramento
+B,McLemore,SG,3,Sacramento
+R,Gay,SF,1,Sacramento
+C,Butler,SF,2,Sacramento
+D,Dukan,SF,3,Sacramento
+W,Cauley-Stein,PF,1,Sacramento
+O,Casspi,PF,2,Sacramento
+E,Moreland,PF,3,Sacramento
+D,Cousins,C,1,Sacramento
+K,Koufos,C,2,Sacramento
+Q,Acy,C,3,Sacramento
+T,Parker,PG,1,San Antonio
+P,Mills,PG,2,San Antonio
+R,McCallum,PG,3,San Antonio
+D,Green,SG,1,San Antonio
+M,Ginobili,SG,2,San Antonio
+J,Simmons,SG,3,San Antonio
+K,Leonard,SF,1,San Antonio
+K,Anderson,SF,2,San Antonio
+R,Williams,SF,3,San Antonio
+L,Aldridge,PF,1,San Antonio
+D,West,PF,2,San Antonio
+M,Bonner,PF,3,San Antonio
+T,Duncan,C,1,San Antonio
+B,Diaw,C,2,San Antonio
+B,Marjanovic,C,3,San Antonio
+K,Lowry,PG,1,Toronto
+C,Joseph,PG,2,Toronto
+D,Wright,PG,3,Toronto
+D,DeRozan,SG,1,Toronto
+T,Ross,SG,2,Toronto
+N,Powell,SG,3,Toronto
+J,Johnson,SF,1,Toronto
+B,Caboclo,SF,2,Toronto
+D,Carroll,SF,3,Toronto
+L,Scola,PF,1,Toronto
+P,Patterson,PF,2,Toronto
+A,Bennett,PF,3,Toronto
+J,Valanciunas,C,1,Toronto
+B,Biyombo,C,2,Toronto
+L,Nogueira,C,3,Toronto
+R,Neto,PG,1,Utah
+T,Burke,PG,2,Utah
+D,Exum,PG,3,Utah
+R,Hood,SG,1,Utah
+A,Burks,SG,2,Utah
+S,Mack,SG,3,Utah
+G,Hayward,SF,1,Utah
+J,Ingles,SF,2,Utah
+C,Johnson,SF,3,Utah
+D,Favors,PF,1,Utah
+T,Booker,PF,2,Utah
+T,Lyles,PF,3,Utah
+R,Gobert,C,1,Utah
+J,Withey,C,2,Utah
+T,Pleiss,C,3,Utah
+J,Wall,PG,1,Washington
+R,Sessions,PG,2,Washington
+G,Temple,SG,1,Washington
+B,Beal,SG,2,Washington
+G,Neal,SG,3,Washington
+A,Anderson,SG,4,Washington
+O,Porter Jr.,SF,1,Washington
+K,Oubre Jr.,SF,2,Washington
+J,Eddie,SF,3,Washington
+J,Dudley,PF,1,Washington
+N,Hilario,PF,2,Washington
+M,Morris,PF,3,Washington
+M,Gortat,C,1,Washington
+D,Gooden,C,2,Washington
+J,Hickson,C,3,Washington

@@ -146,3 +146,7 @@ void Player::setName(string inName) {
 string Player::getName() {
     return(name);
 }
+
+void Player::setRank(int num) {
+	rank = num;
+}

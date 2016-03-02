@@ -11,12 +11,13 @@ Team::Team() // default constructor
 	wins = 0; //function find win percent and loss percent
 	losses = 0;
 	addedProb = 0; //needs function that will updatate( this is the added probability that a team will win)
-	roster[10] = {}; // empty array of players
-	starters[5] = {}; // empty array of players
-	pig[5] = {}; // empty array
+	//roster[10] = {}; // empty array of players
+	//starters[5] = {}; // empty array of players
+	//pig[5] = {}; // empty array
 	wstreak = 0; // why bool? --b/c it can be-if wstreak the +.1 to prob of winning next game
 	lstreak = 0; // why bool? --same as above
 	index = -1; // id in matrix
+	num_players = 0;
 }
 
 Team::~Team() 
@@ -53,9 +54,9 @@ void Team::uploss(){
 }
 
 //do we need a function that allows you to add/subtract players one at a time?
-void Team::setroster(Player* players) // first 5 players should be the starters
+void Team::setroster(Player* players, int num_players) // first 5 players should be the starters
 {
-	roster = new Player[10]; // instantiate array
+	roster = new Player[num_players]; // instantiate array
 	for (int j = 0; j < 10; j++)
 	{
 		roster[j] = players[j];
