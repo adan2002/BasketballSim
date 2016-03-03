@@ -68,27 +68,29 @@ void Team::setroster(Player* players, int num_players) // first 5 players should
 //still need to look at this-don't want to update roster!
 //i thought setstarters might be a static array, and pig would pull from this and subout players that are injured-j
 //but i think that if we have the starters in the first 5 of roster- your way works -j
-void Team::setstarters(Player[5])
+void Team::setstarters()
 {
 	//CASE if both players from a position is hurt
 	// account for case where both players
 	// think about adding a function that returns
 	// players for a given position
-	for (int i = 0; i < 5; i++)
-	{
-		int player_id = 0;
-		Player player = roster[player_id];
-
-		while (player.getPosition() != (i + 1) && player.ifInjured() != 1){ // position doesn't match
-								// and player not injured
-			player_id += 1; // look at next player in roster
-			if (player_id>=15){
-				cout<<"ERROR-set starter loop circulating"<<endl;
-				break;}
-			starters[i] = player_id; //passes the player index into starter array
+	int player_id;
+	int pos = 1;
+	injuryOnTeam=false;
+	while (pos<6){
+		for (player_id=0; player_id<numplayers;player_id++){
+			if (roster[player_id].getPosition()==pos){
+				if (roster[player_id].ifInjured()){
+					injuryOnTeam=true;
+				}
+				else {
+					starters[pos-1]=player_id;
+				}
+				pos++;
+			}
 		}
-		
 	}
+
 }
 
 
@@ -189,4 +191,17 @@ float Team::getAddedProb() {
 
 void Team::addProb(float inProb) {
 	addedProb=+inProb;
+}
+
+bool Team::ifInjuryOnTeam() {
+	return(injuryOnTeam);
+}
+
+int Team::getStarterRating() {
+	int i;
+	int sum=0;
+	for(i=0;i<5;i++){
+		sum+=roster[starters[i]].getRating();
+	}
+	return(sum);
 }

@@ -12,6 +12,7 @@ set(SOURCE_FILES
         Team.h
         ProbMatrix.cpp
         ProbMatrix.h
+        read_csv.cpp
     sym_mat.cpp
     sym_mat.h)
 

@@ -20,6 +20,7 @@ private:
 	Player* roster;
 	int starters[5];
 	Player* pig; //players in game
+	bool injuryOnTeam;
 	bool wstreak; 
 	bool lstreak;
 	int legthOFroster;
@@ -39,7 +40,7 @@ public:
 	//set roster
 	void setroster(Player* player, int num);//first 5 players should be the starters
 	//set starter
-	void setstarters(Player[5]);
+	void setstarters();
 	//set pig
 	void setpig();
 	//setName of team
@@ -54,6 +55,8 @@ public:
 	//loss stream on/off
 	void changeLstreak();
 
+	bool ifInjuryOnTeam();
+
 	//things that should happen to team after the game...
 	//idk if this is the best way to implement
 	void aftergame(char WoL);
@@ -61,6 +64,8 @@ public:
 	int getIndex();
 	void setLengthofRoster(int inLength);
 	void addProb(float inProb);
+
+	int getStarterRating();
 
 };
 

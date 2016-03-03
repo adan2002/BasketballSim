@@ -6,6 +6,7 @@
 #include <vector>
 #include <sstream> // reading in strings as buffers
 #include <fstream> // read in data
+#include <string>
 
 using namespace std;
 
@@ -103,7 +104,16 @@ void ProbMatrix::runGame(Team home, Team away){
 	float rando;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
+	home.setstarters();
+	away.setstarters();
 
+	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
+		int HTR=home.getStarterRating(); //home team ratings
+		int ATR=away.getStarterRating(); //away team ratings
+		///////NOT GOOD ENOUGH/not proportional
+		hometeamwins=hometeamwins-ATR/HTR;
+		//add rankings of both teams.
+	}
 	//see if there are any probability additons for the home team and add it to a dummy variable
 	//see if there are any probability additions for the away team and subtract that from the dummy variable
 	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb();
