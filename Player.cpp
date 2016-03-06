@@ -50,7 +50,7 @@ int Player::getAge(){
 
 //set position
 void Player::setPosition(int posNum){
-    posNum=position;
+   position = posNum;
 }
 
 //get position

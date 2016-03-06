@@ -88,6 +88,7 @@ int main()
 		teams[i].setName(name);
 		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
 		int num_players = stoi(bit); // store number
+		cout << "Number of players for " << name << " : " << num_players << endl;
 		teams[i].setNumPlayers(num_players);
 
 		// intialize roster
@@ -109,27 +110,26 @@ int main()
 
 		getline(roster, line); // skip first row (just header)
 
-		int j = 0;
+		int idx = 0;
 		while (getline(roster, line)){
 			// read file line by line
 			stringstream lineStream(line);
 
 			getline(lineStream, bit, ','); // get first element (i.e. team name)
-			int idx = 0; // keep track of player in array
+			//int idx = 0; // keep track of player in array
 			
 			if (name == bit){ // do the team names match?
 
-					
-				getline(lineStream, bit, ','); // get second element (i.e. player rating)
-				players[idx].setRating(86);
-				
-				getline(lineStream, bit, ','); // get third element (i.e. player rank)
-				players[idx].setRank(stoi(bit));
-
-				getline(lineStream, bit, ','); // get fourth element (i.e. player name)
+				cout << "team name: " << bit << endl;
+				getline(lineStream, bit, ','); // get second element (i.e. player name)
+				cout << "name: " << bit << endl;
 				players[idx].setName(bit);
+				
+				getline(lineStream, bit, ','); // get third element (i.e. player age)
+				players[idx].setAge(stoi(bit));
 
-				getline(lineStream, bit, ','); // get fifth element (i.e. player position)
+				getline(lineStream, bit, ','); // get fourth element (i.e. player pos)
+				cout << "player position: " << bit << endl;
 				// enumerate player position
 				if (bit == "PG"){
 					players[idx].setPosition(1);
@@ -138,7 +138,7 @@ int main()
 				else if (bit == "SG"){
 					players[idx].setPosition(2);
 				}
-				
+
 				else if (bit == "SF"){
 					players[idx].setPosition(3);
 				}
@@ -148,11 +148,17 @@ int main()
 				}
 
 				else{ // o.w. player is center
-					players[idx].setPosition(4);
+					players[idx].setPosition(5);
 				}
+
+				cout << "player position (enumerated): " << players[idx].getPosition() << endl;
+
+
+				getline(lineStream, bit, ','); // get fifth element (i.e. player rank)
+				players[idx].setRank(stoi(bit));
 				
 
-				getline(lineStream, bit, ','); // get sixth element (i.e. player age)
+				getline(lineStream, bit, ','); // get sixth element (i.e. player rating)
 				players[idx].setAge(stoi(bit));
 			
 
@@ -160,11 +166,15 @@ int main()
 				
 			}
 
-			j++;
+
+			//j++;
 		}
 		
+
 		roster.close();
+		teams[i].setroster(players, num_players);
 		i++; // move to next element in vector
+		cout << "team number: " << i << endl;
 	}
 
 	cout << "Closing CSV files\n\n";
@@ -177,7 +187,13 @@ int main()
 	pmat.addTeams(teams, numTeams);
 
 	string fn = "probs.txt"; // probabilities file
-				
+	
+	pmat.setProb(fn, numTeams);
+	cout << pmat.getProb(teams[1], teams[4]) << endl;
+	pmat.runGame(teams[1], teams[4]);
+
+
+
 
 	/*
 		
@@ -276,24 +292,6 @@ int main()
 
 		cout << "frequency of " << teams[i].name << " being best team: " << (teams[i].count / n) << endl;
 
-	}
-
-
-	*/
-
-	/*
-	// create mileage table through a dynamically allocated 2D array
-	cout << "creating dynamic 2D array\n" << endl; 
- 	float ** miles_tbl = new float*[num_of_cities]; //allocate array of float pointers
-	
-	//run a for loop to instatiante a 2D array
-	for (int i = 0; i < num_of_cities; i++)
-	{
-		miles_tbl[i] = new float[num_of_cities]; //allocate each array of floats
-		for (int j = 0; j < num_of_cities; j++)
-		{
-			miles_tbl[i][j] = distances[i][j]; // assign a value
-		}
 	}
 
 	*/

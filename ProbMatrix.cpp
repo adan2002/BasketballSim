@@ -104,12 +104,15 @@ void ProbMatrix::runGame(Team home, Team away){
 	float rando;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
+	cout << "Probability of home team winning: " << hometeamwins << endl;
 	home.setstarters();
 	away.setstarters();
 
+	cout << "Starters set for each team \n" << endl;
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
-		int HTR=home.getStarterRating(); //home team ratings
-		int ATR=away.getStarterRating(); //away team ratings
+		cout << "Injury!";
+		int HTR = home.getStarterRating(); //home team ratings
+		int ATR = away.getStarterRating(); //away team ratings
 		///////NOT GOOD ENOUGH/not proportional
 		hometeamwins=hometeamwins-ATR/HTR;
 		//add rankings of both teams.
@@ -119,16 +122,22 @@ void ProbMatrix::runGame(Team home, Team away){
 	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb();
 
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
-	rando=rand()/RAND_MAX;
+	cout << "\ngenerating random number...\n\n";
+	rando = float(rand()) / 100;
+	cout << "random number generated: " << rando << endl;
 	//if larger, home team loses, if smaller home team wins
 	//run aftergame
 	if (rando<hometeamwins){
 		home.aftergame('W');
 		away.aftergame('L');
+		cout << "\nHome team wins!!!\n\n";
 	}else{
 		home.aftergame('L');
 		away.aftergame('W');
+		cout << "\nAway team wins!!!\n\n";
 	}
+
+	cout << "\nend of game simulation...\n\n";
 
 }
 
