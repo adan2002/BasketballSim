@@ -67,6 +67,8 @@ public:
 
 	int getStarterRating();
 
+	string getName();
+
 };
 
 

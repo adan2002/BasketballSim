@@ -214,3 +214,7 @@ int Team::getStarterRating() {
 	}
 	return(sum);
 }
+
+string Team::getName() {
+	return (name);
+}
