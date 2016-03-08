@@ -8,6 +8,11 @@ require(rvest)
 require(dplyr)
 
 
+
+################################################
+############ Import NBA Rosters ###############
+###############################################
+
 # loop thru every nba team
 
 NBA_teams <- c('ATL', 'BOS', 'BKN', 'CHA', 'CHI', 'CLE', 
@@ -155,3 +160,54 @@ for (team in Team_names){
 probMat
 
 write.table(probMat,file="probs.txt", sep = ',', row.names =F, col.names = F)
+
+
+
+#############################################
+######### 2015-2016 NBA Schedule  ###########
+#############################################
+
+# source: basketball reference.com
+
+url <- "http://www.basketball-reference.com/leagues/NBA_2016_games.html?lid=header_seasons"
+table <- url %>%
+  html() %>%
+  html_table()
+
+
+# truncate html table for desired columns
+season <-  table[[1]]
+season <- tbl_df(season[,c(1,4,6)])
+names(season) <-  c("Away", "Home")
+
+write.table(season,file="2016schedule.txt", sep = ',', row.names =F)
+
+# read table back in
+s <- tbl_df(read.csv(file = "2016schedule.csv", header = T))
+
+for (i in 1:length(s$Away.City)){
+  # match up Away team
+  j = 1 # initialize counter
+  
+  tname = paste(s$Away.City[i], s$Away.Team[i]) # team name
+  while (tname != NBA_teams[j]){
+    j = j + 1  
+    print(tname)
+  }
+   
+  s$Away[i] = Team_names[j] # store team
+  j = 1 # reset counter
+  
+  # match up Home team
+  tname = paste(s$Home.City[i], s$Home.Team[i]) # team name
+  while (tname != NBA_teams[j]){
+    j = j + 1   
+    print (tname)
+  }
+  
+  s$Home[i] = Team_names[j] # store team
+}
+
+
+
+write.csv(s[,5:6],file="2016schedule.csv",  row.names =F)
