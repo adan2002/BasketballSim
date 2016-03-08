@@ -177,7 +177,11 @@ int main()
 	pmat.addTeams(teams, numTeams);
 
 	string fn = "probs.txt"; // probabilities file
-				
+	
+	pmat.setProb(fn, numTeams);
+	cout << pmat.getProb(teams[1], teams[4]) << endl;
+	pmat.runGame(teams[1], teams[4]);
+
 
 	/*
 		
