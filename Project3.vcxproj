@@ -68,14 +68,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProbMatrix.cpp" />
-    <ClCompile Include="read_csv.cpp" />
-    <ClCompile Include="sym_mat.cpp" />
     <ClCompile Include="Team.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h" />
     <ClInclude Include="ProbMatrix.h" />
-    <ClInclude Include="sym_mat.h" />
     <ClInclude Include="Team.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -159,7 +159,7 @@ int main()
 				
 
 				getline(lineStream, bit, ','); // get sixth element (i.e. player rating)
-				players[idx].setAge(stoi(bit));
+				players[idx].setRating(stoi(bit));
 			
 
 				idx++;
