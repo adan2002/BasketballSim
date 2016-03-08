@@ -72,7 +72,7 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 		cout << "Error opening - " << fname << endl;
 		cout << "Press enter to exit." << endl;
 		cin.get();
-		exit;
+		exit(0);
 	}
 
 	matrix = new float*[num_teams];
@@ -105,12 +105,15 @@ void ProbMatrix::runGame(Team home, Team away){
 	float rando;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
+	cout << "Probability of home team winning: " << hometeamwins << endl;
 	home.setstarters();
 	away.setstarters();
 
+	cout << "Starters set for each team \n" << endl;
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
-		int HTR=home.getStarterRating(); //home team ratings
-		int ATR=away.getStarterRating(); //away team ratings
+		cout << "Injury!";
+		int HTR = home.getStarterRating(); //home team ratings
+		int ATR = away.getStarterRating(); //away team ratings
 		///////NOT GOOD ENOUGH/not proportional
 		hometeamwins=hometeamwins-ATR/HTR;
 		//add rankings of both teams.
@@ -120,24 +123,38 @@ void ProbMatrix::runGame(Team home, Team away){
 	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb();
 
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
-	rando=rand()/RAND_MAX;
+	cout << "\ngenerating random number...\n\n";
+	rando = float(rand()) / RAND_MAX;
+	cout << "random number generated: " << rando << endl;
 	//if larger, home team loses, if smaller home team wins
 	//run aftergame
 	if (rando<hometeamwins){
 		home.aftergame('W');
 		away.aftergame('L');
+		cout << "\nHome team wins!!!\n\n";
 	}else{
 		home.aftergame('L');
 		away.aftergame('W');
+		cout << "\nAway team wins!!!\n\n";
 	}
+
+	cout << "\nend of game simulation...\n\n";
 
 }
 
+
 void ProbMatrix::runSeason(string seasonfile) {
 	int i,j=0;
-	int gamesInSeaseon=1231;
+	int gamesInSeason=1230;
 	//might need to allocate dynamically/or at lease at runtime
-	string games[2][gamesInSeaseon];
+	string** games;
+	games = new string*[gamesInSeason];
+	for (i = 0; i < gamesInSeason; i++){
+		games[i] = new string[2];
+		//games[1] = new string[2];
+	}
+	cout << "hello" << endl;
+	i = 0;
 	string line, bit;
 	ifstream  inFile(seasonfile);
 	if (!inFile){
@@ -146,13 +163,13 @@ void ProbMatrix::runSeason(string seasonfile) {
 		cin.get();
 		exit;
 	}
-
-	getline(inFile,line);
+	getline(inFile, line); // skip header
 	while (getline(inFile,line)){
 		stringstream inLine(line);
 		for (i=0;i<2;i++){
 			getline(inLine,bit,',');
-			games[i][j]=bit;
+			cout << "team name: " << bit << endl;
+			games[j][i]=bit;
 		}
 		j++;
 	}
@@ -161,14 +178,19 @@ void ProbMatrix::runSeason(string seasonfile) {
 	j=0;
 	int k=0,l=0;
 
-	for(i=0;i<gamesInSeaseon;i++){
-		while(teams[j].getName()!=games[i][k]){
+	for(i=0;i<gamesInSeason;i++){
+		cout << "\nGame number: " << i << "\n";
+		while(teams[j].getName()!=games[i][k]){ // finding home team
 			j++;
 		}
 		k++;
-		while(teams[l].getName()!=games[i][k]){
+		while(teams[l].getName()!=games[i][k]){ // finding away team
 			l++;
 		}
 		runGame(teams[j],teams[l]);
+		k = 0; // reset counters
+		l = 0;
+		j = 0;
 	}
+
 }
