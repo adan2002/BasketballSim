@@ -210,6 +210,8 @@ int Team::getStarterRating() {
 	int i;
 	int sum=0;
 	for(i=0;i<5;i++){
+		cout << "\nlooking at starter number " << i + 1 << endl;
+		cout << roster[starters[i]].getName() << " rating is " << roster[starters[i]].getRating() << endl;
 		sum+=roster[starters[i]].getRating();
 	}
 	return(sum);

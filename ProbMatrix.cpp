@@ -113,7 +113,10 @@ void ProbMatrix::runGame(Team home, Team away){
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
 		cout << "Injury!";
 		int HTR = home.getStarterRating(); //home team ratings
+		cout << "Starter rating for home team: " << HTR << endl;
+		cout << "\n\n";
 		int ATR = away.getStarterRating(); //away team ratings
+		cout << "Starter rating for home team: " << ATR << endl;
 		///////NOT GOOD ENOUGH/not proportional
 		hometeamwins=hometeamwins-ATR/HTR;
 		//add rankings of both teams.
