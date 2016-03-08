@@ -156,6 +156,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 		exit;
 	}
 
+	getline(inFile,line);
 	while (getline(inFile,line)){
 		stringstream inLine(line);
 		for (i=0;i<2;i++){
