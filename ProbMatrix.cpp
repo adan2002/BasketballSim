@@ -72,7 +72,7 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 		cout << "Error opening - " << fname << endl;
 		cout << "Press enter to exit." << endl;
 		cin.get();
-		exit;
+		exit(0);
 	}
 
 	matrix = new float*[num_teams];
@@ -124,7 +124,7 @@ void ProbMatrix::runGame(Team home, Team away){
 
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
 	cout << "\ngenerating random number...\n\n";
-	rando = float(rand()) / 100;
+	rando = float(rand()) / RAND_MAX;
 	cout << "random number generated: " << rando << endl;
 	//if larger, home team loses, if smaller home team wins
 	//run aftergame
@@ -142,11 +142,19 @@ void ProbMatrix::runGame(Team home, Team away){
 
 }
 
+
 void ProbMatrix::runSeason(string seasonfile) {
 	int i,j=0;
-	int gamesInSeaseon=1231;
+	int gamesInSeason=1230;
 	//might need to allocate dynamically/or at lease at runtime
-	string games[2][gamesInSeaseon];
+	string** games;
+	games = new string*[gamesInSeason];
+	for (i = 0; i < gamesInSeason; i++){
+		games[i] = new string[2];
+		//games[1] = new string[2];
+	}
+	cout << "hello" << endl;
+	i = 0;
 	string line, bit;
 	ifstream  inFile(seasonfile);
 	if (!inFile){
@@ -155,12 +163,13 @@ void ProbMatrix::runSeason(string seasonfile) {
 		cin.get();
 		exit;
 	}
-
+	getline(inFile, line); // skip header
 	while (getline(inFile,line)){
 		stringstream inLine(line);
 		for (i=0;i<2;i++){
 			getline(inLine,bit,',');
-			games[i][j]=bit;
+			cout << "team name: " << bit << endl;
+			games[j][i]=bit;
 		}
 		j++;
 	}
@@ -169,14 +178,19 @@ void ProbMatrix::runSeason(string seasonfile) {
 	j=0;
 	int k=0,l=0;
 
-	for(i=0;i<gamesInSeaseon;i++){
-		while(teams[j].getName()!=games[i][k]){
+	for(i=0;i<gamesInSeason;i++){
+		cout << "\nGame number: " << i << "\n";
+		while(teams[j].getName()!=games[i][k]){ // finding home team
 			j++;
 		}
 		k++;
-		while(teams[l].getName()!=games[i][k]){
+		while(teams[l].getName()!=games[i][k]){ // finding away team
 			l++;
 		}
 		runGame(teams[j],teams[l]);
+		k = 0; // reset counters
+		l = 0;
+		j = 0;
 	}
+
 }
