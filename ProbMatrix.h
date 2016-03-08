@@ -24,8 +24,9 @@ public:
 	void setProb(string fname, int num_teams); // pass in filename
 	float getProb(Team home, Team away);
 	void runGame(Team home, Team away);
+	void runSeason(string seasonfile);
 };
 
 // other functions
 
-#endif PROBMATRIX_H
+#endif //PROBMATRIX_H

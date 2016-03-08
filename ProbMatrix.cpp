@@ -8,6 +8,7 @@
 #include <fstream> // read in data
 #include <string>
 
+
 using namespace std;
 
 ProbMatrix::ProbMatrix() // default constructor
@@ -69,7 +70,7 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 	
 	if (!inFile){
 		cout << "Error opening - " << fname << endl;
-		cout << "\Press enter to exit." << endl;
+		cout << "Press enter to exit." << endl;
 		cin.get();
 		exit;
 	}
@@ -141,3 +142,41 @@ void ProbMatrix::runGame(Team home, Team away){
 
 }
 
+void ProbMatrix::runSeason(string seasonfile) {
+	int i,j=0;
+	int gamesInSeaseon=1231;
+	//might need to allocate dynamically/or at lease at runtime
+	string games[2][gamesInSeaseon];
+	string line, bit;
+	ifstream  inFile(seasonfile);
+	if (!inFile){
+		cout << "Error opening - " << seasonfile << endl;
+		cout << "Press enter to exit." << endl;
+		cin.get();
+		exit;
+	}
+
+	while (getline(inFile,line)){
+		stringstream inLine(line);
+		for (i=0;i<2;i++){
+			getline(inLine,bit,',');
+			games[i][j]=bit;
+		}
+		j++;
+	}
+
+	i=0;
+	j=0;
+	int k=0,l=0;
+
+	for(i=0;i<gamesInSeaseon;i++){
+		while(teams[j].getName()!=games[i][k]){
+			j++;
+		}
+		k++;
+		while(teams[l].getName()!=games[i][k]){
+			l++;
+		}
+		runGame(teams[j],teams[l]);
+	}
+}
