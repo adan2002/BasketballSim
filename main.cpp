@@ -190,6 +190,7 @@ int main()
 	cout << pmat.getProb(teams[1], teams[4]) << endl;
 	pmat.runGame(teams[1], teams[4]);
 
+	pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
 
 
 
