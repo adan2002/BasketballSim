@@ -51,7 +51,7 @@ CHI,Aaron Brooks,31,PG,2,73
 CHI,Mike Dunleavy,35,SF,1,74
 CHI,Doug McDermott,24,SF,2,75
 CHI,Tony Snell,24,SF,3,72
-CHI,Jimmy Butler,26,SG,2,80
+CHI,Jimmy Butler,26,SG,1,80
 CLE,Tristan Thompson,24,C,1,76
 CLE,Timofey Mozgov,29,C,2,74
 CLE,Kevin Love,27,PF,1,89
@@ -270,7 +270,7 @@ POR,Al-Farouq Aminu,25,SF,1,74
 POR,Maurice Harkless,22,SF,2,74
 POR,Allen Crabbe,23,SG,2,67
 POR,Gerald Henderson,28,SG,3,78
-SAC,DeMarcus Cousins,25,C,1,86
+SAC,DeMarcus Cousins,25,PF,1,86
 SAC,Kosta Koufos,27,C,2,72
 SAC,Quincy Acy,25,C,3,67
 SAC,Rajon Rondo,30,PG,1,87
@@ -320,4 +320,4 @@ WAS,John Wall,25,PG,1,86
 WAS,Garrett Temple,29,SG,1,68
 WAS,Bradley Beal,22,SG,2,81
 WAS,Gary Neal,31,SG,3,75
-WAS,Alan Anderson,33,SG,4,71
+WAS,Alan Anderson,33,SF,4,71

@@ -105,8 +105,11 @@ void ProbMatrix::runGame(Team home, Team away){
 	float rando;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
-	cout << "Probability of home team winning: " << hometeamwins << endl;
+	cout << "Probability of home team, " << home.getName() << ", winning: " << hometeamwins << endl;
+	cout << "Probability of away team, " << away.getName() << ", winning: " << (1.0-hometeamwins) << endl;
+	cout << "Setting starters for home team\n";
 	home.setstarters();
+	cout << "Setting starters for away team\n";
 	away.setstarters();
 
 	cout << "Starters set for each team \n" << endl;
@@ -182,7 +185,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 	int k=0,l=0;
 
 	for(i=0;i<gamesInSeason;i++){
-		cout << "\nGame number: " << i << "\n";
+		cout << "\nGame number: " << i+1 << "\n";
 		while(teams[j].getName()!=games[i][k]){ // finding home team
 			j++;
 		}

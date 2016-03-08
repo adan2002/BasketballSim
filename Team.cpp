@@ -91,11 +91,18 @@ void Team::setstarters()
 					injuryOnTeam=true;
 				}
 				else {
-					cout << player_id << endl;
-					starters[pos-1]=player_id;
+					cout << "found a match for the " << pos << " position. " << endl;
+					//cout << "position of player: " << roster[player_id].getPosition() << endl;
+ 					starters[pos-1]=player_id;
+					pos++;
 				}
-				pos++;
 			}
+			/*
+			cout << "looking at player " << player_id << " in roster " << endl;
+			cout << "position of player: " << roster[player_id].getPosition() << endl;
+			cout << "looking for player at " << roster[player_id].getPosition() << " position" << endl;
+			cout << "Moving to player after " << player_id << " in roster.\n\n";
+			*/
 		}
 
 	}
