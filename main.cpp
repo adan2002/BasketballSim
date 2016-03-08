@@ -32,12 +32,23 @@ complement of the entery (home, away)
 #include "Player.h"
 #include "ProbMatrix.h"
 
+void runGame(Team home, Team away){
+	//get probability of winning for the home team
+	//see if there are any probability additons for the home team and add it to a dummy variable
+	//see if there are any probability additions for the away team and subtract that from the dummy variable
+	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
+	//if larger, home team loses, if smaller home team wins
+	//run team.aftergame for both teams.
+}
+
 using namespace std;
 
 int main()
 {
 	cout << "program starting...\n\n";
 
+
+		
 	
 
 	cout << "creating NBA teams..." << endl;
@@ -77,7 +88,6 @@ int main()
 		teams[i].setName(name);
 		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
 		int num_players = stoi(bit); // store number
-		cout << "Number of players for " << name << " : " << num_players << endl;
 		teams[i].setNumPlayers(num_players);
 
 		// intialize roster
@@ -99,26 +109,27 @@ int main()
 
 		getline(roster, line); // skip first row (just header)
 
-		int idx = 0;
+		int j = 0;
 		while (getline(roster, line)){
 			// read file line by line
 			stringstream lineStream(line);
 
 			getline(lineStream, bit, ','); // get first element (i.e. team name)
-			//int idx = 0; // keep track of player in array
+			int idx = 0; // keep track of player in array
 			
 			if (name == bit){ // do the team names match?
 
-				cout << "team name: " << bit << endl;
-				getline(lineStream, bit, ','); // get second element (i.e. player name)
-				cout << "name: " << bit << endl;
-				players[idx].setName(bit);
+					
+				getline(lineStream, bit, ','); // get second element (i.e. player rating)
+				players[idx].setRating(86);
 				
-				getline(lineStream, bit, ','); // get third element (i.e. player age)
-				players[idx].setAge(stoi(bit));
+				getline(lineStream, bit, ','); // get third element (i.e. player rank)
+				players[idx].setRank(stoi(bit));
 
-				getline(lineStream, bit, ','); // get fourth element (i.e. player pos)
-				cout << "player position: " << bit << endl;
+				getline(lineStream, bit, ','); // get fourth element (i.e. player name)
+				players[idx].setName(bit);
+
+				getline(lineStream, bit, ','); // get fifth element (i.e. player position)
 				// enumerate player position
 				if (bit == "PG"){
 					players[idx].setPosition(1);
@@ -127,7 +138,7 @@ int main()
 				else if (bit == "SG"){
 					players[idx].setPosition(2);
 				}
-
+				
 				else if (bit == "SF"){
 					players[idx].setPosition(3);
 				}
@@ -137,17 +148,11 @@ int main()
 				}
 
 				else{ // o.w. player is center
-					players[idx].setPosition(5);
+					players[idx].setPosition(4);
 				}
-
-				cout << "player position (enumerated): " << players[idx].getPosition() << endl;
-
-
-				getline(lineStream, bit, ','); // get fifth element (i.e. player rank)
-				players[idx].setRank(stoi(bit));
 				
 
-				getline(lineStream, bit, ','); // get sixth element (i.e. player rating)
+				getline(lineStream, bit, ','); // get sixth element (i.e. player age)
 				players[idx].setAge(stoi(bit));
 			
 
@@ -155,19 +160,16 @@ int main()
 				
 			}
 
-
-			//j++;
+			j++;
 		}
 		
-
 		roster.close();
-		teams[i].setroster(players, num_players);
 		i++; // move to next element in vector
-		cout << "team number: " << i << endl;
 	}
 
 	cout << "Closing CSV files\n\n";
 	inFile.close();
+	
 
 	cout << "Filling in probability matrix: " << endl;
 	ProbMatrix pmat;
@@ -175,14 +177,7 @@ int main()
 	pmat.addTeams(teams, numTeams);
 
 	string fn = "probs.txt"; // probabilities file
-
-
-	pmat.setProb(fn, numTeams);
-	cout << pmat.getProb(teams[1], teams[4]) << endl;
-	pmat.runGame(teams[1], teams[4]);
-	pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
-
-
+				
 
 	/*
 		
@@ -281,6 +276,24 @@ int main()
 
 		cout << "frequency of " << teams[i].name << " being best team: " << (teams[i].count / n) << endl;
 
+	}
+
+
+	*/
+
+	/*
+	// create mileage table through a dynamically allocated 2D array
+	cout << "creating dynamic 2D array\n" << endl; 
+ 	float ** miles_tbl = new float*[num_of_cities]; //allocate array of float pointers
+	
+	//run a for loop to instatiante a 2D array
+	for (int i = 0; i < num_of_cities; i++)
+	{
+		miles_tbl[i] = new float[num_of_cities]; //allocate each array of floats
+		for (int j = 0; j < num_of_cities; j++)
+		{
+			miles_tbl[i][j] = distances[i][j]; // assign a value
+		}
 	}
 
 	*/
