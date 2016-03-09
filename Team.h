@@ -14,6 +14,8 @@ using namespace std;
 class Team {
 private:
 	string name;
+	int conference;
+	int division;
 	int wins; //function find win percent and loss percent
 	int losses;
 	float addedProb; //needs function that will updatate( this is the added probability that a team will win)
@@ -21,8 +23,8 @@ private:
 	int starters[5];
 	Player* pig; //players in game
 	bool injuryOnTeam;
-	bool wstreak;//change to int
-	bool lstreak; //change to int
+	int wstreak;//change to int
+	int lstreak; //change to int
 	int legthOFroster;
 	int index; // id in matrix
 	int numplayers;
@@ -46,6 +48,14 @@ public:
 	//setName of team
 	void setName(string namein);
 
+	void setDiv(int inDiv);
+
+	void setConf(int inConf);
+
+	int getDiv();
+
+	int getConf();
+
 	void enumerate(int num);
 
 	void setNumPlayers(int num);
@@ -66,6 +76,9 @@ public:
 	void addProb(float inProb);
 
 	int getStarterRating();
+
+	int getLstreak();
+	int getWstreak();
 
 	string getName();
 

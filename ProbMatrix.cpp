@@ -121,7 +121,7 @@ void ProbMatrix::runGame(Team home, Team away){
 		int ATR = away.getStarterRating(); //away team ratings
 		//cout << "Starter rating for home team: " << ATR << endl;
 		///////changed to this...is this the best way?
-		hometeamwins=hometeamwins-(HTR-ATR)/((HTR+ATR)/4);
+		hometeamwins=hometeamwins-(ATR-HTR)/((HTR+ATR)/4);
 		//add rankings of both teams.
 	}
 	//see if there are any probability additons for the home team and add it to a dummy variable
@@ -129,7 +129,18 @@ void ProbMatrix::runGame(Team home, Team away){
 	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb();
 
 	//account for win streak and losing streak here
-
+	if (home.getWstreak()>0){
+		hometeamwins=+0.01;
+	}
+	if (away.getWstreak()>0){
+		hometeamwins=-0.01;
+	}
+	if (home.getLstreak()>0){
+		hometeamwins=+0.01;
+	}
+	if (home.getLstreak()>0){
+		hometeamwins=-0.01;
+	}
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
 	//cout << "\ngenerating random number...\n\n";
 	rando = float(rand()) / RAND_MAX;
