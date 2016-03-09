@@ -121,7 +121,7 @@ void ProbMatrix::runGame(Team home, Team away){
 		int ATR = away.getStarterRating(); //away team ratings
 		cout << "Starter rating for home team: " << ATR << endl;
 		///////changed to this...is this the best way?
-		hometeamwins=hometeamwins-(HTR-ATR)/((HTR+ATR)/4);
+		hometeamwins=hometeamwins-(ATR-HTR)/((HTR+ATR)/4);
 		//add rankings of both teams.
 	}
 	//see if there are any probability additons for the home team and add it to a dummy variable
