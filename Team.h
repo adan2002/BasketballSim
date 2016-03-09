@@ -14,6 +14,8 @@ using namespace std;
 class Team {
 private:
 	string name;
+	int conference;
+	int division;
 	int wins; //function find win percent and loss percent
 	int losses;
 	float addedProb; //needs function that will updatate( this is the added probability that a team will win)
@@ -45,6 +47,14 @@ public:
 	void setpig();
 	//setName of team
 	void setName(string namein);
+
+	void setDiv(int inDiv);
+
+	void setConf(int inConf);
+
+	int getDiv();
+
+	int getConf();
 
 	void enumerate(int num);
 

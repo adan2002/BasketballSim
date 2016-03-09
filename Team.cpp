@@ -13,6 +13,8 @@ Team::Team() // default constructor
 	wins = 0; //function find win percent and loss percent
 	losses = 0;
 	addedProb = 0; //needs function that will updatate( this is the added probability that a team will win)
+	conference=0;
+	division=0;
 	//roster[10] = {}; // empty array of players
 	//starters[5] = {}; // empty array of players
 	//pig[5] = {}; // empty array
@@ -240,4 +242,20 @@ int Team::getStarterRating() {
 
 string Team::getName() {
 	return (name);
+}
+
+void Team::setDiv(int inDiv) {
+	division=inDiv;
+}
+
+void Team::setConf(int inConf) {
+	conference=inConf;
+}
+
+int Team::getDiv(){
+	return (division);
+}
+
+int Team::getConf(){
+	return(conference);
 }
