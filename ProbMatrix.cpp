@@ -160,7 +160,6 @@ void ProbMatrix::runSeason(string seasonfile) {
 		//games[1] = new string[2];
 	}
 	cout << "hello" << endl;
-	i = 0;
 	string line, bit;
 	ifstream  inFile(seasonfile);
 	if (!inFile){
@@ -175,6 +174,9 @@ void ProbMatrix::runSeason(string seasonfile) {
 		for (i=0;i<2;i++){
 			getline(inLine,bit,',');
 			cout << "team name: " << bit << endl;
+			if (bit.length()>3){
+				bit.replace(bit.find("\r"),1,"");
+			}
 			games[j][i]=bit;
 		}
 		j++;
