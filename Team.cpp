@@ -130,18 +130,18 @@ void Team::setpig()
 
 }
 
-void Team::changeLstreak() {
-    if (lstreak){
-        lstreak=false;
+void Team::addLstreak() {
+    if (wstreak>0){
+        wstreak=0;
     }
-    else {lstreak=true;}
+    lstreak++;
 }
 
-void Team::changeWstreak() {
-    if (wstreak){
-        wstreak=false;
+void Team::addWstreak(){
+    if (lstreak>0){
+        lstreak=0;
     }
-    else {wstreak=true;}
+    wstreak++;
 }
 
 void Team::setName(string namein) {
@@ -158,10 +158,12 @@ void Team::aftergame(char WoL) {
         case 'w':
         case 'W':
             wins++;
+			addWstreak();
             break;
         case 'l':
         case 'L':
             losses++;
+			addLstreak();
             break;
         default:
             break;
