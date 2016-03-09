@@ -259,3 +259,11 @@ int Team::getDiv(){
 int Team::getConf(){
 	return(conference);
 }
+
+int Team::getLstreak() {
+	return(lstreak);
+}
+
+int Team::getWstreak() {
+	return(wstreak);
+}

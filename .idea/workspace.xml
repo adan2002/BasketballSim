@@ -14,6 +14,8 @@
     <list default="true" id="cc61fe8b-51e9-45e0-92f1-4921acc820d9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProbMatrix.cpp" afterPath="$PROJECT_DIR$/ProbMatrix.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Team.cpp" afterPath="$PROJECT_DIR$/Team.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Team.h" afterPath="$PROJECT_DIR$/Team.h" />
     </list>
     <ignored path="BasketballSim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +51,8 @@
       <file leaf-file-name="ProbMatrix.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProbMatrix.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48180494">
-              <caret line="122" column="50" selection-start-line="122" selection-start-column="50" selection-end-line="122" selection-end-column="50" />
+            <state vertical-scroll-proportion="1.1746725">
+              <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -69,8 +71,8 @@
       <file leaf-file-name="Team.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Team.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.851852">
-              <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+            <state vertical-scroll-proportion="-9.089286">
+              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -79,8 +81,8 @@
       <file leaf-file-name="Team.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Team.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8965516">
-              <caret line="192" column="25" selection-start-line="192" selection-start-column="22" selection-end-line="192" selection-end-column="25" />
+            <state vertical-scroll-proportion="-22.51724">
+              <caret line="267" column="20" selection-start-line="267" selection-start-column="20" selection-end-line="267" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -434,7 +436,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457546153277</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="changed the injury update">
+      <created>1457546267040</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1457546267040</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView">
@@ -502,7 +510,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added if statement to decGamesout" />
     <MESSAGE value="added &quot;addedprob&quot; to class team" />
     <MESSAGE value="added comments to team.cpp" />
     <MESSAGE value="added changeLstreak, changeWstreak, setName" />
@@ -527,7 +534,8 @@
     <MESSAGE value="changed the probability that home team wins and away team wins if there is injury on team" />
     <MESSAGE value="added win streak and losing streak&#10;&#10;they do not update in runGame() yet." />
     <MESSAGE value="added get/set div and get/set conf" />
-    <option name="LAST_COMMIT_MESSAGE" value="added get/set div and get/set conf" />
+    <MESSAGE value="changed the injury update" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the injury update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -812,6 +820,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="3" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,24 +902,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Team.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.851852">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        <state vertical-scroll-proportion="-9.089286">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Team.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8965516">
-          <caret line="192" column="25" selection-start-line="192" selection-start-column="22" selection-end-line="192" selection-end-column="25" />
+        <state vertical-scroll-proportion="-22.51724">
+          <caret line="267" column="20" selection-start-line="267" selection-start-column="20" selection-end-line="267" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProbMatrix.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48180494">
-          <caret line="122" column="50" selection-start-line="122" selection-start-column="50" selection-end-line="122" selection-end-column="50" />
+        <state vertical-scroll-proportion="1.1746725">
+          <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
           <folding />
         </state>
       </provider>

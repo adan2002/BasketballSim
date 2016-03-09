@@ -23,8 +23,8 @@ private:
 	int starters[5];
 	Player* pig; //players in game
 	bool injuryOnTeam;
-	bool wstreak;//change to int
-	bool lstreak; //change to int
+	int wstreak;//change to int
+	int lstreak; //change to int
 	int legthOFroster;
 	int index; // id in matrix
 	int numplayers;
@@ -76,6 +76,9 @@ public:
 	void addProb(float inProb);
 
 	int getStarterRating();
+
+	int getLstreak();
+	int getWstreak();
 
 	string getName();
 

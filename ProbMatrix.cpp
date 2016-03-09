@@ -129,7 +129,18 @@ void ProbMatrix::runGame(Team home, Team away){
 	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb();
 
 	//account for win streak and losing streak here
-
+	if (home.getWstreak()>0){
+		hometeamwins=+0.01;
+	}
+	if (away.getWstreak()>0){
+		hometeamwins=-0.01;
+	}
+	if (home.getLstreak()>0){
+		hometeamwins=+0.01;
+	}
+	if (home.getLstreak()>0){
+		hometeamwins=-0.01;
+	}
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
 	cout << "\ngenerating random number...\n\n";
 	rando = float(rand()) / RAND_MAX;
