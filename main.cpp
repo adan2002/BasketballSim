@@ -32,14 +32,6 @@ complement of the entery (home, away)
 #include "Player.h"
 #include "ProbMatrix.h"
 
-void runGame(Team home, Team away){
-	//get probability of winning for the home team
-	//see if there are any probability additons for the home team and add it to a dummy variable
-	//see if there are any probability additions for the away team and subtract that from the dummy variable
-	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
-	//if larger, home team loses, if smaller home team wins
-	//run team.aftergame for both teams.
-}
 
 using namespace std;
 
@@ -61,7 +53,8 @@ int main()
 
 	string line;
 
-	string file = "team_counts.csv"; // establish size of rosters
+	string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
+	//string file = "team_counts.csv"; // establish size of rosters
 
 	ifstream  inFile(file);
 
@@ -97,7 +90,9 @@ int main()
 
 		//cout << name << " has " << num_players << " in main rotation.\n\n";
 
-		string fname = "NBA_roster_ratings.csv"; 
+		string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
+		//string fname = "NBA_roster_ratings.csv";
+
 		ifstream  roster(fname); // open new file
 		
 		if (!roster){
@@ -184,13 +179,16 @@ int main()
 	pmat.setSize(numTeams);
 	pmat.addTeams(teams, numTeams);
 
-	string fn = "probs.txt"; // probabilities file
+	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
+	//string fn = "probs.txt"; // probabilities file
 	
 	pmat.setProb(fn, numTeams);
 	cout << pmat.getProb(teams[1], teams[4]) << endl;
 	pmat.runGame(teams[1], teams[4]);
 
-	pmat.runSeason("2016schedule.csv");
+	pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
+	//pmat.runSeason("2016schedule.csv");
+
 
 	cout << "\nExiting program. Press enter to exit." << endl;
 

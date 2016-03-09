@@ -50,7 +50,7 @@ int Player::getAge(){
 
 //set position
 void Player::setPosition(int posNum){
-   position = posNum;
+    position=posNum;
 }
 
 //get position
@@ -109,12 +109,12 @@ int Player::getMinPl(){
 void Player::InjuredInGame(){
     float rando;
     rando=(float)rand()/RAND_MAX;
-    cout<<"r"<<rando<<endl;
+    //cout<<"r"<<rando<<endl;
     injury=rando<pOFi;
     if (injury){
         //subtract from added probability that a team wins
         rando=(float)rand()/RAND_MAX;
-        cout<<"r"<<rand<<endl; //DEBUG
+        //cout<<"r"<<rand<<endl; //DEBUG
         if (rando<=.7){
             gamesWithInjleft=1;
         }

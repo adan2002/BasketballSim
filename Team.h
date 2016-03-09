@@ -21,8 +21,8 @@ private:
 	int starters[5];
 	Player* pig; //players in game
 	bool injuryOnTeam;
-	bool wstreak; 
-	bool lstreak;
+	bool wstreak;//change to int
+	bool lstreak; //change to int
 	int legthOFroster;
 	int index; // id in matrix
 	int numplayers;
@@ -50,10 +50,10 @@ public:
 
 	void setNumPlayers(int num);
 
-	//win streak on/off
-	void changeWstreak();
-	//loss stream on/off
-	void changeLstreak();
+	//adding to winstrek
+	void addWstreak();
+	//adding to lose streak
+	void addLstreak();
 
 	bool ifInjuryOnTeam();
 

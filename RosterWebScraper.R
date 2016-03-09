@@ -67,7 +67,7 @@ newRoster <- na.omit(left_join(roster, ranks, by = c("Fint", "LastName", "City")
 
 finalRoster <- na.omit(left_join(newRoster, ratings, by = c("FirstName", "LastName")))
 finalRoster <- select(finalRoster, -c(FirstName, LastName, HT, Position.x, Fint, COLLEGE,
-                                      X2015.2016.SALARY, WT, NO., City)) # drop the following columns
+                                      X2015.2016.SALARY, WT, NO., City)) 
 names(finalRoster) <- tolower(names(finalRoster)) # make headers lowercase
 colnames(finalRoster)[4] <- "position"
 
