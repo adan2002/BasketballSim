@@ -61,7 +61,6 @@ void Team::setroster(Player* players, int num_players) // first 5 players should
 	roster = new Player[num_players]; // instantiate array
 	for (int j = 0; j < num_players; j++)
 	{
-		//cout << "player name: " << players[j].getName() << endl;
 		roster[j] = players[j];
 	}
 }
@@ -80,7 +79,7 @@ void Team::setstarters()
 	injuryOnTeam=false;
 	int injuredPlayers[10];
 	int icount=0;
-	cout << "entering while loop!\n" << endl;
+	//cout << "entering while loop!\n" << endl;
 	while (pos<6){
 		//cout << "position of interest: " << pos << endl;
 		for (player_id=0; player_id<numplayers;player_id++){
@@ -103,18 +102,10 @@ void Team::setstarters()
 						starters[pos-1]=injuredPlayers[icount2];
 					}
 				else {
-					cout << "found a match for the " << pos << " position. " << endl;
-					//cout << "position of player: " << roster[player_id].getPosition() << endl;
- 					starters[pos-1]=player_id;
+					starters[pos-1]=player_id;
 					pos++;
 				}
 			}
-			/*
-			cout << "looking at player " << player_id << " in roster " << endl;
-			cout << "position of player: " << roster[player_id].getPosition() << endl;
-			cout << "looking for player at " << roster[player_id].getPosition() << " position" << endl;
-			cout << "Moving to player after " << player_id << " in roster.\n\n";
-			*/
 		}
 
 	}
@@ -231,8 +222,8 @@ int Team::getStarterRating() {
 	int i;
 	int sum=0;
 	for(i=0;i<5;i++){
-		cout << "\nlooking at starter number " << i + 1 << endl;
-		cout << roster[starters[i]].getName() << " rating is " << roster[starters[i]].getRating() << endl;
+		//cout << "\nlooking at starter number " << i + 1 << endl;
+		//cout << roster[starters[i]].getName() << " rating is " << roster[starters[i]].getRating() << endl;
 		sum+=roster[starters[i]].getRating();
 	}
 	return(sum);

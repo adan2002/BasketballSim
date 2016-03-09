@@ -39,11 +39,7 @@ int main()
 {
 	cout << "program starting...\n\n";
 
-
-		
-	
-
-	cout << "creating NBA teams..." << endl;
+	cout << "creating all 30 NBA teams..." << endl;
 
 	int numTeams = 30;
 
@@ -53,8 +49,8 @@ int main()
 
 	string line;
 
-	string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
-	//string file = "team_counts.csv"; // establish size of rosters
+	//string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
+	string file = "team_counts.csv"; // establish size of rosters
 
 	ifstream  inFile(file);
 
@@ -81,7 +77,7 @@ int main()
 		teams[i].setName(name);
 		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
 		int num_players = stoi(bit); // store number
-		cout << "Number of players for " << name << " : " << num_players << endl;
+		//cout << "Number of players for " << name << " : " << num_players << endl;
 		teams[i].setNumPlayers(num_players);
 
 		// intialize roster
@@ -90,11 +86,11 @@ int main()
 
 		//cout << name << " has " << num_players << " in main rotation.\n\n";
 
-		string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
-		//string fname = "NBA_roster_ratings.csv";
+		//string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
+		string fname = "NBA_roster_ratings.csv";
 
 		ifstream  roster(fname); // open new file
-		
+	
 		if (!roster){
 			cout << "\nError opening - " << fname << endl;
 			cout << "\nPress enter to exit." << endl;
@@ -102,7 +98,8 @@ int main()
 
 			return -1;
 		}
-
+		
+		
 		getline(roster, line); // skip first row (just header)
 
 		int idx = 0;
@@ -115,16 +112,14 @@ int main()
 			
 			if (name == bit){ // do the team names match?
 
-				cout << "team name: " << bit << endl;
+				//cout << "team name: " << bit << endl;
 				getline(lineStream, bit, ','); // get second element (i.e. player name)
-				cout << "name: " << bit << endl;
 				players[idx].setName(bit);
 				
 				getline(lineStream, bit, ','); // get third element (i.e. player age)
 				players[idx].setAge(stoi(bit));
 
 				getline(lineStream, bit, ','); // get fourth element (i.e. player pos)
-				cout << "player position: " << bit << endl;
 				// enumerate player position
 				if (bit == "PG"){
 					players[idx].setPosition(1);
@@ -146,9 +141,8 @@ int main()
 					players[idx].setPosition(5);
 				}
 
-				cout << "player position (enumerated): " << players[idx].getPosition() << endl;
-
-
+				//cout << "player position (enumerated): " << players[idx].getPosition() << endl;
+				
 				getline(lineStream, bit, ','); // get fifth element (i.e. player rank)
 				players[idx].setRank(stoi(bit));
 				
@@ -167,27 +161,36 @@ int main()
 		roster.close();
 		teams[i].setroster(players, num_players);
 		i++; // move to next element in vector
-		cout << "team number: " << i << endl;
+		//cout << "team number: " << i << endl;
 	}
 
 	cout << "Closing CSV files\n\n";
 	inFile.close();
 	
 
-	cout << "Filling in probability matrix: " << endl;
+	cout << "Filling in probability matrix\n" << endl;
 	ProbMatrix pmat;
 	pmat.setSize(numTeams);
 	pmat.addTeams(teams, numTeams);
 
-	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
-	//string fn = "probs.txt"; // probabilities file
+	//string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
+	string fn = "probs.txt"; // probabilities file
 	
 	pmat.setProb(fn, numTeams);
 	cout << pmat.getProb(teams[1], teams[4]) << endl;
 	pmat.runGame(teams[1], teams[4]);
 
-	pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
-	//pmat.runSeason("2016schedule.csv");
+	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
+	pmat.runSeason("2016schedule.csv");
+
+	// multiple season simulation
+
+	/*
+	for (int s = 0; s < 1000; s++){
+		cout << "Simulating season number " << s << endl;
+		pmat.runSeason("2016schedule.csv");
+	}
+	*/
 
 
 	cout << "\nExiting program. Press enter to exit." << endl;

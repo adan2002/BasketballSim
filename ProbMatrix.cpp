@@ -105,21 +105,21 @@ void ProbMatrix::runGame(Team home, Team away){
 	float rando;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
-	cout << "Probability of home team, " << home.getName() << ", winning: " << hometeamwins << endl;
-	cout << "Probability of away team, " << away.getName() << ", winning: " << (1.0-hometeamwins) << endl;
-	cout << "Setting starters for home team\n";
+	//cout << "Probability of home team, " << home.getName() << ", winning: " << hometeamwins << endl;
+	//cout << "Probability of away team, " << away.getName() << ", winning: " << (1.0-hometeamwins) << endl;
+	//cout << "Setting starters for home team\n";
 	home.setstarters();
-	cout << "Setting starters for away team\n";
+	//cout << "Setting starters for away team\n";
 	away.setstarters();
 
-	cout << "Starters set for each team \n" << endl;
+	//cout << "Starters set for each team \n" << endl;
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
-		cout << "Injury!";
+		//cout << "Injury!";
 		int HTR = home.getStarterRating(); //home team ratings
-		cout << "Starter rating for home team: " << HTR << endl;
-		cout << "\n\n";
+		//cout << "Starter rating for home team: " << HTR << endl;
+		//cout << "\n\n";
 		int ATR = away.getStarterRating(); //away team ratings
-		cout << "Starter rating for home team: " << ATR << endl;
+		//cout << "Starter rating for home team: " << ATR << endl;
 		///////changed to this...is this the best way?
 		hometeamwins=hometeamwins-(HTR-ATR)/((HTR+ATR)/4);
 		//add rankings of both teams.
@@ -131,23 +131,20 @@ void ProbMatrix::runGame(Team home, Team away){
 	//account for win streak and losing streak here
 
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
-	cout << "\ngenerating random number...\n\n";
+	//cout << "\ngenerating random number...\n\n";
 	rando = float(rand()) / RAND_MAX;
-	cout << "random number generated: " << rando << endl;
+	//cout << "random number generated: " << rando << endl;
 	//if larger, home team loses, if smaller home team wins
 	//run aftergame
 	if (rando<hometeamwins){
 		home.aftergame('W');
 		away.aftergame('L');
-		cout << "\nHome team wins!!!\n\n";
+		//cout << "Home team wins!!!\n";
 	}else{
 		home.aftergame('L');
 		away.aftergame('W');
-		cout << "\nAway team wins!!!\n\n";
+		//cout << "Away team wins!!!\n";
 	}
-
-	cout << "\nend of game simulation...\n\n";
-
 }
 
 
@@ -175,7 +172,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 		stringstream inLine(line);
 		for (i=0;i<2;i++){
 			getline(inLine,bit,',');
-			cout << "team name: " << bit << endl;
+			//cout << "team name: " << bit << endl;
 			if (bit.find("\r")>0&&bit.find("\r")<4){
 			bit.replace(bit.find("\r"),1,"");}
 
@@ -189,7 +186,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 	int k=0,l=0;
 
 	for(i=0;i<gamesInSeason;i++){
-		cout << "\nGame number: " << i+1 << "\n";
+		//cout << "\nGame number: " << i+1 << "\n";
 		while(teams[j].getName()!=games[i][k]){ // finding home team
 			j++;
 		}
