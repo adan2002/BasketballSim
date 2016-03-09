@@ -78,6 +78,8 @@ void Team::setstarters()
 	int player_id;
 	int pos = 1;
 	injuryOnTeam=false;
+	int injuredPlayers[10];
+	int icount=0;
 	cout << "entering while loop!\n" << endl;
 	while (pos<6){
 		//cout << "position of interest: " << pos << endl;
@@ -89,8 +91,17 @@ void Team::setstarters()
 				if (roster[player_id].ifInjured()){
 					//cout << "player injured! \n" << endl;
 					injuryOnTeam=true;
-					//NEED TO PUT SOMETHING HERE!
+					injuredPlayers[icount]=player_id;
+					icount++;
 				}
+				//if all players of a position are injured, it goes back to an index of the injured players and places them as starters
+					if(player_id==numplayers){
+						int icount2=0;
+						while (roster[injuredPlayers[icount2]].getPosition()!=pos){
+							icount2++;
+						}
+						starters[pos-1]=injuredPlayers[icount2];
+					}
 				else {
 					cout << "found a match for the " << pos << " position. " << endl;
 					//cout << "position of player: " << roster[player_id].getPosition() << endl;
