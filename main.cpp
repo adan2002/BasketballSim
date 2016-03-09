@@ -73,12 +73,23 @@ int main()
 		string bit;
 		getline(lineStream, bit, ','); // get first element (i.e. team name)
 		string name = bit; // locally store team name
-			
 		teams[i].setName(name);
+
 		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
 		int num_players = stoi(bit); // store number
 		//cout << "Number of players for " << name << " : " << num_players << endl;
 		teams[i].setNumPlayers(num_players);
+
+		getline(lineStream, bit, ','); // get third element (i.e. team conference 1 = eastern, 0 = western)
+		int conf = stoi(bit); // store number
+		//cout << "Number of players for " << name << " : " << num_players << endl;
+		teams[i].setConf(conf);
+
+		getline(lineStream, bit, ','); // get fourth element (i.e. team division, which is enumerated)
+									   // (1,2,3 are in east and 4,5,6 are in west)
+		int div = stoi(bit); // store number
+		//cout << "Number of players for " << name << " : " << num_players << endl;
+		teams[i].setDiv(div);
 
 		// intialize roster
 		Player* players; // create empty array
@@ -175,14 +186,12 @@ int main()
 
 	//string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
 	string fn = "probs.txt"; // probabilities file
-	
-	pmat.setProb(fn, numTeams);
-	cout << pmat.getProb(teams[1], teams[4]) << endl;
-	pmat.runGame(teams[1], teams[4]);
+	pmat.setProb(fn, numTeams); // intialize probabilit matrix values
 
 	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
+	cout << "Simulating a full season\n";
 	pmat.runSeason("2016schedule.csv");
-
+	cout << teams[5].getName() << " won " << teams[5].getWins() << " games.\n";
 	// multiple season simulation
 
 	/*
@@ -193,7 +202,11 @@ int main()
 	*/
 
 
-	cout << "\nExiting program. Press enter to exit." << endl;
+	cout << "\nSorting team array by division enumeration\n";
+	Team** div;
+	div = groupTeams(teams);
+
+	cout << "\nExiting program. Press enter to exit.";
 
 	cin.get();
 

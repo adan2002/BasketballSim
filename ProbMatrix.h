@@ -29,4 +29,6 @@ public:
 
 // other functions
 
+Team** groupTeams(Team* teams);
+
 #endif //PROBMATRIX_H
