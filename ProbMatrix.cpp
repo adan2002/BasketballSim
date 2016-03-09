@@ -120,8 +120,8 @@ void ProbMatrix::runGame(Team home, Team away){
 		cout << "\n\n";
 		int ATR = away.getStarterRating(); //away team ratings
 		cout << "Starter rating for home team: " << ATR << endl;
-		///////NOT GOOD ENOUGH/not proportional
-		hometeamwins=hometeamwins-ATR/HTR;
+		///////changed to this...is this the best way?
+		hometeamwins=hometeamwins-(HTR-ATR)/((HTR+ATR)/4);
 		//add rankings of both teams.
 	}
 	//see if there are any probability additons for the home team and add it to a dummy variable
@@ -176,9 +176,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 			cout << "team name: " << bit << endl;
 			if (bit.find("\r")>0&&bit.find("\r")<4){
 			bit.replace(bit.find("\r"),1,"");}
-			//if (bit.length()>3){
-				//bit.replace(bit.find("\r"),1,"");
-			//}
+
 			games[j][i]=bit;
 		}
 		j++;
