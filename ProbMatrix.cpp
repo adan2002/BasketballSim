@@ -181,7 +181,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 		}
 		j++;
 	}
-
+	inFile.close();
 	i=0;
 	j=0;
 	int k=0,l=0;

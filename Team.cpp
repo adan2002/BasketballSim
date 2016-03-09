@@ -89,6 +89,7 @@ void Team::setstarters()
 				if (roster[player_id].ifInjured()){
 					//cout << "player injured! \n" << endl;
 					injuryOnTeam=true;
+					//NEED TO PUT SOMETHING HERE!
 				}
 				else {
 					cout << "found a match for the " << pos << " position. " << endl;
