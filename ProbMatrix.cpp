@@ -226,14 +226,15 @@ Therefore this will return a 6x5 matrix. Each divison will
 matcht the row index - 1, assuming the count begins at 0. 
 */
 
-Team** groupTeams(Team* teams) //separate teams by division
-{
-	Team** divisions = 0; // 2D array
-	divisions = new Team*[6];
-	int numTeams = 30;
-	Team swap;
+//Team** genStandings(Team* teams){ // rank teams by conference and records
+void genStandings(Team* teams){
+	Team** divisions = 0; // 2D array 
+	divisions = new Team*[6]; // 6 rows (one for each division)
+	int numTeams = 30; // number of NBA franchises
+	Team swap; 
 
 	// bubble sort algorithm, sort teams array by division enumeration
+	// i.e. group teams by division from list of teams
 	for (int i = 0; i < numTeams - 1; i++){ // go up to second to last elements
 		for (int j = 0; j < numTeams - i - 1; j++){
 			if (teams[j].getDiv() > teams[j + 1].getDiv()){ /* For decreasing order use < */
@@ -247,8 +248,8 @@ Team** groupTeams(Team* teams) //separate teams by division
 	// teams are sorted, now store into divisions matrix, 6X5
 	int idx = 0;
 	for (int i = 0; i < 6; i++){ // for every division
-		divisions[i] = new Team[5]; // create a new row
-
+		divisions[i] = new Team[5]; // create 5 elements
+			// each division consists of five teams
 		for (int j = 0; j < 5; j++){ // add teams that belong to that row
 			//cout << "Team name: " << teams[idx].getName() << endl;
 			divisions[i][j] = teams[idx];
@@ -256,13 +257,13 @@ Team** groupTeams(Team* teams) //separate teams by division
 		}
 	}
 
-	// now sort each divsion
+	// now sort teams in each divsion by wins
 
 	for (int i = 0; i < 6; i++){ // for each division
 		// use bubble sort algorithm to arrange from best to worst records
 		for (int c = 0; c < 5 - 1; c++){ // 5 teams in each division
 			for (int d = 0; d < 5 - c - 1; d++){
-				if (divisions[i][d].getWins() < divisions[i][d + 1].getWins()){
+				if (divisions[i][d].getAvgWins() < divisions[i][d + 1].getAvgWins()){
 					swap = divisions[i][d];
 					divisions[i][d] = divisions[i][d + 1];
 					divisions[i][d + 1] = swap;
@@ -287,24 +288,24 @@ Team** groupTeams(Team* teams) //separate teams by division
 
 	}
 
+	// Another method of sorting teams by conference
 	// or sort by columns and then concatenate rankings
 	Team* e1 = new Team[3]; // 1st place finishers of east divisions
 	Team* e2 = new Team[3]; // 2nd place finishers of east divisions...
 	Team* e3 = new Team[3];
-	Team* e4 = new Team[3]; // 2nd place finishers of east divisions...
+	Team* e4 = new Team[3]; 
 	Team* e5 = new Team[3];
-	Team* w1 = new Team[3];
+
+	Team* w1 = new Team[3]; // 1st place finishers of western divisions..
 	Team* w2 = new Team[3];
 	Team* w3 = new Team[3];
 	Team* w4 = new Team[3];
 	Team* w5 = new Team[3];
 
 	for (int i = 0; i < 3; i++){
-		cout << divisions[i][2].getName() << endl;
 		e1[i] = divisions[i][0]; // all the first
 		e2[i] = divisions[i][1];
 		e3[i] = divisions[i][2];
-		cout << e3[i].getName() << endl;
 		e4[i] = divisions[i][3];
 		e5[i] = divisions[i][4];
 
@@ -318,22 +319,22 @@ Team** groupTeams(Team* teams) //separate teams by division
 	// use bubble sort algorithm to arrange from best to worst records
 	for (int c = 0; c < 3 - 1; c++){ // 3 teams in each list
 		for (int d = 0; d < 3 - c - 1; d++){
-			if (e1[d].getWins() < e1[d + 1].getWins()){
+			if (e1[d].getAvgWins() < e1[d + 1].getAvgWins()){
 				swap = e1[d];
 				e1[d] = e1[d + 1];
 				e1[d + 1] = swap;
 			}
-			if (e2[d].getWins() < e2[d + 1].getWins()){
+			if (e2[d].getAvgWins() < e2[d + 1].getAvgWins()){
 				swap = e2[d];
 				e2[d] = e2[d + 1];
 				e2[d + 1] = swap;
 			}
-			if (w1[d].getWins() < w1[d + 1].getWins()){
+			if (w1[d].getAvgWins() < w1[d + 1].getAvgWins()){
 				swap = w1[d];
 				w1[d] = w1[d + 1];
 				w1[d + 1] = swap;
 			}
-			if (w2[d].getWins() < w2[d + 1].getWins()){
+			if (w2[d].getAvgWins() < w2[d + 1].getAvgWins()){
 				swap = w2[d];
 				w2[d] = w2[d + 1];
 				w2[d + 1] = swap;
@@ -363,10 +364,7 @@ Team** groupTeams(Team* teams) //separate teams by division
 	bot11WC[0] = w2[1];
 	bot11WC[1] = w2[2];
 
-	cout << "Team name: " << e5[2].getName() << endl;
-	for (int j = 0; j < 3, j++;){
-		cout << "????\n";
-		cout << "Team name: " << e3[j].getName() << endl;
+	for (int j = 0; j < 3; j++){
 		bot11EC[j + 2] = e3[j]; // teams 7-9 in conference
 		bot11EC[j + 5] = e4[j]; // teams 10-12
 		bot11EC[j + 8] = e5[j]; // teams 13-15
@@ -376,17 +374,21 @@ Team** groupTeams(Team* teams) //separate teams by division
 		bot11WC[j + 8] = w5[j]; // teams 13-15
 	}
 
+	cout << "\nSorting top four teams from eastern conference\n";
+
 
 	// once last bubble sort for top 4
 	for (int c = 0; c < 4 - 1; c++){ // 3 teams in each list
 		for (int d = 0; d < 4 - c - 1; d++){
-			if (top4EC[d].getWins() < top4EC[d + 1].getWins()){
+			if (top4EC[d].getAvgWins() < top4EC[d + 1].getAvgWins()){
+				//cout << "swapping eastern teams\n"; // debug statement
 				swap = top4EC[d];
 				top4EC[d] = top4EC[d + 1];
 				top4EC[d + 1] = swap;
 			}
 
-			if (top4WC[d].getWins() < top4WC[d + 1].getWins()){
+			if (top4WC[d].getAvgWins() < top4WC[d + 1].getAvgWins()){
+				//cout << "swapping western teams\n"; // debug statement
 				swap = top4WC[d];
 				top4WC[d] = top4WC[d + 1];
 				top4WC[d + 1] = swap;
@@ -394,13 +396,18 @@ Team** groupTeams(Team* teams) //separate teams by division
 		}
 	}
 
-	// once last bubble sort for bottom 11
+	// once last bubble sort for bottom 11 teams in each conference
 	for (int c = 0; c < 11 - 1; c++){ // 3 teams in each list
 		for (int d = 0; d < 11 - c - 1; d++){
-			if (bot11EC[d].getWins() < bot11EC[d + 1].getWins()){
+			if (bot11EC[d].getAvgWins() < bot11EC[d + 1].getAvgWins()){
 				swap = bot11EC[d];
 				bot11EC[d] = bot11EC[d + 1];
-				e1[d + 1] = swap;
+				bot11EC[d + 1] = swap; 
+			}
+			if (bot11WC[d].getAvgWins() < bot11WC[d + 1].getAvgWins()){
+				swap = bot11WC[d];
+				bot11WC[d] = bot11WC[d + 1];
+				bot11WC[d + 1] = swap;
 			}
 		}
 	}
@@ -411,20 +418,36 @@ Team** groupTeams(Team* teams) //separate teams by division
 		if (k < 4){
 			cout << "Eastern Conference Seed number " << k + 1;
 			cout << " : " << top4EC[k].getName();
-			cout << "    Wins: " << top4EC[k].getWins() << endl;
+			cout << "    Wins: " << top4EC[k].getAvgWins() << endl;
 		}
 		else{
 			cout << "Eastern Conference Seed number " << k + 1;
 			cout << " : " << bot11EC[k - 4].getName();
-			cout << "    Wins: " << bot11EC[k].getWins() << endl;
+			cout << "    Wins: " << bot11EC[k].getAvgWins() << endl;
 		}
 	}
 
+	cout << endl; // white space
+	
+	for (int k = 0; k < 15; k++){
+		if (k < 4){
+			cout << "Western Conference Seed number " << k + 1;
+			cout << " : " << top4WC[k].getName();
+			cout << "    Wins: " << top4WC[k].getAvgWins() << endl;
+		}
+		else{
+			cout << "Western Conference Seed number " << k + 1;
+			cout << " : " << bot11WC[k - 4].getName();
+			cout << "    Wins: " << bot11WC[k].getAvgWins() << endl;
+		}
+	}
+
+	/*
 	Team** standings; // by 2x15 array
 	standings = new Team*[2];
 	standings[0] = eastConf;
 	standings[1] = westConf;
 
 	return standings;
-
+	*/
 }

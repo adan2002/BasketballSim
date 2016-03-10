@@ -19,6 +19,7 @@ Team::Team() // default constructor
 	lstreak = 0; // why bool? --same as above
 	index = -1; // id in matrix
 	numplayers = 0;
+	avgWins = 0.0;
 }
 
 Team::~Team() 
@@ -267,12 +268,27 @@ int Team::getWstreak() {
 	return(wstreak);
 }
 
-int Team::getWins(){
-	//cout<<wins<<endl;
-	return(wins);
+float Team::getAvgWins(){
+	return avgWins;
 }
 
-int Team::getLosses() {
-	//cout<<losses<<endl;
-	return(losses);
+void Team::setAvgWins(float n){ 
+	avgWins = n;
+}
+
+void Team::resetWins(){
+	wins = 0;
+}
+
+
+// other functions
+void updateWins(Team* teams, int num){ // to be done after every simulation
+	// n tracks what number simulation we are on
+	
+	for (int i = 0; i < 30; i++){ // for every team in the league
+		float avg;
+		avg = ( num*teams[i].getAvgWins() + teams[i].getWins() )/(num + 1); // recalc average
+		teams[i].setAvgWins(avg);
+		teams[i].resetWins(); // reset wins counter
+	}
 }

@@ -23,12 +23,13 @@ public:
 	void addTeams(Team* &list, int num_teams);
 	void setProb(string fname, int num_teams); // pass in filename
 	float getProb(Team home, Team away);
-	void runGame(Team &home, Team &away);
+	void runGame(Team &home, Team &away); // pass by reference
 	void runSeason(string seasonfile);
 };
 
 // other functions
 
-Team** groupTeams(Team* teams);
+//Team** genStandings(Team* teams);
+void genStandings(Team* teams);
 
 #endif //PROBMATRIX_H

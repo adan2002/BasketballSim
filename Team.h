@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class Team {
+class Team{
 private:
 	string name;
 	int conference;
@@ -28,6 +28,8 @@ private:
 	int legthOFroster;
 	int index; // id in matrix
 	int numplayers;
+	float avgWins; // keeps track of averages wins after
+			// multiple simulations
 public:
 	Team();
 	~Team();
@@ -79,19 +81,16 @@ public:
 
 	int getLstreak();
 	int getWstreak();
-<<<<<<< HEAD
 	int getWins();
 	int getLosses();
-=======
-
-	int getWins();
-
-	int getLosses();
-
->>>>>>> 02debf046b0423677dedf1e81d8dc82873e4df98
 	string getName();
 
+	void setAvgWins(float num);
+	float getAvgWins();
+	void resetWins();
 };
 
+// other functions
+void updateWins(Team* teams, int num);
 
 #endif //BASKETBALLSIM_TEAM_H
