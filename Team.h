@@ -80,6 +80,10 @@ public:
 	int getLstreak();
 	int getWstreak();
 
+	int getWins();
+
+	int getLosses();
+
 	string getName();
 
 };
