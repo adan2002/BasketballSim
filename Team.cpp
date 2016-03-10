@@ -15,9 +15,6 @@ Team::Team() // default constructor
 	addedProb = 0; //needs function that will updatate( this is the added probability that a team will win)
 	conference=0;
 	division=0;
-	//roster[10] = {}; // empty array of players
-	//starters[5] = {}; // empty array of players
-	//pig[5] = {}; // empty array
 	wstreak = 0; // why bool? --b/c it can be-if wstreak the +.1 to prob of winning next game
 	lstreak = 0; // why bool? --same as above
 	index = -1; // id in matrix
@@ -46,6 +43,16 @@ float Team::losspercent()
 	int total_games = wins + losses;
 
 	return (float(losses) / float(total_games));
+}
+
+int Team::getWins()
+{
+	return wins;
+}
+
+int Team::getLosses()
+{
+	return losses;
 }
 
 void Team::upwin()
