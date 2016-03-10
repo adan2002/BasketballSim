@@ -202,7 +202,7 @@ void Team::aftergame(char WoL) {
 }
 
 int Team::getIndex() {
-	return (index);
+	return (this->index);
 }
 
 void Team::setLengthofRoster(int inLength) {
