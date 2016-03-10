@@ -79,8 +79,16 @@ public:
 
 	int getLstreak();
 	int getWstreak();
+<<<<<<< HEAD
 	int getWins();
 	int getLosses();
+=======
+
+	int getWins();
+
+	int getLosses();
+
+>>>>>>> 02debf046b0423677dedf1e81d8dc82873e4df98
 	string getName();
 
 };

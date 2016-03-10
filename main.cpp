@@ -49,8 +49,8 @@ int main()
 
 	string line;
 
-	//string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
-	string file = "team_counts.csv"; // establish size of rosters
+	string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
+	//string file = "team_counts.csv"; // establish size of rosters
 
 	ifstream  inFile(file);
 
@@ -97,8 +97,8 @@ int main()
 
 		//cout << name << " has " << num_players << " in main rotation.\n\n";
 
-		//string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
-		string fname = "NBA_roster_ratings.csv";
+		string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
+		//string fname = "NBA_roster_ratings.csv";
 
 		ifstream  roster(fname); // open new file
 	
@@ -184,13 +184,13 @@ int main()
 	pmat.setSize(numTeams);
 	pmat.addTeams(teams, numTeams);
 
-	//string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
-	string fn = "probs.txt"; // probabilities file
+	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
+	//string fn = "probs.txt"; // probabilities file
 	pmat.setProb(fn, numTeams); // intialize probabilit matrix values
 
-	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
+	pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
 	cout << "Simulating a full season\n";
-	pmat.runSeason("2016schedule.csv");
+	//pmat.runSeason("2016schedule.csv");
 	cout << teams[5].getName() << " won " << teams[5].getWins() << " games.\n";
 	// multiple season simulation
 

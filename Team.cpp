@@ -57,11 +57,11 @@ int Team::getLosses()
 
 void Team::upwin()
 {
-	wins += 1; // increment
+	wins = wins + 1; // increment
 }
 
 void Team::uploss(){
-	losses += 1;
+	losses = losses + 1;
 }
 
 //do we need a function that allows you to add/subtract players one at a time?
@@ -174,7 +174,8 @@ void Team::aftergame(char WoL) {
 	//mins added to starters playing time
     int StarterMinAdded=30;
 	//mins added to backup playing time
-    int backupMinAdded=90/(legthOFroster-5);
+	//90 divided by average roster length
+    int backupMinAdded=90/(5);
 	//keep track of player names so they arent updated twice
 	string playersupdated[5];
 	//buffer for searching
@@ -208,7 +209,7 @@ void Team::aftergame(char WoL) {
 }
 
 int Team::getIndex() {
-	return (index);
+	return (this->index);
 }
 
 void Team::setLengthofRoster(int inLength) {
@@ -264,4 +265,14 @@ int Team::getLstreak() {
 
 int Team::getWstreak() {
 	return(wstreak);
+}
+
+int Team::getWins(){
+	//cout<<wins<<endl;
+	return(wins);
+}
+
+int Team::getLosses() {
+	//cout<<losses<<endl;
+	return(losses);
 }

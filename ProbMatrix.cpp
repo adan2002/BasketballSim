@@ -21,15 +21,20 @@ void ProbMatrix::setSize(int num_teams)
 	numTeams = num_teams;
 }
 
-void ProbMatrix::addTeams(Team* list_teams, int num_teams) // parameterized constructor
+/*void ProbMatrix::addTeams(Team* list_teams, int num_teams) // parameterized constructor
 
 {  // think about linking ProbMatrix with Team class
 	teams = new Team[num_teams]; //  create an array of Teams
 	for (int i = 0; i < num_teams; i++){
 		teams[i] = list_teams[i]; // copy over
 	}
-}
+}*/
 
+void ProbMatrix::addTeams(Team* &list_teams, int num_teams) // parameterized constructor
+
+{  // think about linking ProbMatrix with Team class
+	teams = list_teams;
+}
 
 ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constructor
 
@@ -101,7 +106,7 @@ float ProbMatrix::getProb(Team home, Team away){
 
 // other functions
 
-void ProbMatrix::runGame(Team home, Team away){
+void ProbMatrix::runGame(Team &home, Team &away){
 	float rando;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
