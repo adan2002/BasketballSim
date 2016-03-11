@@ -19,8 +19,8 @@ Team::Team() // default constructor
 	addedProb = 0; //needs function that will updatate( this is the added probability that a team will win)
 	conference=0;
 	division=0;
-	wstreak = 0; // why bool? --b/c it can be-if wstreak the +.1 to prob of winning next game
-	lstreak = 0; // why bool? --same as above
+	wstreak = 0;
+	lstreak = 0;
 	index = -1; // id in matrix
 	numplayers = 0;
 	avgWins = 0.0;
