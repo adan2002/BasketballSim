@@ -43,7 +43,7 @@ public:
 	//set roster
 	void setroster(Player* player, int num);//first 5 players should be the starters
 	//set starter
-	void setstarters();
+	float setstarters();
 	//set pig
 	void setpig();
 	//setName of team

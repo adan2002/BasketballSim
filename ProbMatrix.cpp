@@ -111,14 +111,15 @@ float ProbMatrix::getProb(Team home, Team away){
 void ProbMatrix::runGame(Team &home, Team &away){
 	//srand(time(NULL));
 	float rando;
+	float homePenalty, awayPenalty;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
 	//cout << "Probability of home team, " << home.getName() << ", winning: " << hometeamwins << endl;
 	//cout << "Probability of away team, " << away.getName() << ", winning: " << (1.0-hometeamwins) << endl;
 	//cout << "Setting starters for home team\n";
-	home.setstarters();
+	homePenalty=home.setstarters();
 	//cout << "Setting starters for away team\n";
-	away.setstarters();
+	awayPenalty=away.setstarters();
 
 	//cout << "Starters set for each team \n" << endl;
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
@@ -134,7 +135,7 @@ void ProbMatrix::runGame(Team &home, Team &away){
 	}
 	//see if there are any probability additons for the home team and add it to a dummy variable
 	//see if there are any probability additions for the away team and subtract that from the dummy variable
-	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb();
+	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb()+awayPenalty-homePenalty;
 
 	//account for win streak and losing streak here
 	if (home.getWstreak()>0){

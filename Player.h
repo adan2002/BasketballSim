@@ -20,6 +20,7 @@ private:
     int minutes; //minutes played
     bool injury;
     int gamesWithInjleft; //games played with injury
+    float sevOFinj; //keeps track of the random number generated when the player was injrued
 public:
     Player();
     Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, bool inj, int GWIL);
@@ -59,6 +60,7 @@ public:
     string getName();
 
 	void setRank(int num);
+    float getSevOfinj();
 };
 
 
