@@ -21,7 +21,7 @@ Team::Team() // default constructor
 	wstreak = 0; // why bool? --b/c it can be-if wstreak the +.1 to prob of winning next game
 	lstreak = 0; // why bool? --same as above
 	index = -1; // id in matrix
-	numplayers = 0;
+	numplayers = 0; // number of players in roster
 	avgWins = 0.0;
 }
 
@@ -92,12 +92,10 @@ void Team::setstarters()
 	injuryOnTeam=false;
 	int injuredPlayers[10];
 	int icount=0;
-	//cout << "entering while loop!\n" << endl;
+	
 	while (pos<6){
-		//cout << "position of interest: " << pos << endl;
 		for (player_id=0; player_id<numplayers;player_id++){
-			//cout << player_id << endl;
-			//cout << roster[player_id].getPosition() << endl;
+			
 			if (roster[player_id].getPosition()==pos){
 				//cout << roster[player_id].getPosition() << endl;
 				if (roster[player_id].ifInjured()){
@@ -202,10 +200,11 @@ void Team::aftergame(char WoL) {
 	//updates the mins played of non starters by searching for starters and injured players and filtering them out of the update
 	//update includes running the probability that a player is injured
 	for (i=0;i<numplayers-1;i++){
-		cout << i << endl;
+		cout << "i = " << i << endl;
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
+			cout << "j = " <<  j << endl;
 			//won't update if player is injured
 			if (holdName==playersupdated[i]||roster[i].ifInjured()){
 				YN=true;
@@ -240,8 +239,6 @@ int Team::getStarterRating() {
 	int i;
 	int sum=0;
 	for(i=0;i<5;i++){
-		//cout << "\nlooking at starter number " << i + 1 << endl;
-		//cout << roster[starters[i]].getName() << " rating is " << roster[starters[i]].getRating() << endl;
 		sum+=roster[starters[i]].getRating();
 	}
 	return(sum);
@@ -252,14 +249,16 @@ string Team::getName() {
 }
 
 void Team::setDiv(int inDiv) {
-	division=inDiv;
+	division=inDiv; // stored as stored as integer
+	  // eastern divisions are values 1,2,3
+	// western divisions are values 4,5,6
 }
 
 void Team::setConf(int inConf) {
 	conference=inConf;
 }
 
-int Team::getDiv(){
+int Team::getDiv(){ 
 	return (division);
 }
 
@@ -276,7 +275,7 @@ int Team::getWstreak() {
 }
 
 float Team::getAvgWins(){
-	return avgWins;
+	return avgWins; 
 }
 
 void Team::setAvgWins(float n){ 
@@ -344,11 +343,6 @@ void createTeams(Team* teams, string depthcounts, string rosterFile){
 		// intialize roster
 		Player* players; // create empty array
 		players = new Player[num_players];
-
-		//cout << name << " has " << num_players << " in main rotation.\n\n";
-
-		//string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
-		//string fname = "NBA_roster_ratings.csv";
 
 		ifstream  roster(rosterFile); // open new file
 
@@ -421,7 +415,6 @@ void createTeams(Team* teams, string depthcounts, string rosterFile){
 		roster.close();
 		teams[i].setroster(players, num_players);
 		i++; // move to next element in vector
-		//cout << "team number: " << i << endl;
 
 		delete[] players; players = NULL; 	// delete players array
 	}

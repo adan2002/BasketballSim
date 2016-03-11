@@ -32,10 +32,11 @@ the playoffs.
 #include <iostream>
 #include <string>
 #include <stdlib.h> // srand rand 
-#include <vector>
 #include <sstream> // reading in strings as buffers
 #include <fstream> // read in data
-#include <ctime>
+#include <ctime> 
+
+// Loading in class files
 #include "Team.h"
 #include "Player.h"
 #include "ProbMatrix.h"

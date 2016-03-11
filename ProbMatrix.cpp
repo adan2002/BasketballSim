@@ -22,15 +22,6 @@ void ProbMatrix::setSize(int num_teams)
 	numTeams = num_teams;
 }
 
-/*void ProbMatrix::addTeams(Team* list_teams, int num_teams) // parameterized constructor
-
-{  // think about linking ProbMatrix with Team class
-	teams = new Team[num_teams]; //  create an array of Teams
-	for (int i = 0; i < num_teams; i++){
-		teams[i] = list_teams[i]; // copy over
-	}
-}*/
-
 void ProbMatrix::addTeams(Team* &list_teams, int num_teams) // parameterized constructor
 
 {  // think about linking ProbMatrix with Team class
@@ -64,6 +55,8 @@ ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constru
 
 ProbMatrix::~ProbMatrix() // destructor
 { 
+	delete[] teams; teams = NULL;
+	delete[] matrix; matrix = NULL;
 }
 
 // overload [] operator to 
@@ -95,8 +88,6 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 
 		}
 	}
-	//why is this not random?
-	float r = 4.0;//((float)rand() / (RAND_MAX)); // random number between 0 and 1
 
 }
 
@@ -378,14 +369,12 @@ void genStandings(Team* teams){
 	for (int c = 0; c < 4 - 1; c++){ // 3 teams in each list
 		for (int d = 0; d < 4 - c - 1; d++){
 			if (top4EC[d].getAvgWins() < top4EC[d + 1].getAvgWins()){
-				//cout << "swapping eastern teams\n"; // debug statement
 				swap = top4EC[d];
 				top4EC[d] = top4EC[d + 1];
 				top4EC[d + 1] = swap;
 			}
 
 			if (top4WC[d].getAvgWins() < top4WC[d + 1].getAvgWins()){
-				//cout << "swapping western teams\n"; // debug statement
 				swap = top4WC[d];
 				top4WC[d] = top4WC[d + 1];
 				top4WC[d + 1] = swap;
