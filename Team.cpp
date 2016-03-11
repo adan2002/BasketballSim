@@ -156,6 +156,12 @@ void Team::setNumPlayers(int num){
 	numplayers = num;
 }
 
+int Team::getNumPlayers(){
+
+	return numplayers;
+}
+
+
 void Team::aftergame(char WoL) {
     //adds a win or a loss depending on the outcome of the game
     switch (WoL){
@@ -179,8 +185,8 @@ void Team::aftergame(char WoL) {
 	//mins added to starters playing time
     int StarterMinAdded=30;
 	//mins added to backup playing time
-	//90 divided by average roster length
-    int backupMinAdded=90/(5);
+	//90 divided by number of players on bench
+    int backupMinAdded=90/(numplayers-5);
 	//keep track of player names so they arent updated twice
 	string playersupdated[5];
 	//buffer for searching
@@ -195,7 +201,8 @@ void Team::aftergame(char WoL) {
     }
 	//updates the mins played of non starters by searching for starters and injured players and filtering them out of the update
 	//update includes running the probability that a player is injured
-	for (i=0;i<legthOFroster-1;i++){
+	for (i=0;i<numplayers-1;i++){
+		cout << i << endl;
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
@@ -215,10 +222,6 @@ void Team::aftergame(char WoL) {
 
 int Team::getIndex() {
 	return (this->index);
-}
-
-void Team::setLengthofRoster(int inLength) {
-	legthOFroster=inLength;
 }
 
 float Team::getAddedProb() {
@@ -330,7 +333,6 @@ void createTeams(Team* teams, string depthcounts, string rosterFile){
 
 		getline(lineStream, bit, ','); // get third element (i.e. team conference 1 = eastern, 0 = western)
 		int conf = stoi(bit); // store number
-		//cout << "Number of players for " << name << " : " << num_players << endl;
 		teams[i].setConf(conf);
 
 		getline(lineStream, bit, ','); // get fourth element (i.e. team division, which is enumerated)

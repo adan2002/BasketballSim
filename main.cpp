@@ -87,13 +87,15 @@ int main()
 	
 	// multiple season simulation
 	
-	for (int s = 0; s < 1000; s++){
+	for (int s = 0; s < 25; s++){
 		cout << "Simulating season number " << s+1 << endl;
 		//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
 		pmat.runSeason("2016schedule.csv");
 		updateWins(teams, s); // update average wins for all teams and reset win counter for next season
 
 	}
+
+	cout << "Number of player on roster for " << teams[7].getName() << ": " << teams[7].getNumPlayers() << endl;
 	
 	cout << "\nSorting team array by conference\n";
 	genStandings(teams); // functions prints out standings

@@ -25,7 +25,6 @@ private:
 	bool injuryOnTeam;
 	int wstreak;//change to int
 	int lstreak; //change to int
-	int legthOFroster;
 	int index; // id in matrix
 	int numplayers;
 	float avgWins; // keeps track of averages wins after
@@ -49,7 +48,6 @@ public:
 	void setpig();
 	//setName of team
 	void setName(string namein);
-
 	void setDiv(int inDiv);
 
 	void setConf(int inConf);
@@ -61,6 +59,7 @@ public:
 	void enumerate(int num);
 
 	void setNumPlayers(int num);
+	int getNumPlayers();
 
 	//adding to winstrek
 	void addWstreak();
@@ -74,17 +73,13 @@ public:
 	void aftergame(char WoL);
 	float getAddedProb();
 	int getIndex();
-	void setLengthofRoster(int inLength);
 	void addProb(float inProb);
-
 	int getStarterRating();
-
 	int getLstreak();
 	int getWstreak();
 	int getWins();
 	int getLosses();
 	string getName();
-
 	void setAvgWins(float num);
 	float getAvgWins();
 	void resetWins();
