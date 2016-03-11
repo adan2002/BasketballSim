@@ -94,41 +94,43 @@ float Team::setstarters()
 	injuryOnTeam=false;
 	int injuredPlayers[10];
 	int icount=0;
-<<<<<<< HEAD
-	
-=======
+
 	float penaltyForInj=0;
-	//cout << "entering while loop!\n" << endl;
->>>>>>> 2fd5a91c576274a7958681519e78f0e2a6fe43c9
 	while (pos<6){
 		for (player_id=0; player_id<numplayers;player_id++){
-			
-			if (roster[player_id].getPosition()==pos){
-				//cout << roster[player_id].getPosition() << endl;
+			//cout << roster[player_id].getName() << " " << roster[player_id].getPosition() << endl;
+			//cout << "probofInj" << roster[player_id].getProbofInj() << endl;
+			if (roster[player_id].getPosition() == pos){
 				if (roster[player_id].ifInjured()){
 					//cout << "player injured! \n" << endl;
-					injuryOnTeam=true;
-					injuredPlayers[icount]=player_id;
+					injuryOnTeam = true;
+					injuredPlayers[icount] = player_id;
 					icount++;
 				}
 				//if all players of a position are injured, it goes back to an index of the injured players and places them as starters
-					if(player_id==numplayers){
-						cout<<"injured in game"<<endl;
-						int icount2=0;
-						while (roster[injuredPlayers[icount2]].getPosition()!=pos){
-							icount2++;
-							cout<<"probofInj"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
-							penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
-							cout<<"subtractedprob of winning"<<penaltyForInj;
-						}
-						starters[pos-1]=injuredPlayers[icount2];
-					}
-				else {
-					starters[pos-1]=player_id;
-					pos++;
+				if (roster[player_id].getPosition() == pos && !roster[player_id].ifInjured()){ // if last player doesn't match desired pos, then..
+					starters[pos - 1] = player_id;
 				}
+				else if (player_id==numplayers-1) {
+					int icount2 = 0;
+					while (roster[injuredPlayers[icount2]].getPosition()!=pos){
+						//cout << "looking for pos "<< pos << endl;
+						//cout << "player pos "<<roster[injuredPlayers[icount2]].getPosition() << endl;
+						//cout << "icount"<<icount2 << endl;
+						//cout << roster[injuredPlayers[icount2]].getName() << " " << roster[injuredPlayers[icount2]].getPosition() << endl;
+						//cout<<"probofInj"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
+						penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
+						//cout<<"subtracted prob of winning"<<penaltyForInj<<endl;
+						icount2++;
+
+					}
+					starters[pos-1]=injuredPlayers[icount2];
+
+				}
+				
 			}
 		}
+		pos++;
 
 	}
 	return penaltyForInj;
@@ -213,14 +215,10 @@ void Team::aftergame(char WoL) {
 	//update includes running the probability that a player is injured
 	//FIX
 	for (i=0;i<numplayers-1;i++){
-<<<<<<< HEAD
-		cout << "i = " << i << endl;
-=======
->>>>>>> 2fd5a91c576274a7958681519e78f0e2a6fe43c9
+
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
-			cout << "j = " <<  j << endl;
 			//won't update if player is injured
 			if (holdName==playersupdated[j]){
 				YN=true;

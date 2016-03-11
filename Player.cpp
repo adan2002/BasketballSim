@@ -112,8 +112,10 @@ void Player::InjuredInGame(){
     //srand((int)time(NULL));
     rando=rand()/(float) RAND_MAX;
     //cout<<"r"<<rando<<endl;
-    injury=rando<pOFi;
+	if (rando < pOFi){ injury = true; }
     if (injury){
+		cout << name << endl;
+		cout << position << endl;
         //subtract from added probability that a team wins
         sevOFinj=rand()/(float)RAND_MAX;
         //cout<<"r"<<rand<<endl; //DEBUG
