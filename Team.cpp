@@ -5,6 +5,7 @@
 #include "Team.h"
 #include <iostream>
 #include <stdlib.h>
+#include <ctime>
 
 
 Team::Team() // default constructor
@@ -172,6 +173,7 @@ void Team::aftergame(char WoL) {
     //REQUIRE THAT ALL OF THE PLAYERS ARE PASSED BY REFERENCE
     int i,j;
 	float rand;
+	//srand(time(NULL));
 	//mins added to starters playing time
     int StarterMinAdded=30;
 	//mins added to backup playing time
@@ -278,6 +280,7 @@ void Team::setAvgWins(float n){
 
 void Team::resetWins(){
 	wins = 0;
+	losses=0; //update losses too
 }
 
 

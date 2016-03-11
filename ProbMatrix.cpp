@@ -6,6 +6,7 @@
 #include <vector>
 #include <sstream> // reading in strings as buffers
 #include <fstream> // read in data
+#include <ctime>
 #include <string>
 
 
@@ -94,6 +95,7 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 
 		}
 	}
+	//why is this not random?
 	float r = 4.0;//((float)rand() / (RAND_MAX)); // random number between 0 and 1
 
 }
@@ -107,6 +109,7 @@ float ProbMatrix::getProb(Team home, Team away){
 // other functions
 
 void ProbMatrix::runGame(Team &home, Team &away){
+	//srand(time(NULL));
 	float rando;
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
@@ -135,28 +138,32 @@ void ProbMatrix::runGame(Team &home, Team &away){
 
 	//account for win streak and losing streak here
 	if (home.getWstreak()>0){
-		hometeamwins=+0.01;
+		hometeamwins=hometeamwins+0.01;
 	}
 	if (away.getWstreak()>0){
-		hometeamwins=-0.01;
+		hometeamwins=hometeamwins-0.01;
 	}
 	if (away.getLstreak()>0){
-		hometeamwins=+0.01;
+		hometeamwins=hometeamwins+0.01;
 	}
 	if (home.getLstreak()>0){
-		hometeamwins=-0.01;
+		hometeamwins=hometeamwins-0.01;
 	}
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
 	//cout << "\ngenerating random number...\n\n";
-	rando = float(rand()) / RAND_MAX;
-	//cout << "random number generated: " << rando << endl;
+	//srand(time(NULL));
+	rando = rand() / (float)RAND_MAX;
+	//cout << "random number generated: " << rando; //<< endl;
+	//cout<< " prob"<< hometeamwins;
 	//if larger, home team loses, if smaller home team wins
 	//run aftergame
 	if (rando<hometeamwins){
+		//cout<<" home wins"<<endl;
 		home.aftergame('W');
 		away.aftergame('L');
 		//cout << "Home team wins!!!\n";
 	}else{
+		//cout<<" away wins"<<endl;
 		home.aftergame('L');
 		away.aftergame('W');
 		//cout << "Away team wins!!!\n";
@@ -312,8 +319,8 @@ void genStandings(Team* teams){
 		w1[i] = divisions[i + 3][0];
 		w2[i] = divisions[i + 3][1];
 		w3[i] = divisions[i + 3][2];
-		w4[i] = divisions[i + 3][1];
-		w5[i] = divisions[i + 3][2];
+		w4[i] = divisions[i + 3][3];
+		w5[i] = divisions[i + 3][4];
 	}
 
 	// use bubble sort algorithm to arrange from best to worst records
@@ -423,12 +430,11 @@ void genStandings(Team* teams){
 		else{
 			cout << "Eastern Conference Seed number " << k + 1;
 			cout << " : " << bot11EC[k - 4].getName();
-			cout << "    Wins: " << bot11EC[k].getAvgWins() << endl;
+			cout << "    Wins: " << bot11EC[k-4].getAvgWins() << endl;
 		}
 	}
 
 	cout << endl; // white space
-	
 	for (int k = 0; k < 15; k++){
 		if (k < 4){
 			cout << "Western Conference Seed number " << k + 1;
@@ -438,7 +444,7 @@ void genStandings(Team* teams){
 		else{
 			cout << "Western Conference Seed number " << k + 1;
 			cout << " : " << bot11WC[k - 4].getName();
-			cout << "    Wins: " << bot11WC[k].getAvgWins() << endl;
+			cout << "    Wins: " << bot11WC[k-4].getAvgWins() << endl;
 		}
 	}
 

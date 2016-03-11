@@ -108,12 +108,13 @@ int Player::getMinPl(){
 // think about printing out when a player gets injured/sidelined
 void Player::InjuredInGame(){
     float rando;
-    rando=(float)rand()/RAND_MAX;
+    //srand((int)time(NULL));
+    rando=rand()/(float) RAND_MAX;
     //cout<<"r"<<rando<<endl;
     injury=rando<pOFi;
     if (injury){
         //subtract from added probability that a team wins
-        rando=(float)rand()/RAND_MAX;
+        rando=rand()/(float)RAND_MAX;
         //cout<<"r"<<rand<<endl; //DEBUG
         if (rando<=.7){
             gamesWithInjleft=1;
