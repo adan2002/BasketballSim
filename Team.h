@@ -88,9 +88,12 @@ public:
 	void setAvgWins(float num);
 	float getAvgWins();
 	void resetWins();
+
 };
 
 // other functions
 void updateWins(Team* teams, int num);
+void createTeams(Team* teams, string fname1, string fname2); // reads through roster csv file
+		// and generates team rosters
 
 #endif //BASKETBALLSIM_TEAM_H

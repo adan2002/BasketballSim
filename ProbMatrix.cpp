@@ -230,7 +230,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 /*
 NBA has six teams and each division hosts 5 teams.
 Therefore this will return a 6x5 matrix. Each divison will 
-matcht the row index - 1, assuming the count begins at 0. 
+match the row index + 1, assuming the count begins at 0. 
 */
 
 //Team** genStandings(Team* teams){ // rank teams by conference and records
@@ -264,13 +264,14 @@ void genStandings(Team* teams){
 		}
 	}
 
-	// now sort teams in each divsion by wins
+	// now sort teams in each divsion by wins in descending order
 
 	for (int i = 0; i < 6; i++){ // for each division
 		// use bubble sort algorithm to arrange from best to worst records
 		for (int c = 0; c < 5 - 1; c++){ // 5 teams in each division
 			for (int d = 0; d < 5 - c - 1; d++){
-				if (divisions[i][d].getAvgWins() < divisions[i][d + 1].getAvgWins()){
+				if (divisions[i][d].getAvgWins() < divisions[i][d + 1].getAvgWins()){ // if next teams has more wins
+							// then swap.
 					swap = divisions[i][d];
 					divisions[i][d] = divisions[i][d + 1];
 					divisions[i][d + 1] = swap;
@@ -280,47 +281,35 @@ void genStandings(Team* teams){
 
 	}
 
-	// separate teams by conference
-	Team eastConf[15]; // list for eastern conference teams
-	Team westConf[15]; // list for western conference teams
 
-	idx = 0; //reset counter
-	for (int i = 0; i < 3; i++){
-		//cout << i << endl;
-		for (int j = 0; j < 5; j++){
-			eastConf[idx] = divisions[i][j];
-			westConf[idx] = divisions[i + 3][j];
-			idx++;
-		}
+	/*
+	The sorting algorithm used was to group each team based off the place they finished
+	in their respecitve division/conference. Thus, for each conference we have five groups
+	of three teams, which we sort by wins.
+	
+	The top eight teams from each conference makes the playoffs. But the top four is comprised 
+	of the 3 division winners and the team with the best record from the other 12 in a 
+	conference. These four teams are sorted based off record, and so are the reamining teams
+	in the conference.
+	*/
 
-	}
-
-	// Another method of sorting teams by conference
-	// or sort by columns and then concatenate rankings
 	Team* e1 = new Team[3]; // 1st place finishers of east divisions
 	Team* e2 = new Team[3]; // 2nd place finishers of east divisions...
-	Team* e3 = new Team[3];
-	Team* e4 = new Team[3]; 
+	Team* e3 = new Team[3]; Team* e4 = new Team[3]; 
 	Team* e5 = new Team[3];
 
 	Team* w1 = new Team[3]; // 1st place finishers of western divisions..
-	Team* w2 = new Team[3];
-	Team* w3 = new Team[3];
-	Team* w4 = new Team[3];
-	Team* w5 = new Team[3];
+	Team* w2 = new Team[3]; Team* w3 = new Team[3];
+	Team* w4 = new Team[3]; Team* w5 = new Team[3];
 
 	for (int i = 0; i < 3; i++){
-		e1[i] = divisions[i][0]; // all the first
-		e2[i] = divisions[i][1];
-		e3[i] = divisions[i][2];
-		e4[i] = divisions[i][3];
-		e5[i] = divisions[i][4];
+		e1[i] = divisions[i][0]; // all the 1st place teams from eastern divisions
+		e2[i] = divisions[i][1]; e3[i] = divisions[i][2];
+		e4[i] = divisions[i][3]; e5[i] = divisions[i][4];
 
-		w1[i] = divisions[i + 3][0];
-		w2[i] = divisions[i + 3][1];
-		w3[i] = divisions[i + 3][2];
-		w4[i] = divisions[i + 3][3];
-		w5[i] = divisions[i + 3][4];
+		w1[i] = divisions[i + 3][0]; // all the 1st place teams from western divisions
+		w2[i] = divisions[i + 3][1]; w3[i] = divisions[i + 3][2];
+		w4[i] = divisions[i + 3][3]; w5[i] = divisions[i + 3][4];
 	}
 
 	// use bubble sort algorithm to arrange from best to worst records
@@ -349,27 +338,28 @@ void genStandings(Team* teams){
 		}
 	}
 
+	/*
+	We can isolate the top four teams for a conference by looking the 3 division winners
+	and the team with the best record from the group of second place finishers. And we 
+	can sort those four teams by record. And we do the same for the bottom eleven teams.
+	*/
+
 	Team* top4EC = new  Team[4]; // top four teams from eastern conference
 	Team* bot11EC = new Team[11]; // bottom eleven teams from EC
 	Team* top4WC = new Team[4]; // top four teams from western conference
 	Team* bot11WC = new Team[11]; // bottom eleven teams from WC
 
-	// manually insert
-	top4EC[0] = e1[0];
-	top4EC[1] = e1[1];
-	top4EC[2] = e1[2];
-	top4EC[3] = e2[0];
+	// manually insert top four teams and top 2 of the 
+	// bottom 11
+	top4EC[0] = e1[0]; 	top4EC[1] = e1[1];
+	top4EC[2] = e1[2]; 	top4EC[3] = e2[0];
 
-	bot11EC[0] = e2[1];
-	bot11EC[1] = e2[2];
+	bot11EC[0] = e2[1]; bot11EC[1] = e2[2];
 
-	top4WC[0] = w1[0];
-	top4WC[1] = w1[1];
-	top4WC[2] = w1[2];
-	top4WC[3] = w2[0];
+	top4WC[0] = w1[0]; 	top4WC[1] = w1[1];
+	top4WC[2] = w1[2]; 	top4WC[3] = w2[0];
 
-	bot11WC[0] = w2[1];
-	bot11WC[1] = w2[2];
+	bot11WC[0] = w2[1]; bot11WC[1] = w2[2];
 
 	for (int j = 0; j < 3; j++){
 		bot11EC[j + 2] = e3[j]; // teams 7-9 in conference
@@ -448,11 +438,30 @@ void genStandings(Team* teams){
 		}
 	}
 
+	// delete dynamically allocated arrays and set pointers equal to NULL
+	delete[] e1; e1 = NULL;
+
+	delete[] e2; e2 = NULL;
+	delete[] e3; e3 = NULL;
+	delete[] e4; e4 = NULL;
+	delete[] e5; e5 = NULL;
+	delete[] w1; w1 = NULL;
+	delete[] w2; w2 = NULL;
+	delete[] w3; w3 = NULL;
+	delete[] w4; w4 = NULL;
+	delete[] w5; w5 = NULL;
+	delete[] divisions; divisions = NULL;
+	delete[] top4EC; top4EC = NULL;
+	delete[] top4WC; top4WC = NULL;
+	delete[] bot11EC; bot11EC = NULL;
+	delete[] bot11WC; bot11WC = NULL;
+
+	// if we want to return 2D arrays then do the following
 	/*
 	Team** standings; // by 2x15 array
 	standings = new Team*[2];
-	standings[0] = eastConf;
-	standings[1] = westConf;
+
+	// Store top 4 first for each conference, then the bottom 11 teams...
 
 	return standings;
 	*/

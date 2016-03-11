@@ -3,21 +3,29 @@ Authors: Adan Rivas and Jonah Sternthal
 ENGS 65 Engineering Design
 16W
 
-Final Project: Markov Chain Simulation of Basketball teams
+Final Project: Monte Carlo Simulation of Basketball teams
 
 General probability matrix where the row index denotes the home team:
 
-	Atl   Bos   Chi   Det   LA    NY
-Atl  0    1108  708   756  2191   854
-Bos 1108    0   994  1753  3017   222
-Chi 708    994    0   279  2048   809
-Det 756   1753  279     0  2288   649
-LA 2191   3017 2048  2288     0  2794
-NY  854    222  809   649  2794     0
+	 Atl     Bos    Chi   Det    LA    NY
+Atl .304   .110   .708   .756  .219   .854
+Bos .110   .510   .994   .175  .301   .222
+Chi .708   .994   .430   .279  .244   .809
+Det .756   .175   .279   .320  .228   .649
+LA  .219   .301   .204   .228  .654   .279
+NY  .854   .222   .809   .649  .270   .561
 
 
+The values give the likilhood of the home team winning.
 To find the probability that the visiting teams wins, we simply find the
 complement of the entery (home, away)
+
+Our simulation is very similar to a markove chain, except we do take into
+account a team's recent performance in terms of winning and losing streaks.
+We a run simulation for the 2015/2016 season 1000 times to get the average wins 
+per season of every team. We then identify the top 8 teams from each conference
+(in accordance with NBA ranking procedures), and thus predict which teams make
+the playoffs.
 
 */
 
@@ -48,179 +56,53 @@ int main()
 
 	srand(time(NULL));
 
-	cout << "program starting...\n\n";
+	cout << "Program starting...\n\n";
 
-	cout << "creating all 30 NBA teams..." << endl;
+	int numTeams = 30; // number of teams in NBA
 
-	int numTeams = 30;
+	Team* teams; // create empty array of Team class
+	teams = new Team[numTeams]; // allocate array size of 30
 
-	// replace vector with array of Teams
-	Team* teams; // create empty array of Teams
-	teams = new Team[numTeams];
+	//string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
+	string file = "team_counts.csv"; // player count for each team
 
-	string line;
+	//string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
+	string fname = "NBA_roster_ratings.csv"; // player information
 
-	string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
-	//string file = "team_counts.csv"; // establish size of rosters
-
-	ifstream  inFile(file);
-
-
-	if (!inFile){
-		cout << "Error opening - " << file << endl;
-		cout << "\nPress enter to exit." << endl;
-		cin.get();
-		return -1;
-	}
-
-	getline(inFile, line); // skip first row
-
-	int i = 0;
-	while (getline(inFile, line))
-	{
-		teams[i].enumerate(i);
-				
-		stringstream lineStream(line);
-		string bit;
-		getline(lineStream, bit, ','); // get first element (i.e. team name)
-		string name = bit; // locally store team name
-		teams[i].setName(name);
-
-		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
-		int num_players = stoi(bit); // store number
-		//cout << "Number of players for " << name << " : " << num_players << endl;
-		teams[i].setNumPlayers(num_players);
-
-		getline(lineStream, bit, ','); // get third element (i.e. team conference 1 = eastern, 0 = western)
-		int conf = stoi(bit); // store number
-		//cout << "Number of players for " << name << " : " << num_players << endl;
-		teams[i].setConf(conf);
-
-		getline(lineStream, bit, ','); // get fourth element (i.e. team division, which is enumerated)
-									   // (1,2,3 are in east and 4,5,6 are in west)
-		int div = stoi(bit); // store number
-		//cout << "Number of players for " << name << " : " << num_players << endl;
-		teams[i].setDiv(div);
-
-		// intialize roster
-		Player* players; // create empty array
-		players = new Player[num_players];
-
-		//cout << name << " has " << num_players << " in main rotation.\n\n";
-
-		string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
-		//string fname = "NBA_roster_ratings.csv";
-
-		ifstream  roster(fname); // open new file
-	
-		if (!roster){
-			cout << "\nError opening - " << fname << endl;
-			cout << "\nPress enter to exit." << endl;
-			cin.get();
-
-			return -1;
-		}
-		
-		
-		getline(roster, line); // skip first row (just header)
-
-		int idx = 0;
-		while (getline(roster, line)){
-			// read file line by line
-			stringstream lineStream(line);
-
-			getline(lineStream, bit, ','); // get first element (i.e. team name)
-			//int idx = 0; // keep track of player in array
-			
-			if (name == bit){ // do the team names match?
-
-				//cout << "team name: " << bit << endl;
-				getline(lineStream, bit, ','); // get second element (i.e. player name)
-				players[idx].setName(bit);
-				
-				getline(lineStream, bit, ','); // get third element (i.e. player age)
-				players[idx].setAge(stoi(bit));
-
-				getline(lineStream, bit, ','); // get fourth element (i.e. player pos)
-				// enumerate player position
-				if (bit == "PG"){
-					players[idx].setPosition(1);
-				}
-
-				else if (bit == "SG"){
-					players[idx].setPosition(2);
-				}
-
-				else if (bit == "SF"){
-					players[idx].setPosition(3);
-				}
-
-				else if (bit == "PF"){
-					players[idx].setPosition(4);
-				}
-
-				else{ // o.w. player is center
-					players[idx].setPosition(5);
-				}
-
-				//cout << "player position (enumerated): " << players[idx].getPosition() << endl;
-				
-				getline(lineStream, bit, ','); // get fifth element (i.e. player rank)
-				players[idx].setRank(stoi(bit));
-				
-
-				getline(lineStream, bit, ','); // get sixth element (i.e. player rating)
-				players[idx].setRating(stoi(bit));
-			
-
-				idx++;
-				
-			}
-
-		}
-		
-
-		roster.close();
-		teams[i].setroster(players, num_players);
-		i++; // move to next element in vector
-		//cout << "team number: " << i << endl;
-	}
-
-	cout << "Closing CSV files\n\n";
-	inFile.close();
-	
+	cout << "\nInstantiating NBA basketball teams and rosters...\n\n";
+	createTeams(teams, file, fname);
 
 	cout << "Filling in probability matrix\n" << endl;
 	ProbMatrix pmat;
-	pmat.setSize(numTeams);
-	pmat.addTeams(teams, numTeams);
+	pmat.setSize(numTeams); // dynamically allocate matrix
+	pmat.addTeams(teams, numTeams); // create list of teams
 
-	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
-	//string fn = "probs.txt"; // probabilities file
+	//string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
+	string fn = "probs.txt"; // probabilities file
 	pmat.setProb(fn, numTeams); // intialize probabilit matrix values
 
-	pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
+	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
 	cout << "Simulating multiple full season\n";
-	//pmat.runSeason("2016schedule.csv");
+	pmat.runSeason("2016schedule.csv");
 	
 	// multiple season simulation
-
 	
-	for (int s = 0; s < 100; s++){
-		cout << "Simulating season number " << s << endl;
-		pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
-		//pmat.runSeason("2016schedule.csv");
-		updateWins(teams, s);
+	for (int s = 0; s < 1000; s++){
+		cout << "Simulating season number " << s+1 << endl;
+		//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
+		pmat.runSeason("2016schedule.csv");
+		updateWins(teams, s); // update average wins for all teams and reset win counter for next season
 
 	}
 	
-
-
 	cout << "\nSorting team array by conference\n";
-	//Team** div;
-	//div = genStandings(teams); // generate league standings
 	genStandings(teams); // functions prints out standings
-			// for each conference
+			// for each conference Top eight from each conference 
+			// are predicted to make the playoffs
+	
+	// delete all arrays and reset pointers
+	delete[] teams; teams = NULL;
+
 	cout << "\nExiting program. Press enter to exit.";
 
 	cin.get();

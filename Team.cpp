@@ -4,6 +4,8 @@
 
 #include "Team.h"
 #include <iostream>
+#include <sstream> // reading in strings as buffers
+#include <fstream> // read in data
 #include <stdlib.h>
 #include <ctime>
 
@@ -294,4 +296,135 @@ void updateWins(Team* teams, int num){ // to be done after every simulation
 		teams[i].setAvgWins(avg);
 		teams[i].resetWins(); // reset wins counter
 	}
+}
+
+void createTeams(Team* teams, string depthcounts, string rosterFile){
+
+	ifstream  inFile(depthcounts);
+	string line;
+
+	if (!inFile){
+		cout << "Error opening - " << depthcounts << endl;
+		cout << "\nPress enter to exit." << endl;
+		cin.get();
+		exit(0);
+	}
+
+	getline(inFile, line); // skip first row
+
+	int i = 0;
+	while (getline(inFile, line))
+	{
+		teams[i].enumerate(i);
+
+		stringstream lineStream(line);
+		string bit;
+		getline(lineStream, bit, ','); // get first element (i.e. team name)
+		string name = bit; // locally store team name
+		teams[i].setName(name);
+
+		getline(lineStream, bit, ','); // get second element (i.e. number of players on team)
+		int num_players = stoi(bit); // store number
+		//cout << "Number of players for " << name << " : " << num_players << endl;
+		teams[i].setNumPlayers(num_players);
+
+		getline(lineStream, bit, ','); // get third element (i.e. team conference 1 = eastern, 0 = western)
+		int conf = stoi(bit); // store number
+		//cout << "Number of players for " << name << " : " << num_players << endl;
+		teams[i].setConf(conf);
+
+		getline(lineStream, bit, ','); // get fourth element (i.e. team division, which is enumerated)
+		// (1,2,3 are in east and 4,5,6 are in west)
+		int div = stoi(bit); // store number
+		//cout << "Number of players for " << name << " : " << num_players << endl;
+		teams[i].setDiv(div);
+
+		// intialize roster
+		Player* players; // create empty array
+		players = new Player[num_players];
+
+		//cout << name << " has " << num_players << " in main rotation.\n\n";
+
+		//string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
+		//string fname = "NBA_roster_ratings.csv";
+
+		ifstream  roster(rosterFile); // open new file
+
+		if (!roster){
+			cout << "\nError opening - " << rosterFile << endl;
+			cout << "\nPress enter to exit." << endl;
+			cin.get();
+
+			exit(0);
+		}
+		
+		getline(roster, line); // skip first row (just header)
+
+		int idx = 0;
+		while (getline(roster, line)){
+			// read file line by line
+			stringstream lineStream(line);
+
+			getline(lineStream, bit, ','); // get first element (i.e. team name)
+			//int idx = 0; // keep track of player in array
+
+			if (name == bit){ // do the team names match?
+
+				//cout << "team name: " << bit << endl;
+				getline(lineStream, bit, ','); // get second element (i.e. player name)
+				players[idx].setName(bit);
+
+				getline(lineStream, bit, ','); // get third element (i.e. player age)
+				players[idx].setAge(stoi(bit));
+
+				getline(lineStream, bit, ','); // get fourth element (i.e. player pos)
+				// enumerate player position
+				if (bit == "PG"){
+					players[idx].setPosition(1);
+				}
+
+				else if (bit == "SG"){
+					players[idx].setPosition(2);
+				}
+
+				else if (bit == "SF"){
+					players[idx].setPosition(3);
+				}
+
+				else if (bit == "PF"){
+					players[idx].setPosition(4);
+				}
+
+				else{ // o.w. player is center
+					players[idx].setPosition(5);
+				}
+
+				//cout << "player position (enumerated): " << players[idx].getPosition() << endl;
+
+				getline(lineStream, bit, ','); // get fifth element (i.e. player rank)
+				players[idx].setRank(stoi(bit));
+
+
+				getline(lineStream, bit, ','); // get sixth element (i.e. player rating)
+				players[idx].setRating(stoi(bit));
+
+
+				idx++;
+
+			}
+
+		}
+
+
+		roster.close();
+		teams[i].setroster(players, num_players);
+		i++; // move to next element in vector
+		//cout << "team number: " << i << endl;
+
+		delete[] players; players = NULL; 	// delete players array
+	}
+
+	cout << "Closing CSV files\n\n";
+	inFile.close();
+
 }
