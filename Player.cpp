@@ -19,6 +19,7 @@ Player::Player() {
     rank=0;
     injury=false;
     gamesWithInjleft=0;
+    sevOFinj=0;
 }
 
 //input constructor
@@ -114,19 +115,18 @@ void Player::InjuredInGame(){
     injury=rando<pOFi;
     if (injury){
         //subtract from added probability that a team wins
-        rando=rand()/(float)RAND_MAX;
+        sevOFinj=rand()/(float)RAND_MAX;
         //cout<<"r"<<rand<<endl; //DEBUG
-        if (rando<=.7){
+        if (sevOFinj<=.7){
             gamesWithInjleft=1;
         }
-        if (rando>.7&&rando<.9){
+        if (sevOFinj>.7&&rando<.9){
             gamesWithInjleft=5;
         }
-        if(rando>=.9){
+        if(sevOFinj>=.9){
             gamesWithInjleft=20;
         }
-        }
-
+    sevOFinj=pow(sevOFinj,2)/10;}
 }
 
 bool Player::ifInjured(){
@@ -158,4 +158,8 @@ string Player::getName() {
 
 void Player::setRank(int num) {
 	rank = num;
+}
+
+float Player::getSevOfinj(){
+    return(sevOFinj);
 }

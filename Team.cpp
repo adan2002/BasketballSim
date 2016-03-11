@@ -6,6 +6,7 @@
 #include <iostream>
 #include <sstream> // reading in strings as buffers
 #include <fstream> // read in data
+#include <math.h>
 #include <stdlib.h>
 #include <ctime>
 
@@ -18,8 +19,8 @@ Team::Team() // default constructor
 	addedProb = 0; //needs function that will updatate( this is the added probability that a team will win)
 	conference=0;
 	division=0;
-	wstreak = 0; // why bool? --b/c it can be-if wstreak the +.1 to prob of winning next game
-	lstreak = 0; // why bool? --same as above
+	wstreak = 0;
+	lstreak = 0;
 	index = -1; // id in matrix
 	numplayers = 0; // number of players in roster
 	avgWins = 0.0;
@@ -75,13 +76,14 @@ void Team::setroster(Player* players, int num_players) // first 5 players should
 	for (int j = 0; j < num_players; j++)
 	{
 		roster[j] = players[j];
+		roster[j].setProbInj();
 	}
 }
 
 //still need to look at this-don't want to update roster!
 //i thought setstarters might be a static array, and pig would pull from this and subout players that are injured-j
 //but i think that if we have the starters in the first 5 of roster- your way works -j
-void Team::setstarters()
+float Team::setstarters()
 {
 	//CASE if both players from a position is hurt
 	// account for case where both players
@@ -92,7 +94,12 @@ void Team::setstarters()
 	injuryOnTeam=false;
 	int injuredPlayers[10];
 	int icount=0;
+<<<<<<< HEAD
 	
+=======
+	float penaltyForInj=0;
+	//cout << "entering while loop!\n" << endl;
+>>>>>>> 2fd5a91c576274a7958681519e78f0e2a6fe43c9
 	while (pos<6){
 		for (player_id=0; player_id<numplayers;player_id++){
 			
@@ -106,9 +113,13 @@ void Team::setstarters()
 				}
 				//if all players of a position are injured, it goes back to an index of the injured players and places them as starters
 					if(player_id==numplayers){
+						cout<<"injured in game"<<endl;
 						int icount2=0;
 						while (roster[injuredPlayers[icount2]].getPosition()!=pos){
 							icount2++;
+							cout<<"probofInj"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
+							penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
+							cout<<"subtractedprob of winning"<<penaltyForInj;
 						}
 						starters[pos-1]=injuredPlayers[icount2];
 					}
@@ -120,7 +131,7 @@ void Team::setstarters()
 		}
 
 	}
-
+	return penaltyForInj;
 }
 
 
@@ -195,26 +206,35 @@ void Team::aftergame(char WoL) {
     for (i=0; i<5; i++){
         roster[starters[i]].addMinPl(StarterMinAdded);
 		roster[starters[i]].InjuredInGame();
+		roster[starters[i]].setProbInj();
 		playersupdated[i]=roster[starters[i]].getName();
     }
 	//updates the mins played of non starters by searching for starters and injured players and filtering them out of the update
 	//update includes running the probability that a player is injured
+	//FIX
 	for (i=0;i<numplayers-1;i++){
+<<<<<<< HEAD
 		cout << "i = " << i << endl;
+=======
+>>>>>>> 2fd5a91c576274a7958681519e78f0e2a6fe43c9
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
 			cout << "j = " <<  j << endl;
 			//won't update if player is injured
-			if (holdName==playersupdated[i]||roster[i].ifInjured()){
+			if (holdName==playersupdated[j]){
 				YN=true;
-				//if injured decrement games out
-				if (roster[i].ifInjured()){roster[i].decGamesOut();}
 			}
+		}
+		//if injured then decrement a game out
+		if(roster[i].ifInjured()){
+			roster[i].decGamesOut();
+			YN=true;
 		}
 		if (!YN){
 			roster[i].addMinPl(backupMinAdded);
 			roster[i].InjuredInGame();
+			roster[i].setProbInj();
 		}
 	}
 }
