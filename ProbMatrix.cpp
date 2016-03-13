@@ -53,7 +53,8 @@ ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constru
 }
 
 ProbMatrix::~ProbMatrix() // destructor
-{ 
+{
+	cout<<"deleting the matrix"<<endl;
 	delete[] teams; teams = NULL;
 	delete[] matrix; matrix = NULL;
 }
@@ -92,7 +93,7 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 
 
 //function that returns probability of hometeam winning
-float ProbMatrix::getProb(Team home, Team away){
+float ProbMatrix::getProb(Team &home, Team &away){
 	return(matrix[home.getIndex()][away.getIndex()]);
 }
 
@@ -145,7 +146,6 @@ void ProbMatrix::runGame(Team &home, Team &away){
 	//srand(time(NULL));
 	rando = rand() / (float)RAND_MAX;
 	//cout << "random number generated: " << rando; //<< endl;
-	//cout<< " prob"<< hometeamwins;
 	//if larger, home team loses, if smaller home team wins
 	//run aftergame
 	if (rando<hometeamwins){

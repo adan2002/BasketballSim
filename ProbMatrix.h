@@ -22,7 +22,7 @@ public:
 	void setSize(int num_teams); //set size of the matrix
 	void addTeams(Team* &list, int num_teams); //add teams to the matrix-input type: team array
 	void setProb(string fname, int num_teams); // set probability-input: csv with calculated probabilities
-	float getProb(Team home, Team away); //get a probability that a home team will win
+	float getProb(Team &home, Team &away); //get a probability that a home team will win
 	void runGame(Team &home, Team &away); //run a game between two teams
 	void runSeason(string seasonfile); //run a season-input: csv file with the list of games
 };

@@ -28,6 +28,8 @@ Team::Team() // default constructor
 
 Team::~Team() 
 {
+	cout<<name<<endl;
+	cout<<"deleting the team"<<endl;
 	delete[] roster; roster=NULL;
 
 }
@@ -195,7 +197,6 @@ void Team::aftergame(char WoL) {
     //REQUIRE THAT ALL OF THE PLAYERS ARE PASSED BY REFERENCE
     int i,j;
 	float rand;
-	//srand(time(NULL));
 	//mins added to starters playing time
     int StarterMinAdded=30;
 	//mins added to backup playing time

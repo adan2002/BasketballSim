@@ -59,8 +59,9 @@ public:
     void setName(string inName);
     //returns name of player
     string getName();
-
+    //set rank
 	void setRank(int num);
+    //returns the severity of injury
     float getSevOfinj();
 };
 
