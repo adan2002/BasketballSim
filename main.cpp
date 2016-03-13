@@ -80,7 +80,7 @@ int main()
 
 	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
 	fn = "probs.txt"; // probabilities file
-	pmat.setProb(fn, numTeams); // intialize probabilit matrix values
+	pmat.setProb(fn); // intialize probabilit matrix values
 
 	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
 	//cout << "Simulating multiple full season\n";
@@ -88,7 +88,7 @@ int main()
 	
 	// multiple season simulation
 	
-	for (int s = 0; s < 25; s++){
+	for (int s = 0; s < 10; s++){
 		cout << "Simulating season number " << s+1 << endl;
 		//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
 		pmat.runSeason("2016schedule.csv");

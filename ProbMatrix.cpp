@@ -14,7 +14,13 @@ using namespace std;
 
 ProbMatrix::ProbMatrix() // default constructor
 {
-	numTeams = 0;
+	numTeams = 0; // no teams in league
+}
+
+ProbMatrix::~ProbMatrix() // destructor
+{
+	delete[] teams; teams = NULL; // remove pointer from memory
+	delete[] matrix; matrix = NULL;
 }
 
 void ProbMatrix::setSize(int num_teams)
@@ -37,30 +43,10 @@ ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constru
 		teams[i].enumerate(i); // enumerate each variable
 	}
 	
-
-	float** matrix = new float*[num_teams]; //allocate array of float pointers
-
-	// initialize values in matrix
-	for (int j = 0; j < num_teams; j++)
-	{
-		matrix[j] = new float[num_teams]; //allocate each array of floats
-		for (int k = 0; k < num_teams; k++)
-		{
-			matrix[j][k] = 4;
-		}
-	}
-	
-	
-}
-
-ProbMatrix::~ProbMatrix() // destructor
-{ 
-	delete[] teams; teams = NULL;
-	delete[] matrix; matrix = NULL;
 }
 
 // overload [] operator to 
-void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
+void ProbMatrix::setProb(string fname) // requries index in table
 {
 	// read csv file
 
@@ -74,18 +60,16 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 		exit(0);
 	}
 
-	matrix = new float*[num_teams];
+	matrix = new float*[numTeams];
 	
 	for (int row = 0; row < numTeams; row++){
-		matrix[row] = new float[num_teams]; // add a row
+		matrix[row] = new float[numTeams]; // add a row
 		getline(inFile, line); // read in row
 
 		for (int col = 0; col < numTeams; col++){
 			stringstream lineStream(line);
 			getline(lineStream, bit, ',');
 			matrix[row][col] = stof(bit);
-
-
 		}
 	}
 
@@ -102,24 +86,23 @@ float ProbMatrix::getProb(Team home, Team away){
 void ProbMatrix::runGame(Team &home, Team &away){
 	//srand(time(NULL));
 	float rando;
-	float homePenalty, awayPenalty;
+	float homePenalty, awayPenalty; // use to keep track of 
+		// reduced probability if an injured player if forced to 
+		// start.
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
-	//cout << "Probability of home team, " << home.getName() << ", winning: " << hometeamwins << endl;
-	//cout << "Probability of away team, " << away.getName() << ", winning: " << (1.0-hometeamwins) << endl;
-	//cout << "Setting starters for home team\n";
+		
 	homePenalty=home.setstarters();
-	//cout << "Setting starters for away team\n";
 	awayPenalty=away.setstarters();
 
 	//cout << "Starters set for each team \n" << endl;
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
-		//cout << "Injury!";
+		cout << "\nInjury!";
 		int HTR = home.getStarterRating(); //home team ratings
 		//cout << "Starter rating for home team: " << HTR << endl;
 		//cout << "\n\n";
 		int ATR = away.getStarterRating(); //away team ratings
-		//cout << "Starter rating for home team: " << ATR << endl;
+		//cout << "Starter rating for away team: " << ATR << endl;
 		///////changed to this...is this the best way?
 		hometeamwins=hometeamwins-(ATR-HTR)/((HTR+ATR)/4);
 		//add rankings of both teams.
@@ -127,6 +110,8 @@ void ProbMatrix::runGame(Team &home, Team &away){
 	//see if there are any probability additons for the home team and add it to a dummy variable
 	//see if there are any probability additions for the away team and subtract that from the dummy variable
 	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb()+awayPenalty-homePenalty;
+	//cout << "\nProbability of home team winning: " << hometeamwins << endl;
+	//cout << "Probability of away team winning: " << 1 - hometeamwins << endl;
 
 	//account for win streak and losing streak here
 	if (home.getWstreak()>0){
@@ -142,12 +127,11 @@ void ProbMatrix::runGame(Team &home, Team &away){
 		hometeamwins=hometeamwins-0.01;
 	}
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
-	//cout << "\ngenerating random number...\n\n";
-	//srand(time(NULL));
 	rando = rand() / (float)RAND_MAX;
-	//cout << "random number generated: " << rando; //<< endl;
-	//cout<< " prob"<< hometeamwins;
+
+	//cout << "Random number generated to determine winner of game: " << rando << endl;
 	//if larger, home team loses, if smaller home team wins
+
 	//run aftergame
 	if (rando<hometeamwins){
 		//cout<<" home wins"<<endl;
@@ -166,12 +150,11 @@ void ProbMatrix::runGame(Team &home, Team &away){
 void ProbMatrix::runSeason(string seasonfile) {
 	int i,j=0;
 	int gamesInSeason=1230;
-	//might need to allocate dynamically/or at lease at runtime
+	// dynamically allocate the schedule array
 	string** games;
 	games = new string*[gamesInSeason];
 	for (i = 0; i < gamesInSeason; i++){
 		games[i] = new string[2];
-		//games[1] = new string[2];
 	}
 	string line, bit;
 	ifstream  inFile(seasonfile);
@@ -187,7 +170,6 @@ void ProbMatrix::runSeason(string seasonfile) {
 		stringstream inLine(line);
 		for (i=0;i<2;i++){
 			getline(inLine,bit,',');
-			//cout << "team name: " << bit << endl;
 			if (bit.find("\r")>0&&bit.find("\r")<4){
 			bit.replace(bit.find("\r"),1,"");}
 
@@ -201,7 +183,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 	int k=0,l=0;
 
 	for(i=0;i<gamesInSeason;i++){
-		//cout << "\nGame number: " << i+1 << "\n";
+		cout << "\nGame number: " << i+1 << "\n\n";
 		while(teams[j].getName()!=games[i][k]){ // finding home team
 			j++;
 		}
@@ -220,12 +202,14 @@ void ProbMatrix::runSeason(string seasonfile) {
 // other functions
 
 /*
-NBA has six teams and each division hosts 5 teams.
-Therefore this will return a 6x5 matrix. Each divison will 
-match the row index + 1, assuming the count begins at 0. 
+The function belows prints out the standings for each conference
+based off wins over a season. The NBA has six divisions and each division 
+consist of 5 teams. One way to sort them is by creating a 6x5 matrix, where
+each divison will match the row index + 1, assuming the count begins at 0. 
+Teams in division 1-3 are eastern conference teams, while divisions 4-6 represent
+western conference teams.
 */
 
-//Team** genStandings(Team* teams){ // rank teams by conference and records
 void genStandings(Team* teams){
 	Team** divisions = 0; // 2D array 
 	divisions = new Team*[6]; // 6 rows (one for each division)
@@ -250,7 +234,6 @@ void genStandings(Team* teams){
 		divisions[i] = new Team[5]; // create 5 elements
 			// each division consists of five teams
 		for (int j = 0; j < 5; j++){ // add teams that belong to that row
-			//cout << "Team name: " << teams[idx].getName() << endl;
 			divisions[i][j] = teams[idx];
 			idx++; // move onto to nex team
 		}

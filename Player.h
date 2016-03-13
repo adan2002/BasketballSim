@@ -58,9 +58,11 @@ public:
     void setName(string inName);
     //returns name of player
     string getName();
-
-	void setRank(int num);
-    float getSevOfinj();
+	void setRank(int num); // keep track of players
+		// rank in depth chart
+    float getSevOfinj(); // keep track of random number
+		// to determine the severit of player injur.
+		// This has implications if an injured player if forced to start.
 };
 
 

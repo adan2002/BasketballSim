@@ -69,7 +69,6 @@ void Team::uploss(){
 	losses = losses + 1;
 }
 
-//do we need a function that allows you to add/subtract players one at a time?
 void Team::setroster(Player* players, int num_players) // first 5 players should be the starters
 {
 	roster = new Player[num_players]; // instantiate array
@@ -98,11 +97,8 @@ float Team::setstarters()
 	float penaltyForInj=0;
 	while (pos<6){
 		for (player_id=0; player_id<numplayers;player_id++){
-			//cout << roster[player_id].getName() << " " << roster[player_id].getPosition() << endl;
-			//cout << "probofInj" << roster[player_id].getProbofInj() << endl;
 			if (roster[player_id].getPosition() == pos){
 				if (roster[player_id].ifInjured()){
-					//cout << "player injured! \n" << endl;
 					injuryOnTeam = true;
 					injuredPlayers[icount] = player_id;
 					icount++;
@@ -114,13 +110,7 @@ float Team::setstarters()
 				else if (player_id==numplayers-1) {
 					int icount2 = 0;
 					while (roster[injuredPlayers[icount2]].getPosition()!=pos){
-						//cout << "looking for pos "<< pos << endl;
-						//cout << "player pos "<<roster[injuredPlayers[icount2]].getPosition() << endl;
-						//cout << "icount"<<icount2 << endl;
-						//cout << roster[injuredPlayers[icount2]].getName() << " " << roster[injuredPlayers[icount2]].getPosition() << endl;
-						//cout<<"probofInj"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
 						penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
-						//cout<<"subtracted prob of winning"<<penaltyForInj<<endl;
 						icount2++;
 
 					}
@@ -306,7 +296,7 @@ void Team::resetWins(){
 }
 
 
-// other functions
+// other non-class based functions
 void updateWins(Team* teams, int num){ // to be done after every simulation
 	// n tracks what number simulation we are on
 	
@@ -317,6 +307,12 @@ void updateWins(Team* teams, int num){ // to be done after every simulation
 		teams[i].resetWins(); // reset wins counter
 	}
 }
+
+/*
+The following functions reads through two separate csv files which contains
+the number of players for each team and the respective player information
+including name, positions, age, and rating.
+*/
 
 void createTeams(Team* teams, string depthcounts, string rosterFile){
 

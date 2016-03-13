@@ -49,25 +49,17 @@ public:
 	//setName of team
 	void setName(string namein);
 	void setDiv(int inDiv);
-
 	void setConf(int inConf);
-
 	int getDiv();
-
 	int getConf();
-
-	void enumerate(int num);
-
+	void enumerate(int num); // set index value of team in prob matrix
 	void setNumPlayers(int num);
 	int getNumPlayers();
-
 	//adding to winstrek
 	void addWstreak();
 	//adding to lose streak
 	void addLstreak();
-
 	bool ifInjuryOnTeam();
-
 	//things that should happen to team after the game...
 	//idk if this is the best way to implement
 	void aftergame(char WoL);
