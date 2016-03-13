@@ -13,22 +13,22 @@ using namespace std;
 
 class Team{
 private:
-	string name;
-	int conference;
-	int division;
-	int wins; //function find win percent and loss percent
-	int losses;
+	string name; //Stores the name of the team
+	int conference; //the conference of the team
+	int division; //team's division
+	int wins; //teams wins over the season
+	int losses;  //team losses over the season
 	float addedProb; //needs function that will updatate( this is the added probability that a team will win)
-	Player* roster;
-	int starters[5];
+	Player* roster; //list of players in the roster
+	int starters[5]; //an int array that holds the index of the starting players
 	Player* pig; //players in game
-	bool injuryOnTeam;
-	int wstreak;//change to int
-	int lstreak; //change to int
+	bool injuryOnTeam; //indicates an injury on the team T-injury on team
+	int wstreak;//keeps track of the wins in a row
+	int lstreak; //keeps track of losses in a row
 	int index; // id in matrix
-	int numplayers;
+	int numplayers; //records the number of players on the team
 	float avgWins; // keeps track of averages wins after
-			// multiple simulations
+					// multiple simulations
 public:
 	Team();
 	~Team();

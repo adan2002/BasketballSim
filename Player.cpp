@@ -32,7 +32,7 @@ Player::Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, b
     rating=rtng;
     injury=inj;
     gamesWithInjleft=GWIL;
-    pOFi= (log(float (2*age)))+(minutes/150);
+    pOFi= (log(float (2*age)));
     pOFi=pOFi/100;
 }
 //destructor
@@ -95,7 +95,7 @@ int Player::getRating(){
 void Player::setMinPl(int mins){
     minutes=mins;
 }
-
+//add minutes after a game
 void Player::addMinPl(int minsadded) {
     minutes+=minsadded;
 }

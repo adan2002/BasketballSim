@@ -65,10 +65,10 @@ int main()
 	teams = new Team[numTeams]; // allocate array size of 30
 
 	string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
-	file = "team_counts.csv"; // player count for each team
+	//file = "team_counts.csv"; // player count for each team
 
 	string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
-	fname = "NBA_roster_ratings.csv"; // player information
+	//fname = "NBA_roster_ratings.csv"; // player information
 
 	cout << "\nInstantiating NBA basketball teams and rosters...\n\n";
 	createTeams(teams, file, fname);
@@ -79,7 +79,7 @@ int main()
 	pmat.addTeams(teams, numTeams); // create list of teams
 
 	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
-	fn = "probs.txt"; // probabilities file
+	//fn = "probs.txt"; // probabilities file
 	pmat.setProb(fn, numTeams); // intialize probabilit matrix values
 
 	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
@@ -90,8 +90,8 @@ int main()
 	
 	for (int s = 0; s < 25; s++){
 		cout << "Simulating season number " << s+1 << endl;
-		//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
-		pmat.runSeason("2016schedule.csv");
+		pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
+		//pmat.runSeason("2016schedule.csv");
 		updateWins(teams, s); // update average wins for all teams and reset win counter for next season
 
 	}

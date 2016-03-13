@@ -9,6 +9,7 @@
 #include <string>
 using namespace std;
 
+//player class
 class Player {
 private:
     string name;
@@ -16,11 +17,11 @@ private:
     int position; //1-PG,2-SG,3-SF,4-PF,5-C
 	int rank; // 1 = starter, 2 = backup
     float pOFi; //probabilty of injury
-    int rating;
+    int rating; //over all rating in the league
     int minutes; //minutes played
-    bool injury;
+    bool injury; //T/F if a player is injured-true
     int gamesWithInjleft; //games played with injury
-    float sevOFinj; //keeps track of the random number generated when the player was injrued
+    float sevOFinj; //keeps track of the random number generated when the player was injured
 public:
     Player();
     Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, bool inj, int GWIL);

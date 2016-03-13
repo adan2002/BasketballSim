@@ -28,6 +28,7 @@ Team::Team() // default constructor
 
 Team::~Team() 
 {
+	delete[] roster; roster=NULL;
 
 }
 
@@ -107,6 +108,7 @@ float Team::setstarters()
 					injuredPlayers[icount] = player_id;
 					icount++;
 				}
+
 				//if all players of a position are injured, it goes back to an index of the injured players and places them as starters
 				if (roster[player_id].getPosition() == pos && !roster[player_id].ifInjured()){ // if last player doesn't match desired pos, then..
 					starters[pos - 1] = player_id;
@@ -114,7 +116,7 @@ float Team::setstarters()
 				else if (player_id==numplayers-1) {
 					int icount2 = 0;
 					while (roster[injuredPlayers[icount2]].getPosition()!=pos){
-						//cout << "looking for pos "<< pos << endl;
+						cout << "looking for pos "<< pos << endl;
 						//cout << "player pos "<<roster[injuredPlayers[icount2]].getPosition() << endl;
 						//cout << "icount"<<icount2 << endl;
 						//cout << roster[injuredPlayers[icount2]].getName() << " " << roster[injuredPlayers[icount2]].getPosition() << endl;
