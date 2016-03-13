@@ -21,7 +21,6 @@ private:
 	float addedProb; //needs function that will updatate( this is the added probability that a team will win)
 	Player* roster; //list of players in the roster
 	int starters[5]; //an int array that holds the index of the starting players
-	Player* pig; //players in game
 	bool injuryOnTeam; //indicates an injury on the team T-injury on team
 	int wstreak;//keeps track of the wins in a row
 	int lstreak; //keeps track of losses in a row
@@ -44,8 +43,6 @@ public:
 	void setroster(Player* player, int num);//first 5 players should be the starters
 	//set starter
 	float setstarters();
-	//set pig
-	void setpig();
 	//setName of team
 	void setName(string namein);
 	void setDiv(int inDiv);

@@ -60,7 +60,6 @@ int Player::getPosition(){
 }
 
 //set probability of injury (based on age/minutes played)
-// Based on age of player and minutes played throughout the season
 // If minutes played exceeds 2400 (30 min on average over 80 games),
 // then add extra term
 void Player::setProbInj(){
@@ -105,17 +104,18 @@ int Player::getMinPl(){
     return minutes;
 }
 
-//change injury //did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss 20 games
+//change injury
+// did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss 20 games
 // think about printing out when a player gets injured/sidelined
 void Player::InjuredInGame(){
     float rando;
     //srand((int)time(NULL));
     rando=rand()/(float) RAND_MAX;
     //cout<<"r"<<rando<<endl;
-	if (rando < pOFi){ injury = true; }
-    if (injury){
-		cout << name << endl;
-		cout << position << endl;
+	if (rando < pOFi){ injury = true; } //update bool
+    if (injury){ //if injured determine severity of injury
+		//cout << name << endl; //DEBUG
+		//cout << position << endl; //DEBUG
         //subtract from added probability that a team wins
         sevOFinj=rand()/(float)RAND_MAX;
         //cout<<"r"<<rand<<endl; //DEBUG

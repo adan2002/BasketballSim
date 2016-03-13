@@ -70,10 +70,11 @@ void Team::uploss(){
 	losses = losses + 1;
 }
 
-//do we need a function that allows you to add/subtract players one at a time?
-void Team::setroster(Player* players, int num_players) // first 5 players should be the starters
+//inport array of players and set as roster
+void Team::setroster(Player* players, int num_players)
 {
 	roster = new Player[num_players]; // instantiate array
+	//put players in roster--use this methodology to prevent the user from alter the roster outside the function
 	for (int j = 0; j < num_players; j++)
 	{
 		roster[j] = players[j];
@@ -81,46 +82,53 @@ void Team::setroster(Player* players, int num_players) // first 5 players should
 	}
 }
 
-//still need to look at this-don't want to update roster!
-//i thought setstarters might be a static array, and pig would pull from this and subout players that are injured-j
-//but i think that if we have the starters in the first 5 of roster- your way works -j
+
+//set starters in game
 float Team::setstarters()
 {
-	//CASE if both players from a position is hurt
-	// account for case where both players
-	// think about adding a function that returns
-	// players for a given position
-	int player_id;
-	int pos = 1;
-	injuryOnTeam=false;
-	int injuredPlayers[10];
-	int icount=0;
+	int player_id; //counter
+	int pos = 1; //inititalize position array
+	injuryOnTeam=false; //set injury on team to false
+	int injuredPlayers[10]; ///set array that calls injured players by index(will at max be 10)
+	int icount=0; //initilaize counter
 
-	float penaltyForInj=0;
+	float penaltyForInj=0; //initialize penalty for injury
+
+	//search for players to fill position 1-5
 	while (pos<6){
+		//seach through roster to find if player matches posititon
 		for (player_id=0; player_id<numplayers;player_id++){
 			//cout << roster[player_id].getName() << " " << roster[player_id].getPosition() << endl;
 			//cout << "probofInj" << roster[player_id].getProbofInj() << endl;
+
 			if (roster[player_id].getPosition() == pos){
+				//check to see if that player is injured
 				if (roster[player_id].ifInjured()){
 					//cout << "player injured! \n" << endl;
-					injuryOnTeam = true;
-					injuredPlayers[icount] = player_id;
+					injuryOnTeam = true; //update "injury on team"
+					injuredPlayers[icount] = player_id; //add player to injured players list
 					icount++;
 				}
 
-				//if all players of a position are injured, it goes back to an index of the injured players and places them as starters
-				if (roster[player_id].getPosition() == pos && !roster[player_id].ifInjured()){ // if last player doesn't match desired pos, then..
+				// if player matches desired pos, then add him to the list
+				if (roster[player_id].getPosition() == pos && !roster[player_id].ifInjured()){
 					starters[pos - 1] = player_id;
 				}
+				//if all players of a position are injured, it looks in the index of the injured players and places them as starters
 				else if (player_id==numplayers-1) {
 					int icount2 = 0;
 					while (roster[injuredPlayers[icount2]].getPosition()!=pos){
-						cout << "looking for pos "<< pos << endl;
+
+						/*DEBUG
+						//cout << "looking for pos "<< pos << endl;
 						//cout << "player pos "<<roster[injuredPlayers[icount2]].getPosition() << endl;
 						//cout << "icount"<<icount2 << endl;
 						//cout << roster[injuredPlayers[icount2]].getName() << " " << roster[injuredPlayers[icount2]].getPosition() << endl;
 						//cout<<"probofInj"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
+						//DEBUG*/
+
+						//if it puts an injured player in the starting line up, then it returns a number that decrements
+						//the teams chance of winning
 						penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
 						//cout<<"subtracted prob of winning"<<penaltyForInj<<endl;
 						icount2++;
@@ -135,17 +143,10 @@ float Team::setstarters()
 		pos++;
 
 	}
+	//return the probability penalty for injury-this will be used when calculating a teams probability of winning
 	return penaltyForInj;
 }
 
-
-//i think we probably dont need this one anymore. after each game we can add a standard amt of time to the starters
-//and a standard amount of time to the non-starters that is less than that of the starters
-// think more about...
-void Team::setpig()
-{
-
-}
 
 void Team::addLstreak() {
     if (wstreak>0){
