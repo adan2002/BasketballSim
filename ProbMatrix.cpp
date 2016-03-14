@@ -35,20 +35,7 @@ ProbMatrix::ProbMatrix(int num_teams, Team* list_teams) // parameterized constru
 		teams[i] = list_teams[i]; // copy over
 		teams[i].enumerate(i); // enumerate each variable
 	}
-	
 
-	float** matrix = new float*[num_teams]; //allocate array of float pointers
-
-	// initialize values in matrix
-	for (int j = 0; j < num_teams; j++)
-	{
-		matrix[j] = new float[num_teams]; //allocate each array of floats
-		for (int k = 0; k < num_teams; k++)
-		{
-			matrix[j][k] = 4;
-		}
-	}
-	
 	
 }
 
@@ -74,8 +61,9 @@ void ProbMatrix::setProb(string fname, int num_teams) // requries index in table
 		exit(0);
 	}
 
+	//initialize matrix
 	matrix = new float*[num_teams];
-	
+	//fill matrix
 	for (int row = 0; row < numTeams; row++){
 		matrix[row] = new float[num_teams]; // add a row
 		getline(inFile, line); // read in row
@@ -213,11 +201,6 @@ void ProbMatrix::runSeason(string seasonfile) {
 			l++;
 		}
 		//run game between home and away team
-		cout<<"game number: "<<i<<endl;
-		cout<<"home team win streak: "<<teams[j].getWstreak()<<endl;
-		cout<<"home team losing streak: "<<teams[j].getLstreak()<<endl;
-		cout<<"away team win streak: "<<teams[l].getWstreak()<<endl;
-		cout<<"away team losing streak: "<<teams[l].getLstreak()<<endl<<endl;
 		runGame(teams[j],teams[l]);
 		k = 0; // reset counters
 		l = 0;
