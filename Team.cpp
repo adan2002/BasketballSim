@@ -90,16 +90,16 @@ float Team::setstarters()
 {
 	int player_id; //counter
 	int pos = 1; //inititalize position array
-	injuryOnTeam=false; //set injury on team to false
+	injuryOnTeam = false; //set injury on team to false
 	int injuredPlayers[10]; ///set array that calls injured players by index(will at max be 10)
-	int icount=0; //initilaize counter
+	int icount = 0; //initilaize counter
 
-	float penaltyForInj=0; //initialize penalty for injury
+	float penaltyForInj = 0; //initialize penalty for injury
 
 	//search for players to fill position 1-5
 	while (pos<6){
 		//seach through roster to find if player matches posititon
-		for (player_id=0; player_id<numplayers;player_id++){
+		for (player_id = 0; player_id<numplayers; player_id++){
 			//cout << roster[player_id].getName() << " " << roster[player_id].getPosition() << endl;
 			//cout << "probofInj" << roster[player_id].getProbofInj() << endl;
 
@@ -109,7 +109,6 @@ float Team::setstarters()
 					//cout << "player injured! \n" << endl;
 					injuryOnTeam = true; //update "injury on team"
 					injuredPlayers[icount] = player_id; //add player to injured players list
-
 					icount++;
 				}
 
@@ -118,44 +117,51 @@ float Team::setstarters()
 					starters[pos - 1] = player_id;
 				}
 				//if all players of a position are injured, it looks in the index of the injured players and places them as starters
-				else if (player_id==numplayers-1) {
+				else if (player_id == numplayers - 1) {
 					//make sure that indexed player [numplayers-1] isnt injured and doesnt fill posititon
-					if (roster[numplayers-1].getPosition()==pos && !roster[numplayers-1].ifInjured()){
-						starters[pos-1]=numplayers-1;
+					if (roster[numplayers - 1].getPosition() == pos && !roster[numplayers - 1].ifInjured()){
+						starters[pos - 1] = numplayers - 1;
 						break;
 					}
 					int icount2 = 0;
-					while (roster[injuredPlayers[icount2]].getPosition()!=pos){
+					while (roster[injuredPlayers[icount2]].getPosition() != pos){
+
+						/*DEBUG
+						//cout << "looking for pos "<< pos << endl;
+						//cout << "player pos "<<roster[injuredPlayers[icount2]].getPosition() << endl;
+						//cout << "icount"<<icount2 << endl;
+						//cout << roster[injuredPlayers[icount2]].getName() << " " << roster[injuredPlayers[icount2]].getPosition() << endl;
+						//cout<<"probofInj"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
+						//DEBUG*/
 
 						//if it puts an injured player in the starting line up, then it returns a number that decrements
 						//the teams chance of winning
-<<<<<<< HEAD
-						penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
-=======
 
 						//cout<<"subtracted prob of winning "<<penaltyForInj<<endl;
 						//cout<<roster[injuredPlayers[icount2]].getPosition()<<endl;
 
->>>>>>> 55c5ba4a448c22662605b9e3ea42e568c4e7c9ce
 						icount2++;
 
 					}
 					//if it puts an injured player in the starting line up, then it returns a number that decrements
 					//the teams chance of winning
-					penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
-					starters[pos-1]=injuredPlayers[icount2];
+					penaltyForInj = penaltyForInj + roster[injuredPlayers[icount2]].getSevOfinj();
+					starters[pos - 1] = injuredPlayers[icount2];
 					//cout<<"playing injured player's position: "<<roster[injuredPlayers[icount2]].getPosition()<<endl;
 					//cout<<"pOFi"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
 				}
-				
+
 			}
 		}
 		pos++;
 
 	}
 	//return the probability penalty for injury-this will be used when calculating a teams probability of winning
+	//cout << "Penalty for injury " << penaltyForInj << endl;
 	return penaltyForInj;
+	
 }
+
 
 //loosing streak
 void Team::addLstreak() {

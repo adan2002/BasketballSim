@@ -64,11 +64,11 @@ int main()
 	Team* teams; // create empty array of Team class
 	teams = new Team[numTeams]; // allocate array size of 30
 
-	string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
-	file = "team_counts.csv"; // player count for each team
+	//string file = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\team_counts.csv"; // establish size of rosters
+	string file = "team_counts.csv"; // player count for each team
 
-	string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
-	fname = "NBA_roster_ratings.csv"; // player information
+	//string fname = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\NBA_roster_ratings.csv";
+	string fname = "NBA_roster_ratings.csv"; // player information
 
 	cout << "\nInstantiating NBA basketball teams and rosters...\n\n";
 	createTeams(teams, file, fname);
@@ -78,16 +78,10 @@ int main()
 	pmat.setSize(numTeams); // dynamically allocate matrix
 	pmat.addTeams(teams, numTeams); // create list of teams
 
-	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
-<<<<<<< HEAD
-	fn = "probs.txt"; // probabilities file
+	//string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
+	string fn = "probs.txt"; // probabilities file
 	pmat.setProb(fn); // intialize probabilit matrix values
 
-=======
-	//fn = "probs.txt"; // probabilities file
-	pmat.setProb(fn, numTeams); // intialize probabilit matrix values
-	
->>>>>>> 55c5ba4a448c22662605b9e3ea42e568c4e7c9ce
 	// multiple season simulation
 	
 	for (int s = 0; s < 10; s++){
