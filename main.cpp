@@ -81,10 +81,6 @@ int main()
 	string fn = "C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\probs.txt"; // probabilities file
 	//fn = "probs.txt"; // probabilities file
 	pmat.setProb(fn, numTeams); // intialize probabilit matrix values
-
-	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
-	//cout << "Simulating multiple full season\n";
-	//pmat.runSeason("2016schedule.csv");
 	
 	// multiple season simulation
 	

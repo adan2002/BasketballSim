@@ -32,7 +32,7 @@ Player::Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, b
     rating=rtng;
     injury=inj;
     gamesWithInjleft=GWIL;
-    pOFi= (log(float (2*age)));
+    pOFi= 0;
     pOFi=pOFi/100;
 }
 //destructor
@@ -114,6 +114,8 @@ void Player::InjuredInGame(){
     //cout<<"r"<<rando<<endl;
 	if (rando < pOFi){ injury = true; } //update bool
     if (injury){ //if injured determine severity of injury
+        //cout<<"player injured"<<endl<<endl;
+        //cout<<"pOFi"<<pOFi<<endl;
 		//cout << name << endl; //DEBUG
 		//cout << position << endl; //DEBUG
         //subtract from added probability that a team wins

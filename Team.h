@@ -18,7 +18,6 @@ private:
 	int division; //team's division
 	int wins; //teams wins over the season
 	int losses;  //team losses over the season
-	float addedProb; //needs function that will updatate( this is the added probability that a team will win)
 	Player* roster; //list of players in the roster
 	int starters[5]; //an int array that holds the index of the starting players
 	bool injuryOnTeam; //indicates an injury on the team T-injury on team
@@ -68,10 +67,9 @@ public:
 	//things that should happen to team after the game...
 	//idk if this is the best way to implement
 	void aftergame(char WoL);
-	float getAddedProb();
 	int getIndex();
 	void addProb(float inProb);
-	int getStarterRating();
+	int getStarterRating(); //returns the sum of the the the teams individuals rating
 	int getLstreak();
 	int getWstreak();
 	int getWins();

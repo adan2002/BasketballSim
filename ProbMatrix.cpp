@@ -99,34 +99,37 @@ float ProbMatrix::getProb(Team &home, Team &away){
 
 // other functions
 
+//RUN A GAME
 void ProbMatrix::runGame(Team &home, Team &away){
 	//srand(time(NULL));
 	float rando;
 	float homePenalty, awayPenalty;
+
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
-	//cout << "Probability of home team, " << home.getName() << ", winning: " << hometeamwins << endl;
-	//cout << "Probability of away team, " << away.getName() << ", winning: " << (1.0-hometeamwins) << endl;
-	//cout << "Setting starters for home team\n";
+
+	//set starters for the home and away team team
+
+	//decrease in probability if an injured player starts
 	homePenalty=home.setstarters();
-	//cout << "Setting starters for away team\n";
 	awayPenalty=away.setstarters();
 
-	//cout << "Starters set for each team \n" << endl;
+	//if there is an injury on either team, a modification to the static probability must be made
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
-		//cout << "Injury!";
+		//compare the starters rating of the home team to the away team
+		//if there is an injury, then a usual starter is replaced by a backup
+
+		//gets the sum of the rankings of the starters on the home and away teams
 		int HTR = home.getStarterRating(); //home team ratings
-		//cout << "Starter rating for home team: " << HTR << endl;
-		//cout << "\n\n";
 		int ATR = away.getStarterRating(); //away team ratings
-		//cout << "Starter rating for home team: " << ATR << endl;
-		///////changed to this...is this the best way?
+
+		//re-evaluates the proability that the home team wins based on the new starters
 		hometeamwins=hometeamwins-(ATR-HTR)/((HTR+ATR)/4);
-		//add rankings of both teams.
+
 	}
-	//see if there are any probability additons for the home team and add it to a dummy variable
-	//see if there are any probability additions for the away team and subtract that from the dummy variable
-	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb()+awayPenalty-homePenalty;
+	//adds probability to the home team winning if away team has an injured starter
+	//subtracts if home teams as an injured starter
+	hometeamwins=hometeamwins+awayPenalty-homePenalty;
 
 	//account for win streak and losing streak here
 	if (home.getWstreak()>0){
@@ -141,33 +144,33 @@ void ProbMatrix::runGame(Team &home, Team &away){
 	if (home.getLstreak()>0){
 		hometeamwins=hometeamwins-0.01;
 	}
-	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
-	//cout << "\ngenerating random number...\n\n";
-	//srand(time(NULL));
+
+	//generate a random number and determine if it is larger
+	// or smaller than the probability that the home team wins
 	rando = rand() / (float)RAND_MAX;
-	//cout << "random number generated: " << rando; //<< endl;
 	//if larger, home team loses, if smaller home team wins
 	//run aftergame
 	if (rando<hometeamwins){
 		//cout<<" home wins"<<endl;
 		home.aftergame('W');
 		away.aftergame('L');
-		//cout << "Home team wins!!!\n";
 	}else{
-		//cout<<" away wins"<<endl;
 		home.aftergame('L');
 		away.aftergame('W');
-		//cout << "Away team wins!!!\n";
 	}
 }
 
-
+//run season
 void ProbMatrix::runSeason(string seasonfile) {
 	int i,j=0;
+	//amount of games in the season
 	int gamesInSeason=1230;
-	//might need to allocate dynamically/or at lease at runtime
+	//dynamically allocates memory
 	string** games;
+	//games is allocated to 1230
 	games = new string*[gamesInSeason];
+
+	//imports the csv file into games array
 	for (i = 0; i < gamesInSeason; i++){
 		games[i] = new string[2];
 		//games[1] = new string[2];
@@ -199,6 +202,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 	j=0;
 	int k=0,l=0;
 
+	//function iterates through the games in season and runs each game
 	for(i=0;i<gamesInSeason;i++){
 		//cout << "\nGame number: " << i+1 << "\n";
 		while(teams[j].getName()!=games[i][k]){ // finding home team
@@ -208,6 +212,12 @@ void ProbMatrix::runSeason(string seasonfile) {
 		while(teams[l].getName()!=games[i][k]){ // finding away team
 			l++;
 		}
+		//run game between home and away team
+		cout<<"game number: "<<i<<endl;
+		cout<<"home team win streak: "<<teams[j].getWstreak()<<endl;
+		cout<<"home team losing streak: "<<teams[j].getLstreak()<<endl;
+		cout<<"away team win streak: "<<teams[l].getWstreak()<<endl;
+		cout<<"away team losing streak: "<<teams[l].getLstreak()<<endl<<endl;
 		runGame(teams[j],teams[l]);
 		k = 0; // reset counters
 		l = 0;
