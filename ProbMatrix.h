@@ -13,7 +13,7 @@ class ProbMatrix
 {
 private:
 	int numTeams; // number of teams
-	float** matrix; // 2D array 
+	float** matrix; // 2D array containing the probabilities that the home team wins
 	Team* teams; // list of teams
 public:
 	ProbMatrix();
@@ -22,7 +22,7 @@ public:
 	void setSize(int num_teams);
 	void addTeams(Team* &list, int num_teams);
 	void setProb(string fname); // pass in filename
-	float getProb(Team home, Team away);
+	float getProb(Team &home, Team &away);
 	void runGame(Team &home, Team &away); // pass by reference
 	void runSeason(string seasonfile);
 };

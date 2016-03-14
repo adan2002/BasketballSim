@@ -6,7 +6,6 @@
 #include <vector>
 #include <sstream> // reading in strings as buffers
 #include <fstream> // read in data
-#include <ctime>
 #include <string>
 
 
@@ -19,6 +18,7 @@ ProbMatrix::ProbMatrix() // default constructor
 
 ProbMatrix::~ProbMatrix() // destructor
 {
+	cout << "deleting the matrix" << endl;
 	delete[] teams; teams = NULL; // remove pointer from memory
 	delete[] matrix; matrix = NULL;
 }
@@ -77,7 +77,7 @@ void ProbMatrix::setProb(string fname) // requries index in table
 
 
 //function that returns probability of hometeam winning
-float ProbMatrix::getProb(Team home, Team away){
+float ProbMatrix::getProb(Team &home, Team &away){
 	return(matrix[home.getIndex()][away.getIndex()]);
 }
 
@@ -97,7 +97,7 @@ void ProbMatrix::runGame(Team &home, Team &away){
 
 	//cout << "Starters set for each team \n" << endl;
 	if (home.ifInjuryOnTeam()||away.ifInjuryOnTeam()){
-		cout << "\nInjury!";
+		//cout << "\nInjury!";
 		int HTR = home.getStarterRating(); //home team ratings
 		//cout << "Starter rating for home team: " << HTR << endl;
 		//cout << "\n\n";
@@ -107,6 +107,7 @@ void ProbMatrix::runGame(Team &home, Team &away){
 		hometeamwins=hometeamwins-(ATR-HTR)/((HTR+ATR)/4);
 		//add rankings of both teams.
 	}
+
 	//see if there are any probability additons for the home team and add it to a dummy variable
 	//see if there are any probability additions for the away team and subtract that from the dummy variable
 	hometeamwins=hometeamwins+home.getAddedProb()-away.getAddedProb()+awayPenalty-homePenalty;
@@ -126,9 +127,9 @@ void ProbMatrix::runGame(Team &home, Team &away){
 	if (home.getLstreak()>0){
 		hometeamwins=hometeamwins-0.01;
 	}
+
 	//generate a random number and determine if it is larger or smaller than the probability that the home team wins
 	rando = rand() / (float)RAND_MAX;
-
 	//cout << "Random number generated to determine winner of game: " << rando << endl;
 	//if larger, home team loses, if smaller home team wins
 
@@ -183,7 +184,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 	int k=0,l=0;
 
 	for(i=0;i<gamesInSeason;i++){
-		cout << "\nGame number: " << i+1 << "\n\n";
+		//cout << "\nGame number: " << i+1 << "\n\n";
 		while(teams[j].getName()!=games[i][k]){ // finding home team
 			j++;
 		}
@@ -345,9 +346,6 @@ void genStandings(Team* teams){
 		bot11WC[j + 5] = w4[j]; // teams 10-12
 		bot11WC[j + 8] = w5[j]; // teams 13-15
 	}
-
-	cout << "\nSorting top four teams from eastern conference\n";
-
 
 	// once last bubble sort for top 4
 	for (int c = 0; c < 4 - 1; c++){ // 3 teams in each list

@@ -32,7 +32,7 @@ Player::Player(string namein, int yo, int pos, int rankin, int PofI, int rtng, b
     rating=rtng;
     injury=inj;
     gamesWithInjleft=GWIL;
-    pOFi= (log(float (2*age)))+(minutes/150);
+    pOFi= (log(float (2*age)));
     pOFi=pOFi/100;
 }
 //destructor
@@ -60,7 +60,6 @@ int Player::getPosition(){
 }
 
 //set probability of injury (based on age/minutes played)
-// Based on age of player and minutes played throughout the season
 // If minutes played exceeds 2400 (30 min on average over 80 games),
 // then add extra term
 void Player::setProbInj(){
@@ -95,7 +94,7 @@ int Player::getRating(){
 void Player::setMinPl(int mins){
     minutes=mins;
 }
-
+//add minutes after a game
 void Player::addMinPl(int minsadded) {
     minutes+=minsadded;
 }
@@ -105,17 +104,18 @@ int Player::getMinPl(){
     return minutes;
 }
 
-//change injury //did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss 20 games
+//change injury
+// did you get an injury this game-if so how bad (70% miss 1 game, 20% miss 5 games, 10% miss 20 games
 // think about printing out when a player gets injured/sidelined
 void Player::InjuredInGame(){
     float rando;
     //srand((int)time(NULL));
     rando=rand()/(float) RAND_MAX;
     //cout<<"r"<<rando<<endl;
-	if (rando < pOFi){ injury = true; }
-    if (injury){
-		//cout << name << " " << cout << position << endl;
-
+	if (rando < pOFi){ injury = true; } //update bool
+    if (injury){ //if injured determine severity of injury
+		//cout << name << endl; //DEBUG
+		//cout << position << endl; //DEBUG
         //subtract from added probability that a team wins
         sevOFinj=rand()/(float)RAND_MAX;
         if (sevOFinj<=.7){
@@ -127,7 +127,9 @@ void Player::InjuredInGame(){
         if(sevOFinj>=.9){
             gamesWithInjleft=20;
         }
-    sevOFinj=pow(sevOFinj,2)/10;}
+		
+		sevOFinj=pow(sevOFinj,2)/10;
+	}
 }
 
 bool Player::ifInjured(){
@@ -164,3 +166,8 @@ void Player::setRank(int num) {
 float Player::getSevOfinj(){
     return(sevOFinj);
 }
+
+
+
+
+

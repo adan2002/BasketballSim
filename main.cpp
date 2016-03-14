@@ -82,10 +82,6 @@ int main()
 	fn = "probs.txt"; // probabilities file
 	pmat.setProb(fn); // intialize probabilit matrix values
 
-	//pmat.runSeason("C:\\Users\\Jonah.Sternthal\\Documents\\Dartmouth\\W16\\ENGS65\\BBALLSIM\\BasketballSim\\2016schedule.csv");
-	//cout << "Simulating multiple full season\n";
-	//pmat.runSeason("2016schedule.csv");
-	
 	// multiple season simulation
 	
 	for (int s = 0; s < 10; s++){
@@ -96,9 +92,7 @@ int main()
 
 	}
 
-	cout << "Number of player on roster for " << teams[7].getName() << ": " << teams[7].getNumPlayers() << endl;
-	
-	cout << "\nSorting team array by conference\n";
+	//cout << "\nSorting team array by conference\n";
 	genStandings(teams); // functions prints out standings
 			// for each conference Top eight from each conference 
 			// are predicted to make the playoffs
