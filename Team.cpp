@@ -16,7 +16,6 @@ Team::Team() // default constructor
 	name = "";
 	wins = 0; //function find win percent and loss percent
 	losses = 0;
-	addedProb = 0; //needs function that will updatate( this is the added probability that a team will win)
 	conference=0;
 	division=0;
 	wstreak = 0;
@@ -25,20 +24,20 @@ Team::Team() // default constructor
 	numplayers = 0; // number of players in roster
 	avgWins = 0.0;
 }
-
+//destructor
 Team::~Team() 
 {
-	cout<<name<<endl;
-	cout<<"deleting the team"<<endl;
 	delete[] roster; roster=NULL;
 
 }
 
+//gives value to index
 void Team::enumerate(int num)
 {
 	index = num;
 }
 
+//calculates the win percent
 float Team::winpercent()
 {
 	int total_games = wins + losses; // num of games played
@@ -63,11 +62,13 @@ int Team::getLosses()
 	return losses;
 }
 
+//increments wins
 void Team::upwin()
 {
 	wins = wins + 1; // increment
 }
 
+//increment losses
 void Team::uploss(){
 	losses = losses + 1;
 }
@@ -118,17 +119,33 @@ float Team::setstarters()
 				}
 				//if all players of a position are injured, it looks in the index of the injured players and places them as starters
 				else if (player_id==numplayers-1) {
+					//make sure that indexed player [numplayers-1] isnt injured and doesnt fill posititon
+					if (roster[numplayers-1].getPosition()==pos && !roster[numplayers-1].ifInjured()){
+						starters[pos-1]=numplayers-1;
+						break;
+					}
 					int icount2 = 0;
 					while (roster[injuredPlayers[icount2]].getPosition()!=pos){
 
 						//if it puts an injured player in the starting line up, then it returns a number that decrements
 						//the teams chance of winning
+<<<<<<< HEAD
 						penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
+=======
+
+						//cout<<"subtracted prob of winning "<<penaltyForInj<<endl;
+						//cout<<roster[injuredPlayers[icount2]].getPosition()<<endl;
+
+>>>>>>> 55c5ba4a448c22662605b9e3ea42e568c4e7c9ce
 						icount2++;
 
 					}
+					//if it puts an injured player in the starting line up, then it returns a number that decrements
+					//the teams chance of winning
+					penaltyForInj=penaltyForInj+roster[injuredPlayers[icount2]].getSevOfinj();
 					starters[pos-1]=injuredPlayers[icount2];
-
+					//cout<<"playing injured player's position: "<<roster[injuredPlayers[icount2]].getPosition()<<endl;
+					//cout<<"pOFi"<<roster[injuredPlayers[icount2]].getProbofInj()<<endl;
 				}
 				
 			}
@@ -140,14 +157,15 @@ float Team::setstarters()
 	return penaltyForInj;
 }
 
-
+//loosing streak
 void Team::addLstreak() {
-    if (wstreak>0){
-        wstreak=0;
+    if (wstreak>0){ //if winstreak > 0
+        wstreak=0; //set it to zero
     }
-    lstreak++;
+    lstreak++; //increment lstreak
 }
 
+//winning streak, same as ad L streak
 void Team::addWstreak(){
     if (lstreak>0){
         lstreak=0;
@@ -168,26 +186,24 @@ int Team::getNumPlayers(){
 	return numplayers;
 }
 
-
+//function run after every game to update the team
 void Team::aftergame(char WoL) {
     //adds a win or a loss depending on the outcome of the game
-    switch (WoL){
+    switch (WoL){ //depending on whether or not a team has won or lost
         case 'w':
         case 'W':
-            wins++;
+            wins++; //increment wins, add to win streak
 			addWstreak();
             break;
         case 'l':
         case 'L':
-            losses++;
+            losses++;  //increment losses add to loosing steak
 			addLstreak();
             break;
         default:
             break;
     }
-    //REQUIRE THAT ALL OF THE PLAYERS ARE PASSED BY REFERENCE
     int i,j;
-	float rand;
 	//mins added to starters playing time
     int StarterMinAdded=30;
 	//mins added to backup playing time
@@ -206,15 +222,15 @@ void Team::aftergame(char WoL) {
 		roster[starters[i]].setProbInj();
 		playersupdated[i]=roster[starters[i]].getName();
     }
-	//updates the mins played of non starters by searching for starters and injured players and filtering them out of the update
+	//updates the mins played of non starters by searching for starters
+	// and injured players and filtering them out of the update
 	//update includes running the probability that a player is injured
-	//FIX
 	for (i=0;i<numplayers-1;i++){
 
 		holdName=roster[i].getName();
 		YN=false;
 		for (j=0;j<5;j++){
-			//won't update if player is injured
+			//won't update if player is injured (they didnt play)
 			if (holdName==playersupdated[j]){
 				YN=true;
 			}
@@ -224,24 +240,17 @@ void Team::aftergame(char WoL) {
 			roster[i].decGamesOut();
 			YN=true;
 		}
+		//update in player has not been selected as already updated or injured
 		if (!YN){
-			roster[i].addMinPl(backupMinAdded);
-			roster[i].InjuredInGame();
-			roster[i].setProbInj();
+			roster[i].addMinPl(backupMinAdded); //add mins
+			roster[i].InjuredInGame(); //determine if they have been injured
+			roster[i].setProbInj(); //reset probability of getting injured
 		}
 	}
 }
 
 int Team::getIndex() {
 	return (this->index);
-}
-
-float Team::getAddedProb() {
-	return(addedProb);
-}
-
-void Team::addProb(float inProb) {
-	addedProb=+inProb;
 }
 
 bool Team::ifInjuryOnTeam() {
@@ -423,6 +432,9 @@ void createTeams(Team* teams, string depthcounts, string rosterFile){
 				getline(lineStream, bit, ','); // get sixth element (i.e. player rating)
 				players[idx].setRating(stoi(bit));
 
+				players[idx].setProbInj();
+
+				players[idx].setMinPl(0);
 
 				idx++;
 
