@@ -94,7 +94,7 @@ void ProbMatrix::runGame(Team &home, Team &away){
 		// start.
 	//get probability of winning for the home team
 	float hometeamwins=getProb(home, away);
-	cout << "Probability of home team winning: " << hometeamwins << endl;
+	//cout << "Probability of home team winning: " << hometeamwins << endl;
 	homePenalty=home.setstarters();
 	awayPenalty=away.setstarters();
 
@@ -190,7 +190,7 @@ void ProbMatrix::runSeason(string seasonfile) {
 
 	//function iterates through the games in season and runs each game
 	for(i=0;i<gamesInSeason;i++){
-		cout << "\nGame number: " << i+1 << "\n\n";
+		//cout << "\nGame number: " << i+1 << "\n\n";
 		while(teams[j].getName()!=games[i][k]){ // finding home team
 			j++;
 		}
